@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/p5_project/devel_isolated/ur_dashboard_msgs
+
+Name: ur_dashboard_msgs
+Description: Description of ur_dashboard_msgs
+Version: 2.0.0
+Cflags: -I/home/ubuntu/p5_project/devel_isolated/ur_dashboard_msgs/include
+Libs: -L${prefix}/lib 
+Requires: actionlib_msgs message_runtime std_msgs

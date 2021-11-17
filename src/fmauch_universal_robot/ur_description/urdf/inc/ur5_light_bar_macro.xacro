@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro">
+  <xacro:macro name="ur5_light_bar" params="prefix">
+    <xacro:include filename="$(find ur_description)/urdf/inc/ur5_macro.xacro" />
+    <xacro:include filename="$(find ur_description)/urdf/inc/b_and_r_light_bar_macro.xacro" />
+    <xacro:include filename="$(find ur_description)/urdf/inc/mount_macro.xacro" />
+
+    <xacro:ur5_robot prefix="${prefix}" />
+
+    <!-- Specify where the mount is connected to -->
+    <xacro:mount prefix="${prefix}" connected_to="${prefix}tool0" />
+
+    <!-- Specify where the camera is connected to -->
+    <xacro:b_and_r_light_bar prefix="${prefix}" connected_to="${prefix}mount" />
+
+  </xacro:macro>
+</robot>

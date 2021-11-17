@@ -1,0 +1,23 @@
+controller_list:
+  - name: ur5_cam_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - ur5_cam_1shoulder_pan_joint
+      - ur5_cam_1shoulder_lift_joint
+      - ur5_cam_1elbow_joint
+      - ur5_cam_1wrist_1_joint
+      - ur5_cam_1wrist_2_joint
+      - ur5_cam_1wrist_3_joint
+  - name: ur5_light_bar_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - ur5_light_bar_1shoulder_pan_joint
+      - ur5_light_bar_1shoulder_lift_joint
+      - ur5_light_bar_1elbow_joint
+      - ur5_light_bar_1wrist_1_joint
+      - ur5_light_bar_1wrist_2_joint
+      - ur5_light_bar_1wrist_3_joint

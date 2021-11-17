@@ -1,0 +1,18 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "catkin_make_isolated",
+			"args": [
+				"--directory",
+				"/home/ubuntu/p5_project",
+				"-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+			],
+			"problemMatcher": [
+				"$catkin-gcc"
+			],
+			"group": "build",
+			"label": "catkin_make_isolated: build"
+		}
+	]
+}

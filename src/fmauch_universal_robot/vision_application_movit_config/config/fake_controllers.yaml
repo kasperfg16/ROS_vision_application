@@ -1,0 +1,32 @@
+controller_list:
+  - name: fake_ur5_cam_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - ur5_cam_1shoulder_pan_joint
+      - ur5_cam_1shoulder_lift_joint
+      - ur5_cam_1elbow_joint
+      - ur5_cam_1wrist_1_joint
+      - ur5_cam_1wrist_2_joint
+      - ur5_cam_1wrist_3_joint
+  - name: fake_ur5_light_bar_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - ur5_light_bar_1shoulder_pan_joint
+      - ur5_light_bar_1shoulder_lift_joint
+      - ur5_light_bar_1elbow_joint
+      - ur5_light_bar_1wrist_1_joint
+      - ur5_light_bar_1wrist_2_joint
+      - ur5_light_bar_1wrist_3_joint
+  - name: fake_mount_and_cam_controller
+    type: $(arg fake_execution_type)
+    joints:
+      []
+  - name: fake_mount_and_light_bar_controller
+    type: $(arg fake_execution_type)
+    joints:
+      []
+initial:  # Define initial robot poses per group
+  - group: ur5_cam
+    pose: home_ur5_cam
+  - group: ur5_light_bar
+    pose: ur5_light_bar_home

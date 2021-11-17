@@ -1,0 +1,22 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/home/ubuntu/p5_project/devel_isolated/ur_dashboard_msgs/include/**",
+        "/home/ubuntu/p5_project/devel_isolated/ur_client_library/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/ubuntu/p5_project/src/Universal_Robots_ROS_Driver/controller_stopper/include/**",
+        "/home/ubuntu/p5_project/src/Universal_Robots_ROS_Driver/ur_calibration/include/**",
+        "/home/ubuntu/p5_project/src/fmauch_universal_robot/ur_kinematics/include/**",
+        "/home/ubuntu/p5_project/src/Universal_Robots_ROS_Driver/ur_robot_driver/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS"
+    }
+  ],
+  "version": 4
+}

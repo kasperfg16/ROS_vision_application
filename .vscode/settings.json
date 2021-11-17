@@ -1,0 +1,12 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/ubuntu/p5_project/devel_isolated/ur_kinematics/lib/python3/dist-packages",
+        "/home/ubuntu/p5_project/devel_isolated/ur_dashboard_msgs/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/ubuntu/p5_project/devel_isolated/ur_kinematics/lib/python3/dist-packages",
+        "/home/ubuntu/p5_project/devel_isolated/ur_dashboard_msgs/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ]
+}

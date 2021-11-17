@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xacro="https://ros.org/wiki/xacro">
+  <!-- refrence: https://gramaziokohler.github.io/compas_fab/latest/examples/03_backends_ros/07_ros_create_urdf_ur5_with_measurement_tool.html
+    Here we define the 2 parameters of the macro -->
+  <xacro:macro name="b_and_r_cam" params="prefix connected_to">
+    <!-- Create a fixed joint with a parameterized name. -->
+    <joint name="${prefix}b_and_r_cam_joint" type="fixed">
+      <!-- The parent link must be read from the robot model it is attached to. -->
+      <parent link="${connected_to}"/>
+      <child link="${prefix}b_and_r_cam"/>
+      <!-- The tool is directly attached to the flange. -->
+      <origin rpy="-1.57079633 0 0" xyz="0.0 -0.063 -0.053"/>
+    </joint>
+    <link name="${prefix}b_and_r_cam">
+      <visual>
+        <geometry>
+          <!-- The path to the visual meshes in the package. -->
+          <mesh filename="package://ur_description/meshes/camera.stl"
+          scale="0.001 0.001 0.001"/>
+        </geometry>
+      </visual>
+      <collision>
+        <geometry>
+          <!-- The path to the collision meshes in the package. NOTE: mesh must be imported in metres, else
+          use the "scale" param to compensate-->
+          <mesh filename="package://ur_description/meshes/camera.stl"
+          scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material>
+          <color rgba="0.8 0.7 0 1"/>
+        </material>
+      </collision>
+    </link>
+
+    <!-- TCP frame -->
+    <joint name="${prefix}tcp_joint" type="fixed">
+      <origin rpy="-1.57079633 0 0" xyz="0.0 0.0 0.053" />
+      <parent link="${prefix}b_and_r_cam"/>
+      <child link="${prefix}tcp"/>
+    </joint>
+    <link name="${prefix}tcp"/>
+
+  </xacro:macro>
+</robot>
