@@ -1,8 +1,0 @@
-prefix=/home/ubuntu/p5_project/install_isolated
-
-Name: vision_application_movit_config
-Description: Description of vision_application_movit_config
-Version: 0.3.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
