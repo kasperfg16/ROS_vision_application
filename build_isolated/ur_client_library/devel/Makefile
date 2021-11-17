@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/p5_project/src/Universal_Robots_Client_Library
+CMAKE_SOURCE_DIR = /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/p5_project/build_isolated/ur_client_library/devel
+CMAKE_BINARY_DIR = /home/ubuntu/p5_project_group_364/build_isolated/ur_client_library/devel
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -126,9 +126,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/p5_project/build_isolated/ur_client_library/devel/CMakeFiles /home/ubuntu/p5_project/build_isolated/ur_client_library/devel/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/p5_project_group_364/build_isolated/ur_client_library/devel/CMakeFiles /home/ubuntu/p5_project_group_364/build_isolated/ur_client_library/devel/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/p5_project/build_isolated/ur_client_library/devel/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/p5_project_group_364/build_isolated/ur_client_library/devel/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

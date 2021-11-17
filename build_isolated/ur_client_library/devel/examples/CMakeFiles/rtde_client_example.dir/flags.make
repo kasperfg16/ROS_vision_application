@@ -6,5 +6,5 @@ CXX_FLAGS =  -Wall -pedantic -Wall -pedantic -O2 -g -DNDEBUG   -std=c++11
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/ubuntu/p5_project/src/Universal_Robots_Client_Library/include 
+CXX_INCLUDES = -I/home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/include 
 

@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/ubuntu/p5_project/install_isolated")
+  set(CMAKE_INSTALL_PREFIX "/home/ubuntu/p5_project_group_364/install_isolated")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/ubuntu/p5_project/build_isolated/ur_calibration/gtest/googletest/cmake_install.cmake")
+  include("/home/ubuntu/p5_project_group_364/build_isolated/ur_calibration/gtest/googletest/cmake_install.cmake")
 
 endif()
 

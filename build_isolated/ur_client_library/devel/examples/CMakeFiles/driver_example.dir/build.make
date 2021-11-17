@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/p5_project/src/Universal_Robots_Client_Library
+CMAKE_SOURCE_DIR = /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/p5_project/build_isolated/ur_client_library/devel
+CMAKE_BINARY_DIR = /home/ubuntu/p5_project_group_364/build_isolated/ur_client_library/devel
 
 # Include any dependencies generated for this target.
 include examples/CMakeFiles/driver_example.dir/depend.make
@@ -58,17 +58,17 @@ include examples/CMakeFiles/driver_example.dir/progress.make
 include examples/CMakeFiles/driver_example.dir/flags.make
 
 examples/CMakeFiles/driver_example.dir/full_driver.cpp.o: examples/CMakeFiles/driver_example.dir/flags.make
-examples/CMakeFiles/driver_example.dir/full_driver.cpp.o: /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/examples/full_driver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/CMakeFiles/driver_example.dir/full_driver.cpp.o"
-	cd /home/ubuntu/p5_project/build_isolated/ur_client_library/devel/examples && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/driver_example.dir/full_driver.cpp.o -c /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/examples/full_driver.cpp
+examples/CMakeFiles/driver_example.dir/full_driver.cpp.o: /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/examples/full_driver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project_group_364/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/CMakeFiles/driver_example.dir/full_driver.cpp.o"
+	cd /home/ubuntu/p5_project_group_364/build_isolated/ur_client_library/devel/examples && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/driver_example.dir/full_driver.cpp.o -c /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/examples/full_driver.cpp
 
 examples/CMakeFiles/driver_example.dir/full_driver.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/driver_example.dir/full_driver.cpp.i"
-	cd /home/ubuntu/p5_project/build_isolated/ur_client_library/devel/examples && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/examples/full_driver.cpp > CMakeFiles/driver_example.dir/full_driver.cpp.i
+	cd /home/ubuntu/p5_project_group_364/build_isolated/ur_client_library/devel/examples && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/examples/full_driver.cpp > CMakeFiles/driver_example.dir/full_driver.cpp.i
 
 examples/CMakeFiles/driver_example.dir/full_driver.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/driver_example.dir/full_driver.cpp.s"
-	cd /home/ubuntu/p5_project/build_isolated/ur_client_library/devel/examples && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/examples/full_driver.cpp -o CMakeFiles/driver_example.dir/full_driver.cpp.s
+	cd /home/ubuntu/p5_project_group_364/build_isolated/ur_client_library/devel/examples && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/examples/full_driver.cpp -o CMakeFiles/driver_example.dir/full_driver.cpp.s
 
 # Object files for target driver_example
 driver_example_OBJECTS = \
@@ -81,8 +81,8 @@ examples/driver_example: examples/CMakeFiles/driver_example.dir/full_driver.cpp.
 examples/driver_example: examples/CMakeFiles/driver_example.dir/build.make
 examples/driver_example: liburcl.so
 examples/driver_example: examples/CMakeFiles/driver_example.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ubuntu/p5_project/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable driver_example"
-	cd /home/ubuntu/p5_project/build_isolated/ur_client_library/devel/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/driver_example.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ubuntu/p5_project_group_364/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable driver_example"
+	cd /home/ubuntu/p5_project_group_364/build_isolated/ur_client_library/devel/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/driver_example.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 examples/CMakeFiles/driver_example.dir/build: examples/driver_example
@@ -90,10 +90,10 @@ examples/CMakeFiles/driver_example.dir/build: examples/driver_example
 .PHONY : examples/CMakeFiles/driver_example.dir/build
 
 examples/CMakeFiles/driver_example.dir/clean:
-	cd /home/ubuntu/p5_project/build_isolated/ur_client_library/devel/examples && $(CMAKE_COMMAND) -P CMakeFiles/driver_example.dir/cmake_clean.cmake
+	cd /home/ubuntu/p5_project_group_364/build_isolated/ur_client_library/devel/examples && $(CMAKE_COMMAND) -P CMakeFiles/driver_example.dir/cmake_clean.cmake
 .PHONY : examples/CMakeFiles/driver_example.dir/clean
 
 examples/CMakeFiles/driver_example.dir/depend:
-	cd /home/ubuntu/p5_project/build_isolated/ur_client_library/devel && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/p5_project/src/Universal_Robots_Client_Library /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/examples /home/ubuntu/p5_project/build_isolated/ur_client_library/devel /home/ubuntu/p5_project/build_isolated/ur_client_library/devel/examples /home/ubuntu/p5_project/build_isolated/ur_client_library/devel/examples/CMakeFiles/driver_example.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/p5_project_group_364/build_isolated/ur_client_library/devel && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/examples /home/ubuntu/p5_project_group_364/build_isolated/ur_client_library/devel /home/ubuntu/p5_project_group_364/build_isolated/ur_client_library/devel/examples /home/ubuntu/p5_project_group_364/build_isolated/ur_client_library/devel/examples/CMakeFiles/driver_example.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : examples/CMakeFiles/driver_example.dir/depend
 

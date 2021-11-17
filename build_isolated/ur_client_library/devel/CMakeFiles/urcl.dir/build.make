@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/p5_project/src/Universal_Robots_Client_Library
+CMAKE_SOURCE_DIR = /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/p5_project/build_isolated/ur_client_library/devel
+CMAKE_BINARY_DIR = /home/ubuntu/p5_project_group_364/build_isolated/ur_client_library/devel
 
 # Include any dependencies generated for this target.
 include CMakeFiles/urcl.dir/depend.make
@@ -58,355 +58,355 @@ include CMakeFiles/urcl.dir/progress.make
 include CMakeFiles/urcl.dir/flags.make
 
 CMakeFiles/urcl.dir/src/comm/tcp_socket.cpp.o: CMakeFiles/urcl.dir/flags.make
-CMakeFiles/urcl.dir/src/comm/tcp_socket.cpp.o: /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/comm/tcp_socket.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/urcl.dir/src/comm/tcp_socket.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/comm/tcp_socket.cpp.o -c /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/comm/tcp_socket.cpp
+CMakeFiles/urcl.dir/src/comm/tcp_socket.cpp.o: /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/comm/tcp_socket.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project_group_364/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/urcl.dir/src/comm/tcp_socket.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/comm/tcp_socket.cpp.o -c /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/comm/tcp_socket.cpp
 
 CMakeFiles/urcl.dir/src/comm/tcp_socket.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/urcl.dir/src/comm/tcp_socket.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/comm/tcp_socket.cpp > CMakeFiles/urcl.dir/src/comm/tcp_socket.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/comm/tcp_socket.cpp > CMakeFiles/urcl.dir/src/comm/tcp_socket.cpp.i
 
 CMakeFiles/urcl.dir/src/comm/tcp_socket.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/urcl.dir/src/comm/tcp_socket.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/comm/tcp_socket.cpp -o CMakeFiles/urcl.dir/src/comm/tcp_socket.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/comm/tcp_socket.cpp -o CMakeFiles/urcl.dir/src/comm/tcp_socket.cpp.s
 
 CMakeFiles/urcl.dir/src/comm/tcp_server.cpp.o: CMakeFiles/urcl.dir/flags.make
-CMakeFiles/urcl.dir/src/comm/tcp_server.cpp.o: /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/comm/tcp_server.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/urcl.dir/src/comm/tcp_server.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/comm/tcp_server.cpp.o -c /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/comm/tcp_server.cpp
+CMakeFiles/urcl.dir/src/comm/tcp_server.cpp.o: /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/comm/tcp_server.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project_group_364/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/urcl.dir/src/comm/tcp_server.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/comm/tcp_server.cpp.o -c /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/comm/tcp_server.cpp
 
 CMakeFiles/urcl.dir/src/comm/tcp_server.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/urcl.dir/src/comm/tcp_server.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/comm/tcp_server.cpp > CMakeFiles/urcl.dir/src/comm/tcp_server.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/comm/tcp_server.cpp > CMakeFiles/urcl.dir/src/comm/tcp_server.cpp.i
 
 CMakeFiles/urcl.dir/src/comm/tcp_server.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/urcl.dir/src/comm/tcp_server.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/comm/tcp_server.cpp -o CMakeFiles/urcl.dir/src/comm/tcp_server.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/comm/tcp_server.cpp -o CMakeFiles/urcl.dir/src/comm/tcp_server.cpp.s
 
 CMakeFiles/urcl.dir/src/control/reverse_interface.cpp.o: CMakeFiles/urcl.dir/flags.make
-CMakeFiles/urcl.dir/src/control/reverse_interface.cpp.o: /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/control/reverse_interface.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/urcl.dir/src/control/reverse_interface.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/control/reverse_interface.cpp.o -c /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/control/reverse_interface.cpp
+CMakeFiles/urcl.dir/src/control/reverse_interface.cpp.o: /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/control/reverse_interface.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project_group_364/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/urcl.dir/src/control/reverse_interface.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/control/reverse_interface.cpp.o -c /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/control/reverse_interface.cpp
 
 CMakeFiles/urcl.dir/src/control/reverse_interface.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/urcl.dir/src/control/reverse_interface.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/control/reverse_interface.cpp > CMakeFiles/urcl.dir/src/control/reverse_interface.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/control/reverse_interface.cpp > CMakeFiles/urcl.dir/src/control/reverse_interface.cpp.i
 
 CMakeFiles/urcl.dir/src/control/reverse_interface.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/urcl.dir/src/control/reverse_interface.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/control/reverse_interface.cpp -o CMakeFiles/urcl.dir/src/control/reverse_interface.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/control/reverse_interface.cpp -o CMakeFiles/urcl.dir/src/control/reverse_interface.cpp.s
 
 CMakeFiles/urcl.dir/src/control/script_sender.cpp.o: CMakeFiles/urcl.dir/flags.make
-CMakeFiles/urcl.dir/src/control/script_sender.cpp.o: /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/control/script_sender.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/urcl.dir/src/control/script_sender.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/control/script_sender.cpp.o -c /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/control/script_sender.cpp
+CMakeFiles/urcl.dir/src/control/script_sender.cpp.o: /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/control/script_sender.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project_group_364/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/urcl.dir/src/control/script_sender.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/control/script_sender.cpp.o -c /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/control/script_sender.cpp
 
 CMakeFiles/urcl.dir/src/control/script_sender.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/urcl.dir/src/control/script_sender.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/control/script_sender.cpp > CMakeFiles/urcl.dir/src/control/script_sender.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/control/script_sender.cpp > CMakeFiles/urcl.dir/src/control/script_sender.cpp.i
 
 CMakeFiles/urcl.dir/src/control/script_sender.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/urcl.dir/src/control/script_sender.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/control/script_sender.cpp -o CMakeFiles/urcl.dir/src/control/script_sender.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/control/script_sender.cpp -o CMakeFiles/urcl.dir/src/control/script_sender.cpp.s
 
 CMakeFiles/urcl.dir/src/control/trajectory_point_interface.cpp.o: CMakeFiles/urcl.dir/flags.make
-CMakeFiles/urcl.dir/src/control/trajectory_point_interface.cpp.o: /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/control/trajectory_point_interface.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/urcl.dir/src/control/trajectory_point_interface.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/control/trajectory_point_interface.cpp.o -c /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/control/trajectory_point_interface.cpp
+CMakeFiles/urcl.dir/src/control/trajectory_point_interface.cpp.o: /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/control/trajectory_point_interface.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project_group_364/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/urcl.dir/src/control/trajectory_point_interface.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/control/trajectory_point_interface.cpp.o -c /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/control/trajectory_point_interface.cpp
 
 CMakeFiles/urcl.dir/src/control/trajectory_point_interface.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/urcl.dir/src/control/trajectory_point_interface.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/control/trajectory_point_interface.cpp > CMakeFiles/urcl.dir/src/control/trajectory_point_interface.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/control/trajectory_point_interface.cpp > CMakeFiles/urcl.dir/src/control/trajectory_point_interface.cpp.i
 
 CMakeFiles/urcl.dir/src/control/trajectory_point_interface.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/urcl.dir/src/control/trajectory_point_interface.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/control/trajectory_point_interface.cpp -o CMakeFiles/urcl.dir/src/control/trajectory_point_interface.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/control/trajectory_point_interface.cpp -o CMakeFiles/urcl.dir/src/control/trajectory_point_interface.cpp.s
 
 CMakeFiles/urcl.dir/src/primary/primary_package.cpp.o: CMakeFiles/urcl.dir/flags.make
-CMakeFiles/urcl.dir/src/primary/primary_package.cpp.o: /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/primary/primary_package.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/urcl.dir/src/primary/primary_package.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/primary/primary_package.cpp.o -c /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/primary/primary_package.cpp
+CMakeFiles/urcl.dir/src/primary/primary_package.cpp.o: /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/primary/primary_package.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project_group_364/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/urcl.dir/src/primary/primary_package.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/primary/primary_package.cpp.o -c /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/primary/primary_package.cpp
 
 CMakeFiles/urcl.dir/src/primary/primary_package.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/urcl.dir/src/primary/primary_package.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/primary/primary_package.cpp > CMakeFiles/urcl.dir/src/primary/primary_package.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/primary/primary_package.cpp > CMakeFiles/urcl.dir/src/primary/primary_package.cpp.i
 
 CMakeFiles/urcl.dir/src/primary/primary_package.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/urcl.dir/src/primary/primary_package.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/primary/primary_package.cpp -o CMakeFiles/urcl.dir/src/primary/primary_package.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/primary/primary_package.cpp -o CMakeFiles/urcl.dir/src/primary/primary_package.cpp.s
 
 CMakeFiles/urcl.dir/src/primary/robot_message.cpp.o: CMakeFiles/urcl.dir/flags.make
-CMakeFiles/urcl.dir/src/primary/robot_message.cpp.o: /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/primary/robot_message.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/urcl.dir/src/primary/robot_message.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/primary/robot_message.cpp.o -c /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/primary/robot_message.cpp
+CMakeFiles/urcl.dir/src/primary/robot_message.cpp.o: /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/primary/robot_message.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project_group_364/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/urcl.dir/src/primary/robot_message.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/primary/robot_message.cpp.o -c /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/primary/robot_message.cpp
 
 CMakeFiles/urcl.dir/src/primary/robot_message.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/urcl.dir/src/primary/robot_message.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/primary/robot_message.cpp > CMakeFiles/urcl.dir/src/primary/robot_message.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/primary/robot_message.cpp > CMakeFiles/urcl.dir/src/primary/robot_message.cpp.i
 
 CMakeFiles/urcl.dir/src/primary/robot_message.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/urcl.dir/src/primary/robot_message.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/primary/robot_message.cpp -o CMakeFiles/urcl.dir/src/primary/robot_message.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/primary/robot_message.cpp -o CMakeFiles/urcl.dir/src/primary/robot_message.cpp.s
 
 CMakeFiles/urcl.dir/src/primary/robot_state.cpp.o: CMakeFiles/urcl.dir/flags.make
-CMakeFiles/urcl.dir/src/primary/robot_state.cpp.o: /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/primary/robot_state.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/urcl.dir/src/primary/robot_state.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/primary/robot_state.cpp.o -c /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/primary/robot_state.cpp
+CMakeFiles/urcl.dir/src/primary/robot_state.cpp.o: /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/primary/robot_state.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project_group_364/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/urcl.dir/src/primary/robot_state.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/primary/robot_state.cpp.o -c /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/primary/robot_state.cpp
 
 CMakeFiles/urcl.dir/src/primary/robot_state.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/urcl.dir/src/primary/robot_state.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/primary/robot_state.cpp > CMakeFiles/urcl.dir/src/primary/robot_state.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/primary/robot_state.cpp > CMakeFiles/urcl.dir/src/primary/robot_state.cpp.i
 
 CMakeFiles/urcl.dir/src/primary/robot_state.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/urcl.dir/src/primary/robot_state.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/primary/robot_state.cpp -o CMakeFiles/urcl.dir/src/primary/robot_state.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/primary/robot_state.cpp -o CMakeFiles/urcl.dir/src/primary/robot_state.cpp.s
 
 CMakeFiles/urcl.dir/src/primary/robot_message/version_message.cpp.o: CMakeFiles/urcl.dir/flags.make
-CMakeFiles/urcl.dir/src/primary/robot_message/version_message.cpp.o: /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/primary/robot_message/version_message.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/urcl.dir/src/primary/robot_message/version_message.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/primary/robot_message/version_message.cpp.o -c /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/primary/robot_message/version_message.cpp
+CMakeFiles/urcl.dir/src/primary/robot_message/version_message.cpp.o: /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/primary/robot_message/version_message.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project_group_364/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/urcl.dir/src/primary/robot_message/version_message.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/primary/robot_message/version_message.cpp.o -c /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/primary/robot_message/version_message.cpp
 
 CMakeFiles/urcl.dir/src/primary/robot_message/version_message.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/urcl.dir/src/primary/robot_message/version_message.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/primary/robot_message/version_message.cpp > CMakeFiles/urcl.dir/src/primary/robot_message/version_message.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/primary/robot_message/version_message.cpp > CMakeFiles/urcl.dir/src/primary/robot_message/version_message.cpp.i
 
 CMakeFiles/urcl.dir/src/primary/robot_message/version_message.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/urcl.dir/src/primary/robot_message/version_message.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/primary/robot_message/version_message.cpp -o CMakeFiles/urcl.dir/src/primary/robot_message/version_message.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/primary/robot_message/version_message.cpp -o CMakeFiles/urcl.dir/src/primary/robot_message/version_message.cpp.s
 
 CMakeFiles/urcl.dir/src/primary/robot_state/kinematics_info.cpp.o: CMakeFiles/urcl.dir/flags.make
-CMakeFiles/urcl.dir/src/primary/robot_state/kinematics_info.cpp.o: /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/primary/robot_state/kinematics_info.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/urcl.dir/src/primary/robot_state/kinematics_info.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/primary/robot_state/kinematics_info.cpp.o -c /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/primary/robot_state/kinematics_info.cpp
+CMakeFiles/urcl.dir/src/primary/robot_state/kinematics_info.cpp.o: /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/primary/robot_state/kinematics_info.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project_group_364/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/urcl.dir/src/primary/robot_state/kinematics_info.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/primary/robot_state/kinematics_info.cpp.o -c /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/primary/robot_state/kinematics_info.cpp
 
 CMakeFiles/urcl.dir/src/primary/robot_state/kinematics_info.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/urcl.dir/src/primary/robot_state/kinematics_info.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/primary/robot_state/kinematics_info.cpp > CMakeFiles/urcl.dir/src/primary/robot_state/kinematics_info.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/primary/robot_state/kinematics_info.cpp > CMakeFiles/urcl.dir/src/primary/robot_state/kinematics_info.cpp.i
 
 CMakeFiles/urcl.dir/src/primary/robot_state/kinematics_info.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/urcl.dir/src/primary/robot_state/kinematics_info.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/primary/robot_state/kinematics_info.cpp -o CMakeFiles/urcl.dir/src/primary/robot_state/kinematics_info.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/primary/robot_state/kinematics_info.cpp -o CMakeFiles/urcl.dir/src/primary/robot_state/kinematics_info.cpp.s
 
 CMakeFiles/urcl.dir/src/rtde/control_package_pause.cpp.o: CMakeFiles/urcl.dir/flags.make
-CMakeFiles/urcl.dir/src/rtde/control_package_pause.cpp.o: /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/rtde/control_package_pause.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/urcl.dir/src/rtde/control_package_pause.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/rtde/control_package_pause.cpp.o -c /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/rtde/control_package_pause.cpp
+CMakeFiles/urcl.dir/src/rtde/control_package_pause.cpp.o: /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/rtde/control_package_pause.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project_group_364/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/urcl.dir/src/rtde/control_package_pause.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/rtde/control_package_pause.cpp.o -c /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/rtde/control_package_pause.cpp
 
 CMakeFiles/urcl.dir/src/rtde/control_package_pause.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/urcl.dir/src/rtde/control_package_pause.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/rtde/control_package_pause.cpp > CMakeFiles/urcl.dir/src/rtde/control_package_pause.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/rtde/control_package_pause.cpp > CMakeFiles/urcl.dir/src/rtde/control_package_pause.cpp.i
 
 CMakeFiles/urcl.dir/src/rtde/control_package_pause.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/urcl.dir/src/rtde/control_package_pause.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/rtde/control_package_pause.cpp -o CMakeFiles/urcl.dir/src/rtde/control_package_pause.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/rtde/control_package_pause.cpp -o CMakeFiles/urcl.dir/src/rtde/control_package_pause.cpp.s
 
 CMakeFiles/urcl.dir/src/rtde/control_package_setup_inputs.cpp.o: CMakeFiles/urcl.dir/flags.make
-CMakeFiles/urcl.dir/src/rtde/control_package_setup_inputs.cpp.o: /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/rtde/control_package_setup_inputs.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/urcl.dir/src/rtde/control_package_setup_inputs.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/rtde/control_package_setup_inputs.cpp.o -c /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/rtde/control_package_setup_inputs.cpp
+CMakeFiles/urcl.dir/src/rtde/control_package_setup_inputs.cpp.o: /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/rtde/control_package_setup_inputs.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project_group_364/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/urcl.dir/src/rtde/control_package_setup_inputs.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/rtde/control_package_setup_inputs.cpp.o -c /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/rtde/control_package_setup_inputs.cpp
 
 CMakeFiles/urcl.dir/src/rtde/control_package_setup_inputs.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/urcl.dir/src/rtde/control_package_setup_inputs.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/rtde/control_package_setup_inputs.cpp > CMakeFiles/urcl.dir/src/rtde/control_package_setup_inputs.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/rtde/control_package_setup_inputs.cpp > CMakeFiles/urcl.dir/src/rtde/control_package_setup_inputs.cpp.i
 
 CMakeFiles/urcl.dir/src/rtde/control_package_setup_inputs.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/urcl.dir/src/rtde/control_package_setup_inputs.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/rtde/control_package_setup_inputs.cpp -o CMakeFiles/urcl.dir/src/rtde/control_package_setup_inputs.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/rtde/control_package_setup_inputs.cpp -o CMakeFiles/urcl.dir/src/rtde/control_package_setup_inputs.cpp.s
 
 CMakeFiles/urcl.dir/src/rtde/control_package_setup_outputs.cpp.o: CMakeFiles/urcl.dir/flags.make
-CMakeFiles/urcl.dir/src/rtde/control_package_setup_outputs.cpp.o: /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/rtde/control_package_setup_outputs.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/urcl.dir/src/rtde/control_package_setup_outputs.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/rtde/control_package_setup_outputs.cpp.o -c /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/rtde/control_package_setup_outputs.cpp
+CMakeFiles/urcl.dir/src/rtde/control_package_setup_outputs.cpp.o: /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/rtde/control_package_setup_outputs.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project_group_364/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/urcl.dir/src/rtde/control_package_setup_outputs.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/rtde/control_package_setup_outputs.cpp.o -c /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/rtde/control_package_setup_outputs.cpp
 
 CMakeFiles/urcl.dir/src/rtde/control_package_setup_outputs.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/urcl.dir/src/rtde/control_package_setup_outputs.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/rtde/control_package_setup_outputs.cpp > CMakeFiles/urcl.dir/src/rtde/control_package_setup_outputs.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/rtde/control_package_setup_outputs.cpp > CMakeFiles/urcl.dir/src/rtde/control_package_setup_outputs.cpp.i
 
 CMakeFiles/urcl.dir/src/rtde/control_package_setup_outputs.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/urcl.dir/src/rtde/control_package_setup_outputs.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/rtde/control_package_setup_outputs.cpp -o CMakeFiles/urcl.dir/src/rtde/control_package_setup_outputs.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/rtde/control_package_setup_outputs.cpp -o CMakeFiles/urcl.dir/src/rtde/control_package_setup_outputs.cpp.s
 
 CMakeFiles/urcl.dir/src/rtde/control_package_start.cpp.o: CMakeFiles/urcl.dir/flags.make
-CMakeFiles/urcl.dir/src/rtde/control_package_start.cpp.o: /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/rtde/control_package_start.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/urcl.dir/src/rtde/control_package_start.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/rtde/control_package_start.cpp.o -c /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/rtde/control_package_start.cpp
+CMakeFiles/urcl.dir/src/rtde/control_package_start.cpp.o: /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/rtde/control_package_start.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project_group_364/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/urcl.dir/src/rtde/control_package_start.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/rtde/control_package_start.cpp.o -c /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/rtde/control_package_start.cpp
 
 CMakeFiles/urcl.dir/src/rtde/control_package_start.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/urcl.dir/src/rtde/control_package_start.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/rtde/control_package_start.cpp > CMakeFiles/urcl.dir/src/rtde/control_package_start.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/rtde/control_package_start.cpp > CMakeFiles/urcl.dir/src/rtde/control_package_start.cpp.i
 
 CMakeFiles/urcl.dir/src/rtde/control_package_start.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/urcl.dir/src/rtde/control_package_start.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/rtde/control_package_start.cpp -o CMakeFiles/urcl.dir/src/rtde/control_package_start.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/rtde/control_package_start.cpp -o CMakeFiles/urcl.dir/src/rtde/control_package_start.cpp.s
 
 CMakeFiles/urcl.dir/src/rtde/data_package.cpp.o: CMakeFiles/urcl.dir/flags.make
-CMakeFiles/urcl.dir/src/rtde/data_package.cpp.o: /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/rtde/data_package.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/urcl.dir/src/rtde/data_package.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/rtde/data_package.cpp.o -c /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/rtde/data_package.cpp
+CMakeFiles/urcl.dir/src/rtde/data_package.cpp.o: /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/rtde/data_package.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project_group_364/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/urcl.dir/src/rtde/data_package.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/rtde/data_package.cpp.o -c /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/rtde/data_package.cpp
 
 CMakeFiles/urcl.dir/src/rtde/data_package.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/urcl.dir/src/rtde/data_package.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/rtde/data_package.cpp > CMakeFiles/urcl.dir/src/rtde/data_package.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/rtde/data_package.cpp > CMakeFiles/urcl.dir/src/rtde/data_package.cpp.i
 
 CMakeFiles/urcl.dir/src/rtde/data_package.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/urcl.dir/src/rtde/data_package.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/rtde/data_package.cpp -o CMakeFiles/urcl.dir/src/rtde/data_package.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/rtde/data_package.cpp -o CMakeFiles/urcl.dir/src/rtde/data_package.cpp.s
 
 CMakeFiles/urcl.dir/src/rtde/get_urcontrol_version.cpp.o: CMakeFiles/urcl.dir/flags.make
-CMakeFiles/urcl.dir/src/rtde/get_urcontrol_version.cpp.o: /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/rtde/get_urcontrol_version.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/urcl.dir/src/rtde/get_urcontrol_version.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/rtde/get_urcontrol_version.cpp.o -c /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/rtde/get_urcontrol_version.cpp
+CMakeFiles/urcl.dir/src/rtde/get_urcontrol_version.cpp.o: /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/rtde/get_urcontrol_version.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project_group_364/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/urcl.dir/src/rtde/get_urcontrol_version.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/rtde/get_urcontrol_version.cpp.o -c /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/rtde/get_urcontrol_version.cpp
 
 CMakeFiles/urcl.dir/src/rtde/get_urcontrol_version.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/urcl.dir/src/rtde/get_urcontrol_version.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/rtde/get_urcontrol_version.cpp > CMakeFiles/urcl.dir/src/rtde/get_urcontrol_version.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/rtde/get_urcontrol_version.cpp > CMakeFiles/urcl.dir/src/rtde/get_urcontrol_version.cpp.i
 
 CMakeFiles/urcl.dir/src/rtde/get_urcontrol_version.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/urcl.dir/src/rtde/get_urcontrol_version.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/rtde/get_urcontrol_version.cpp -o CMakeFiles/urcl.dir/src/rtde/get_urcontrol_version.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/rtde/get_urcontrol_version.cpp -o CMakeFiles/urcl.dir/src/rtde/get_urcontrol_version.cpp.s
 
 CMakeFiles/urcl.dir/src/rtde/request_protocol_version.cpp.o: CMakeFiles/urcl.dir/flags.make
-CMakeFiles/urcl.dir/src/rtde/request_protocol_version.cpp.o: /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/rtde/request_protocol_version.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/urcl.dir/src/rtde/request_protocol_version.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/rtde/request_protocol_version.cpp.o -c /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/rtde/request_protocol_version.cpp
+CMakeFiles/urcl.dir/src/rtde/request_protocol_version.cpp.o: /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/rtde/request_protocol_version.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project_group_364/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/urcl.dir/src/rtde/request_protocol_version.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/rtde/request_protocol_version.cpp.o -c /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/rtde/request_protocol_version.cpp
 
 CMakeFiles/urcl.dir/src/rtde/request_protocol_version.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/urcl.dir/src/rtde/request_protocol_version.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/rtde/request_protocol_version.cpp > CMakeFiles/urcl.dir/src/rtde/request_protocol_version.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/rtde/request_protocol_version.cpp > CMakeFiles/urcl.dir/src/rtde/request_protocol_version.cpp.i
 
 CMakeFiles/urcl.dir/src/rtde/request_protocol_version.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/urcl.dir/src/rtde/request_protocol_version.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/rtde/request_protocol_version.cpp -o CMakeFiles/urcl.dir/src/rtde/request_protocol_version.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/rtde/request_protocol_version.cpp -o CMakeFiles/urcl.dir/src/rtde/request_protocol_version.cpp.s
 
 CMakeFiles/urcl.dir/src/rtde/rtde_package.cpp.o: CMakeFiles/urcl.dir/flags.make
-CMakeFiles/urcl.dir/src/rtde/rtde_package.cpp.o: /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/rtde/rtde_package.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/urcl.dir/src/rtde/rtde_package.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/rtde/rtde_package.cpp.o -c /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/rtde/rtde_package.cpp
+CMakeFiles/urcl.dir/src/rtde/rtde_package.cpp.o: /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/rtde/rtde_package.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project_group_364/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/urcl.dir/src/rtde/rtde_package.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/rtde/rtde_package.cpp.o -c /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/rtde/rtde_package.cpp
 
 CMakeFiles/urcl.dir/src/rtde/rtde_package.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/urcl.dir/src/rtde/rtde_package.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/rtde/rtde_package.cpp > CMakeFiles/urcl.dir/src/rtde/rtde_package.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/rtde/rtde_package.cpp > CMakeFiles/urcl.dir/src/rtde/rtde_package.cpp.i
 
 CMakeFiles/urcl.dir/src/rtde/rtde_package.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/urcl.dir/src/rtde/rtde_package.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/rtde/rtde_package.cpp -o CMakeFiles/urcl.dir/src/rtde/rtde_package.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/rtde/rtde_package.cpp -o CMakeFiles/urcl.dir/src/rtde/rtde_package.cpp.s
 
 CMakeFiles/urcl.dir/src/rtde/text_message.cpp.o: CMakeFiles/urcl.dir/flags.make
-CMakeFiles/urcl.dir/src/rtde/text_message.cpp.o: /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/rtde/text_message.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/urcl.dir/src/rtde/text_message.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/rtde/text_message.cpp.o -c /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/rtde/text_message.cpp
+CMakeFiles/urcl.dir/src/rtde/text_message.cpp.o: /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/rtde/text_message.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project_group_364/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/urcl.dir/src/rtde/text_message.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/rtde/text_message.cpp.o -c /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/rtde/text_message.cpp
 
 CMakeFiles/urcl.dir/src/rtde/text_message.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/urcl.dir/src/rtde/text_message.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/rtde/text_message.cpp > CMakeFiles/urcl.dir/src/rtde/text_message.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/rtde/text_message.cpp > CMakeFiles/urcl.dir/src/rtde/text_message.cpp.i
 
 CMakeFiles/urcl.dir/src/rtde/text_message.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/urcl.dir/src/rtde/text_message.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/rtde/text_message.cpp -o CMakeFiles/urcl.dir/src/rtde/text_message.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/rtde/text_message.cpp -o CMakeFiles/urcl.dir/src/rtde/text_message.cpp.s
 
 CMakeFiles/urcl.dir/src/rtde/rtde_client.cpp.o: CMakeFiles/urcl.dir/flags.make
-CMakeFiles/urcl.dir/src/rtde/rtde_client.cpp.o: /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/rtde/rtde_client.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/urcl.dir/src/rtde/rtde_client.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/rtde/rtde_client.cpp.o -c /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/rtde/rtde_client.cpp
+CMakeFiles/urcl.dir/src/rtde/rtde_client.cpp.o: /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/rtde/rtde_client.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project_group_364/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/urcl.dir/src/rtde/rtde_client.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/rtde/rtde_client.cpp.o -c /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/rtde/rtde_client.cpp
 
 CMakeFiles/urcl.dir/src/rtde/rtde_client.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/urcl.dir/src/rtde/rtde_client.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/rtde/rtde_client.cpp > CMakeFiles/urcl.dir/src/rtde/rtde_client.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/rtde/rtde_client.cpp > CMakeFiles/urcl.dir/src/rtde/rtde_client.cpp.i
 
 CMakeFiles/urcl.dir/src/rtde/rtde_client.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/urcl.dir/src/rtde/rtde_client.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/rtde/rtde_client.cpp -o CMakeFiles/urcl.dir/src/rtde/rtde_client.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/rtde/rtde_client.cpp -o CMakeFiles/urcl.dir/src/rtde/rtde_client.cpp.s
 
 CMakeFiles/urcl.dir/src/ur/ur_driver.cpp.o: CMakeFiles/urcl.dir/flags.make
-CMakeFiles/urcl.dir/src/ur/ur_driver.cpp.o: /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/ur/ur_driver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/urcl.dir/src/ur/ur_driver.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/ur/ur_driver.cpp.o -c /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/ur/ur_driver.cpp
+CMakeFiles/urcl.dir/src/ur/ur_driver.cpp.o: /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/ur/ur_driver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project_group_364/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/urcl.dir/src/ur/ur_driver.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/ur/ur_driver.cpp.o -c /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/ur/ur_driver.cpp
 
 CMakeFiles/urcl.dir/src/ur/ur_driver.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/urcl.dir/src/ur/ur_driver.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/ur/ur_driver.cpp > CMakeFiles/urcl.dir/src/ur/ur_driver.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/ur/ur_driver.cpp > CMakeFiles/urcl.dir/src/ur/ur_driver.cpp.i
 
 CMakeFiles/urcl.dir/src/ur/ur_driver.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/urcl.dir/src/ur/ur_driver.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/ur/ur_driver.cpp -o CMakeFiles/urcl.dir/src/ur/ur_driver.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/ur/ur_driver.cpp -o CMakeFiles/urcl.dir/src/ur/ur_driver.cpp.s
 
 CMakeFiles/urcl.dir/src/ur/calibration_checker.cpp.o: CMakeFiles/urcl.dir/flags.make
-CMakeFiles/urcl.dir/src/ur/calibration_checker.cpp.o: /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/ur/calibration_checker.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/urcl.dir/src/ur/calibration_checker.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/ur/calibration_checker.cpp.o -c /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/ur/calibration_checker.cpp
+CMakeFiles/urcl.dir/src/ur/calibration_checker.cpp.o: /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/ur/calibration_checker.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project_group_364/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/urcl.dir/src/ur/calibration_checker.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/ur/calibration_checker.cpp.o -c /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/ur/calibration_checker.cpp
 
 CMakeFiles/urcl.dir/src/ur/calibration_checker.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/urcl.dir/src/ur/calibration_checker.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/ur/calibration_checker.cpp > CMakeFiles/urcl.dir/src/ur/calibration_checker.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/ur/calibration_checker.cpp > CMakeFiles/urcl.dir/src/ur/calibration_checker.cpp.i
 
 CMakeFiles/urcl.dir/src/ur/calibration_checker.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/urcl.dir/src/ur/calibration_checker.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/ur/calibration_checker.cpp -o CMakeFiles/urcl.dir/src/ur/calibration_checker.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/ur/calibration_checker.cpp -o CMakeFiles/urcl.dir/src/ur/calibration_checker.cpp.s
 
 CMakeFiles/urcl.dir/src/ur/dashboard_client.cpp.o: CMakeFiles/urcl.dir/flags.make
-CMakeFiles/urcl.dir/src/ur/dashboard_client.cpp.o: /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/ur/dashboard_client.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/urcl.dir/src/ur/dashboard_client.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/ur/dashboard_client.cpp.o -c /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/ur/dashboard_client.cpp
+CMakeFiles/urcl.dir/src/ur/dashboard_client.cpp.o: /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/ur/dashboard_client.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project_group_364/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/urcl.dir/src/ur/dashboard_client.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/ur/dashboard_client.cpp.o -c /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/ur/dashboard_client.cpp
 
 CMakeFiles/urcl.dir/src/ur/dashboard_client.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/urcl.dir/src/ur/dashboard_client.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/ur/dashboard_client.cpp > CMakeFiles/urcl.dir/src/ur/dashboard_client.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/ur/dashboard_client.cpp > CMakeFiles/urcl.dir/src/ur/dashboard_client.cpp.i
 
 CMakeFiles/urcl.dir/src/ur/dashboard_client.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/urcl.dir/src/ur/dashboard_client.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/ur/dashboard_client.cpp -o CMakeFiles/urcl.dir/src/ur/dashboard_client.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/ur/dashboard_client.cpp -o CMakeFiles/urcl.dir/src/ur/dashboard_client.cpp.s
 
 CMakeFiles/urcl.dir/src/ur/tool_communication.cpp.o: CMakeFiles/urcl.dir/flags.make
-CMakeFiles/urcl.dir/src/ur/tool_communication.cpp.o: /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/ur/tool_communication.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/urcl.dir/src/ur/tool_communication.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/ur/tool_communication.cpp.o -c /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/ur/tool_communication.cpp
+CMakeFiles/urcl.dir/src/ur/tool_communication.cpp.o: /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/ur/tool_communication.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project_group_364/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/urcl.dir/src/ur/tool_communication.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/ur/tool_communication.cpp.o -c /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/ur/tool_communication.cpp
 
 CMakeFiles/urcl.dir/src/ur/tool_communication.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/urcl.dir/src/ur/tool_communication.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/ur/tool_communication.cpp > CMakeFiles/urcl.dir/src/ur/tool_communication.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/ur/tool_communication.cpp > CMakeFiles/urcl.dir/src/ur/tool_communication.cpp.i
 
 CMakeFiles/urcl.dir/src/ur/tool_communication.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/urcl.dir/src/ur/tool_communication.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/ur/tool_communication.cpp -o CMakeFiles/urcl.dir/src/ur/tool_communication.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/ur/tool_communication.cpp -o CMakeFiles/urcl.dir/src/ur/tool_communication.cpp.s
 
 CMakeFiles/urcl.dir/src/rtde/rtde_writer.cpp.o: CMakeFiles/urcl.dir/flags.make
-CMakeFiles/urcl.dir/src/rtde/rtde_writer.cpp.o: /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/rtde/rtde_writer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/urcl.dir/src/rtde/rtde_writer.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/rtde/rtde_writer.cpp.o -c /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/rtde/rtde_writer.cpp
+CMakeFiles/urcl.dir/src/rtde/rtde_writer.cpp.o: /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/rtde/rtde_writer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project_group_364/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/urcl.dir/src/rtde/rtde_writer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/rtde/rtde_writer.cpp.o -c /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/rtde/rtde_writer.cpp
 
 CMakeFiles/urcl.dir/src/rtde/rtde_writer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/urcl.dir/src/rtde/rtde_writer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/rtde/rtde_writer.cpp > CMakeFiles/urcl.dir/src/rtde/rtde_writer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/rtde/rtde_writer.cpp > CMakeFiles/urcl.dir/src/rtde/rtde_writer.cpp.i
 
 CMakeFiles/urcl.dir/src/rtde/rtde_writer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/urcl.dir/src/rtde/rtde_writer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/rtde/rtde_writer.cpp -o CMakeFiles/urcl.dir/src/rtde/rtde_writer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/rtde/rtde_writer.cpp -o CMakeFiles/urcl.dir/src/rtde/rtde_writer.cpp.s
 
 CMakeFiles/urcl.dir/src/default_log_handler.cpp.o: CMakeFiles/urcl.dir/flags.make
-CMakeFiles/urcl.dir/src/default_log_handler.cpp.o: /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/default_log_handler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/urcl.dir/src/default_log_handler.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/default_log_handler.cpp.o -c /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/default_log_handler.cpp
+CMakeFiles/urcl.dir/src/default_log_handler.cpp.o: /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/default_log_handler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project_group_364/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/urcl.dir/src/default_log_handler.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/default_log_handler.cpp.o -c /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/default_log_handler.cpp
 
 CMakeFiles/urcl.dir/src/default_log_handler.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/urcl.dir/src/default_log_handler.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/default_log_handler.cpp > CMakeFiles/urcl.dir/src/default_log_handler.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/default_log_handler.cpp > CMakeFiles/urcl.dir/src/default_log_handler.cpp.i
 
 CMakeFiles/urcl.dir/src/default_log_handler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/urcl.dir/src/default_log_handler.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/default_log_handler.cpp -o CMakeFiles/urcl.dir/src/default_log_handler.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/default_log_handler.cpp -o CMakeFiles/urcl.dir/src/default_log_handler.cpp.s
 
 CMakeFiles/urcl.dir/src/log.cpp.o: CMakeFiles/urcl.dir/flags.make
-CMakeFiles/urcl.dir/src/log.cpp.o: /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/log.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/urcl.dir/src/log.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/log.cpp.o -c /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/log.cpp
+CMakeFiles/urcl.dir/src/log.cpp.o: /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/log.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/p5_project_group_364/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/urcl.dir/src/log.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/urcl.dir/src/log.cpp.o -c /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/log.cpp
 
 CMakeFiles/urcl.dir/src/log.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/urcl.dir/src/log.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/log.cpp > CMakeFiles/urcl.dir/src/log.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/log.cpp > CMakeFiles/urcl.dir/src/log.cpp.i
 
 CMakeFiles/urcl.dir/src/log.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/urcl.dir/src/log.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/src/log.cpp -o CMakeFiles/urcl.dir/src/log.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/src/log.cpp -o CMakeFiles/urcl.dir/src/log.cpp.s
 
 # Object files for target urcl
 urcl_OBJECTS = \
@@ -470,7 +470,7 @@ liburcl.so: CMakeFiles/urcl.dir/src/default_log_handler.cpp.o
 liburcl.so: CMakeFiles/urcl.dir/src/log.cpp.o
 liburcl.so: CMakeFiles/urcl.dir/build.make
 liburcl.so: CMakeFiles/urcl.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ubuntu/p5_project/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Linking CXX shared library liburcl.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ubuntu/p5_project_group_364/build_isolated/ur_client_library/devel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Linking CXX shared library liburcl.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/urcl.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -483,6 +483,6 @@ CMakeFiles/urcl.dir/clean:
 .PHONY : CMakeFiles/urcl.dir/clean
 
 CMakeFiles/urcl.dir/depend:
-	cd /home/ubuntu/p5_project/build_isolated/ur_client_library/devel && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/p5_project/src/Universal_Robots_Client_Library /home/ubuntu/p5_project/src/Universal_Robots_Client_Library /home/ubuntu/p5_project/build_isolated/ur_client_library/devel /home/ubuntu/p5_project/build_isolated/ur_client_library/devel /home/ubuntu/p5_project/build_isolated/ur_client_library/devel/CMakeFiles/urcl.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/p5_project_group_364/build_isolated/ur_client_library/devel && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library /home/ubuntu/p5_project_group_364/build_isolated/ur_client_library/devel /home/ubuntu/p5_project_group_364/build_isolated/ur_client_library/devel /home/ubuntu/p5_project_group_364/build_isolated/ur_client_library/devel/CMakeFiles/urcl.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/urcl.dir/depend
 

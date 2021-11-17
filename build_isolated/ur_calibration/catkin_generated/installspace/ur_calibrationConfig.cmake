@@ -67,14 +67,14 @@ set(ur_calibration_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(ur_calibration_SOURCE_PREFIX /home/ubuntu/p5_project/src/Universal_Robots_ROS_Driver/ur_calibration)
-  set(ur_calibration_DEVEL_PREFIX /home/ubuntu/p5_project/devel_isolated/ur_calibration)
+  set(ur_calibration_SOURCE_PREFIX /home/ubuntu/p5_project_group_364/src/Universal_Robots_ROS_Driver/ur_calibration)
+  set(ur_calibration_DEVEL_PREFIX /home/ubuntu/p5_project_group_364/devel_isolated/ur_calibration)
   set(ur_calibration_INSTALL_PREFIX "")
   set(ur_calibration_PREFIX ${ur_calibration_DEVEL_PREFIX})
 else()
   set(ur_calibration_SOURCE_PREFIX "")
   set(ur_calibration_DEVEL_PREFIX "")
-  set(ur_calibration_INSTALL_PREFIX /home/ubuntu/p5_project/install_isolated)
+  set(ur_calibration_INSTALL_PREFIX /home/ubuntu/p5_project_group_364/install_isolated)
   set(ur_calibration_PREFIX ${ur_calibration_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(ur_calibration_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/usr/lib/x86_64-linux-gnu/cmake/yaml-cpp/../../../../../include;/opt/ros/noetic/include;/usr/include " STREQUAL " ")
+if(NOT "/usr/lib/x86_64-linux-gnu/cmake/yaml-cpp/../../../../../include;/home/ubuntu/p5_project_group_364/devel_isolated/ur_client_library/include;/usr/include " STREQUAL " ")
   set(ur_calibration_INCLUDE_DIRS "")
-  set(_include_dirs "/usr/lib/x86_64-linux-gnu/cmake/yaml-cpp/../../../../../include;/opt/ros/noetic/include;/usr/include")
+  set(_include_dirs "/usr/lib/x86_64-linux-gnu/cmake/yaml-cpp/../../../../../include;/home/ubuntu/p5_project_group_364/devel_isolated/ur_client_library/include;/usr/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -116,7 +116,7 @@ if(NOT "/usr/lib/x86_64-linux-gnu/cmake/yaml-cpp/../../../../../include;/opt/ros
   endforeach()
 endif()
 
-set(libraries "/usr/lib/x86_64-linux-gnu/libyaml-cpp.so.0.6.2;/opt/ros/noetic/lib/x86_64-linux-gnu/liburcl.so")
+set(libraries "/usr/lib/x86_64-linux-gnu/libyaml-cpp.so.0.6.2;/home/ubuntu/p5_project_group_364/devel_isolated/ur_client_library/lib/liburcl.so")
 foreach(library ${libraries})
   # keep build configuration keywords, target names and absolute libraries as-is
   if("${library}" MATCHES "^(debug|optimized|general)$")
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/ubuntu/p5_project/install_isolated/lib;/home/ubuntu/p5_project/devel_isolated/ur_calibration/lib;/home/ubuntu/p5_project/devel_isolated/ur_robot_driver/lib;/home/ubuntu/p5_project/devel_isolated/ur_kinematics/lib;/home/ubuntu/p5_project/devel_isolated/ur_gazebo/lib;/home/ubuntu/p5_project/devel_isolated/ur5_cam_moveit_config/lib;/home/ubuntu/p5_project/devel_isolated/ur_description/lib;/home/ubuntu/p5_project/devel_isolated/ur_dashboard_msgs/lib;/home/ubuntu/p5_project/devel_isolated/universal_robots/lib;/home/ubuntu/p5_project/devel_isolated/controller_stopper/lib;/opt/ros/noetic/lib)
+    foreach(path /home/ubuntu/p5_project_group_364/install_isolated/lib;/home/ubuntu/p5_project_group_364/devel_isolated/ur_robot_driver/lib;/home/ubuntu/p5_project_group_364/devel_isolated/ur_kinematics/lib;/home/ubuntu/p5_project_group_364/devel_isolated/ur_gazebo/lib;/home/ubuntu/p5_project_group_364/devel_isolated/ur5_cam_moveit_config/lib;/home/ubuntu/p5_project_group_364/devel_isolated/ur_description/lib;/home/ubuntu/p5_project_group_364/devel_isolated/ur_dashboard_msgs/lib;/home/ubuntu/p5_project_group_364/devel_isolated/universal_robots/lib;/home/ubuntu/p5_project_group_364/devel_isolated/controller_stopper/lib;/home/ubuntu/p5_project/devel_isolated/vision_application_movit_config/lib;/home/ubuntu/p5_project/devel_isolated/ur_calibration/lib;/home/ubuntu/p5_project/devel_isolated/ur_robot_driver/lib;/home/ubuntu/p5_project/devel_isolated/ur_kinematics/lib;/home/ubuntu/p5_project/devel_isolated/ur_gazebo/lib;/home/ubuntu/p5_project/devel_isolated/ur5_cam_moveit_config/lib;/home/ubuntu/p5_project/devel_isolated/ur_description/lib;/home/ubuntu/p5_project/devel_isolated/ur_dashboard_msgs/lib;/home/ubuntu/p5_project/devel_isolated/universal_robots/lib;/home/ubuntu/p5_project/devel_isolated/controller_stopper/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

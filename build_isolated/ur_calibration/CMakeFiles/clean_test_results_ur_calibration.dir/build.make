@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/p5_project/src/Universal_Robots_ROS_Driver/ur_calibration
+CMAKE_SOURCE_DIR = /home/ubuntu/p5_project_group_364/src/Universal_Robots_ROS_Driver/ur_calibration
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/p5_project/build_isolated/ur_calibration
+CMAKE_BINARY_DIR = /home/ubuntu/p5_project_group_364/build_isolated/ur_calibration
 
 # Utility rule file for clean_test_results_ur_calibration.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/ubuntu/p5_project/build_isolated/ur_calibration
 include CMakeFiles/clean_test_results_ur_calibration.dir/progress.make
 
 CMakeFiles/clean_test_results_ur_calibration:
-	/usr/bin/python3 /opt/ros/noetic/share/catkin/cmake/test/remove_test_results.py /home/ubuntu/p5_project/build_isolated/ur_calibration/test_results/ur_calibration
+	/usr/bin/python3 /opt/ros/noetic/share/catkin/cmake/test/remove_test_results.py /home/ubuntu/p5_project_group_364/build_isolated/ur_calibration/test_results/ur_calibration
 
 clean_test_results_ur_calibration: CMakeFiles/clean_test_results_ur_calibration
 clean_test_results_ur_calibration: CMakeFiles/clean_test_results_ur_calibration.dir/build.make
@@ -71,6 +71,6 @@ CMakeFiles/clean_test_results_ur_calibration.dir/clean:
 .PHONY : CMakeFiles/clean_test_results_ur_calibration.dir/clean
 
 CMakeFiles/clean_test_results_ur_calibration.dir/depend:
-	cd /home/ubuntu/p5_project/build_isolated/ur_calibration && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/p5_project/src/Universal_Robots_ROS_Driver/ur_calibration /home/ubuntu/p5_project/src/Universal_Robots_ROS_Driver/ur_calibration /home/ubuntu/p5_project/build_isolated/ur_calibration /home/ubuntu/p5_project/build_isolated/ur_calibration /home/ubuntu/p5_project/build_isolated/ur_calibration/CMakeFiles/clean_test_results_ur_calibration.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/p5_project_group_364/build_isolated/ur_calibration && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/p5_project_group_364/src/Universal_Robots_ROS_Driver/ur_calibration /home/ubuntu/p5_project_group_364/src/Universal_Robots_ROS_Driver/ur_calibration /home/ubuntu/p5_project_group_364/build_isolated/ur_calibration /home/ubuntu/p5_project_group_364/build_isolated/ur_calibration /home/ubuntu/p5_project_group_364/build_isolated/ur_calibration/CMakeFiles/clean_test_results_ur_calibration.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/clean_test_results_ur_calibration.dir/depend
 

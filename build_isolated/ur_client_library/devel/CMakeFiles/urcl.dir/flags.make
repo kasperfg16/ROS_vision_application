@@ -6,5 +6,5 @@ CXX_FLAGS =  -Wall -pedantic -O2 -g -DNDEBUG -fPIC   -Wall -Wextra -Wno-unused-p
 
 CXX_DEFINES = -Durcl_EXPORTS
 
-CXX_INCLUDES = -I/home/ubuntu/p5_project/src/Universal_Robots_Client_Library/include 
+CXX_INCLUDES = -I/home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/include 
 

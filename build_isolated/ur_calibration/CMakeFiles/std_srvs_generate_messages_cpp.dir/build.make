@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/p5_project/src/Universal_Robots_ROS_Driver/ur_calibration
+CMAKE_SOURCE_DIR = /home/ubuntu/p5_project_group_364/src/Universal_Robots_ROS_Driver/ur_calibration
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/p5_project/build_isolated/ur_calibration
+CMAKE_BINARY_DIR = /home/ubuntu/p5_project_group_364/build_isolated/ur_calibration
 
 # Utility rule file for std_srvs_generate_messages_cpp.
 
@@ -67,6 +67,6 @@ CMakeFiles/std_srvs_generate_messages_cpp.dir/clean:
 .PHONY : CMakeFiles/std_srvs_generate_messages_cpp.dir/clean
 
 CMakeFiles/std_srvs_generate_messages_cpp.dir/depend:
-	cd /home/ubuntu/p5_project/build_isolated/ur_calibration && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/p5_project/src/Universal_Robots_ROS_Driver/ur_calibration /home/ubuntu/p5_project/src/Universal_Robots_ROS_Driver/ur_calibration /home/ubuntu/p5_project/build_isolated/ur_calibration /home/ubuntu/p5_project/build_isolated/ur_calibration /home/ubuntu/p5_project/build_isolated/ur_calibration/CMakeFiles/std_srvs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/p5_project_group_364/build_isolated/ur_calibration && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/p5_project_group_364/src/Universal_Robots_ROS_Driver/ur_calibration /home/ubuntu/p5_project_group_364/src/Universal_Robots_ROS_Driver/ur_calibration /home/ubuntu/p5_project_group_364/build_isolated/ur_calibration /home/ubuntu/p5_project_group_364/build_isolated/ur_calibration /home/ubuntu/p5_project_group_364/build_isolated/ur_calibration/CMakeFiles/std_srvs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/std_srvs_generate_messages_cpp.dir/depend
 

@@ -1,8 +1,8 @@
-# Install script for directory: /home/ubuntu/p5_project/src/Universal_Robots_Client_Library/examples
+# Install script for directory: /home/ubuntu/p5_project_group_364/src/Universal_Robots_Client_Library/examples
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/ubuntu/p5_project/devel_isolated/ur_client_library")
+  set(CMAKE_INSTALL_PREFIX "/home/ubuntu/p5_project_group_364/devel_isolated/ur_client_library")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
