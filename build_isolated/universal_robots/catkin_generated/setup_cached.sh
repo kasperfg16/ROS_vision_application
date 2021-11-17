@@ -7,3 +7,6 @@
 # new environment variables
 
 # modified environment variables
+export CMAKE_PREFIX_PATH="/home/ubuntu/p5_project_group_364/devel_isolated/universal_robots:$CMAKE_PREFIX_PATH"
+export ROSLISP_PACKAGE_DIRECTORIES="/home/ubuntu/p5_project_group_364/devel_isolated/universal_robots/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
+export ROS_PACKAGE_PATH="/home/ubuntu/p5_project_group_364/src/fmauch_universal_robot/universal_robots:$ROS_PACKAGE_PATH"

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/p5_project/src/fmauch_universal_robot/universal_robots
+CMAKE_SOURCE_DIR = /home/ubuntu/p5_project_group_364/src/fmauch_universal_robot/universal_robots
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/p5_project/build_isolated/universal_robots
+CMAKE_BINARY_DIR = /home/ubuntu/p5_project_group_364/build_isolated/universal_robots
 
 # Utility rule file for doxygen.
 
@@ -67,6 +67,6 @@ CMakeFiles/doxygen.dir/clean:
 .PHONY : CMakeFiles/doxygen.dir/clean
 
 CMakeFiles/doxygen.dir/depend:
-	cd /home/ubuntu/p5_project/build_isolated/universal_robots && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/p5_project/src/fmauch_universal_robot/universal_robots /home/ubuntu/p5_project/src/fmauch_universal_robot/universal_robots /home/ubuntu/p5_project/build_isolated/universal_robots /home/ubuntu/p5_project/build_isolated/universal_robots /home/ubuntu/p5_project/build_isolated/universal_robots/CMakeFiles/doxygen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/p5_project_group_364/build_isolated/universal_robots && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/p5_project_group_364/src/fmauch_universal_robot/universal_robots /home/ubuntu/p5_project_group_364/src/fmauch_universal_robot/universal_robots /home/ubuntu/p5_project_group_364/build_isolated/universal_robots /home/ubuntu/p5_project_group_364/build_isolated/universal_robots /home/ubuntu/p5_project_group_364/build_isolated/universal_robots/CMakeFiles/doxygen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/doxygen.dir/depend
 

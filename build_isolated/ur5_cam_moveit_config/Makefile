@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/p5_project/src/fmauch_universal_robot/ur5_cam_moveit_config
+CMAKE_SOURCE_DIR = /home/ubuntu/p5_project_group_364/src/fmauch_universal_robot/ur5_cam_moveit_config
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/p5_project/build_isolated/ur5_cam_moveit_config
+CMAKE_BINARY_DIR = /home/ubuntu/p5_project_group_364/build_isolated/ur5_cam_moveit_config
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,9 +137,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/p5_project/build_isolated/ur5_cam_moveit_config/CMakeFiles /home/ubuntu/p5_project/build_isolated/ur5_cam_moveit_config/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/p5_project_group_364/build_isolated/ur5_cam_moveit_config/CMakeFiles /home/ubuntu/p5_project_group_364/build_isolated/ur5_cam_moveit_config/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/p5_project/build_isolated/ur5_cam_moveit_config/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/p5_project_group_364/build_isolated/ur5_cam_moveit_config/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

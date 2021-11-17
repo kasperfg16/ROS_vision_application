@@ -6,5 +6,5 @@ CXX_FLAGS =   -std=c++11
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"ur_calibration\"
 
-CXX_INCLUDES = -I/home/ubuntu/p5_project/src/Universal_Robots_ROS_Driver/ur_calibration/include -I/home/ubuntu/p5_project/src/Universal_Robots_ROS_Driver/ur_robot_driver/include -I/home/ubuntu/p5_project/devel_isolated/ur_dashboard_msgs/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/eigen3 -I/usr/lib/x86_64-linux-gnu/cmake/yaml-cpp/../../../../../include -isystem /opt/ros/noetic/include 
+CXX_INCLUDES = -I/home/ubuntu/p5_project_group_364/src/Universal_Robots_ROS_Driver/ur_calibration/include -I/home/ubuntu/p5_project_group_364/src/Universal_Robots_ROS_Driver/ur_robot_driver/include -I/home/ubuntu/p5_project_group_364/devel_isolated/ur_dashboard_msgs/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/eigen3 -I/usr/lib/x86_64-linux-gnu/cmake/yaml-cpp/../../../../../include -isystem /home/ubuntu/p5_project_group_364/devel_isolated/ur_client_library/include 
 

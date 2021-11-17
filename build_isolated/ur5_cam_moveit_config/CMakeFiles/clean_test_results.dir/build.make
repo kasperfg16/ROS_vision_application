@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/p5_project/src/fmauch_universal_robot/ur5_cam_moveit_config
+CMAKE_SOURCE_DIR = /home/ubuntu/p5_project_group_364/src/fmauch_universal_robot/ur5_cam_moveit_config
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/p5_project/build_isolated/ur5_cam_moveit_config
+CMAKE_BINARY_DIR = /home/ubuntu/p5_project_group_364/build_isolated/ur5_cam_moveit_config
 
 # Utility rule file for clean_test_results.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/ubuntu/p5_project/build_isolated/ur5_cam_moveit_config
 include CMakeFiles/clean_test_results.dir/progress.make
 
 CMakeFiles/clean_test_results:
-	/usr/bin/python3 /opt/ros/noetic/share/catkin/cmake/test/remove_test_results.py /home/ubuntu/p5_project/build_isolated/ur5_cam_moveit_config/test_results
+	/usr/bin/python3 /opt/ros/noetic/share/catkin/cmake/test/remove_test_results.py /home/ubuntu/p5_project_group_364/build_isolated/ur5_cam_moveit_config/test_results
 
 clean_test_results: CMakeFiles/clean_test_results
 clean_test_results: CMakeFiles/clean_test_results.dir/build.make
@@ -71,6 +71,6 @@ CMakeFiles/clean_test_results.dir/clean:
 .PHONY : CMakeFiles/clean_test_results.dir/clean
 
 CMakeFiles/clean_test_results.dir/depend:
-	cd /home/ubuntu/p5_project/build_isolated/ur5_cam_moveit_config && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/p5_project/src/fmauch_universal_robot/ur5_cam_moveit_config /home/ubuntu/p5_project/src/fmauch_universal_robot/ur5_cam_moveit_config /home/ubuntu/p5_project/build_isolated/ur5_cam_moveit_config /home/ubuntu/p5_project/build_isolated/ur5_cam_moveit_config /home/ubuntu/p5_project/build_isolated/ur5_cam_moveit_config/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/p5_project_group_364/build_isolated/ur5_cam_moveit_config && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/p5_project_group_364/src/fmauch_universal_robot/ur5_cam_moveit_config /home/ubuntu/p5_project_group_364/src/fmauch_universal_robot/ur5_cam_moveit_config /home/ubuntu/p5_project_group_364/build_isolated/ur5_cam_moveit_config /home/ubuntu/p5_project_group_364/build_isolated/ur5_cam_moveit_config /home/ubuntu/p5_project_group_364/build_isolated/ur5_cam_moveit_config/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/clean_test_results.dir/depend
 

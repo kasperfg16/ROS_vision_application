@@ -1,6 +1,9 @@
 devel/
+devel_isolated/
 logs/
 build/
+build_isolated/
+.vscode/ilo9
 bin/
 lib/
 msg_gen/

@@ -7,4 +7,7 @@
 # new environment variables
 
 # modified environment variables
-export PWD='/home/ubuntu/p5_project/build_isolated/controller_stopper'
+export CMAKE_PREFIX_PATH="/home/ubuntu/p5_project_group_364/devel_isolated/controller_stopper:$CMAKE_PREFIX_PATH"
+export PWD='/home/ubuntu/p5_project_group_364/build_isolated/controller_stopper'
+export ROSLISP_PACKAGE_DIRECTORIES="/home/ubuntu/p5_project_group_364/devel_isolated/controller_stopper/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
+export ROS_PACKAGE_PATH="/home/ubuntu/p5_project_group_364/src/Universal_Robots_ROS_Driver/controller_stopper:$ROS_PACKAGE_PATH"

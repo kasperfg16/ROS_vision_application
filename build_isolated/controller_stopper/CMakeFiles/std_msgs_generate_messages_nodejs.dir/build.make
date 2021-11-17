@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/p5_project/src/Universal_Robots_ROS_Driver/controller_stopper
+CMAKE_SOURCE_DIR = /home/ubuntu/p5_project_group_364/src/Universal_Robots_ROS_Driver/controller_stopper
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/p5_project/build_isolated/controller_stopper
+CMAKE_BINARY_DIR = /home/ubuntu/p5_project_group_364/build_isolated/controller_stopper
 
 # Utility rule file for std_msgs_generate_messages_nodejs.
 
@@ -67,6 +67,6 @@ CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean:
 .PHONY : CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
 
 CMakeFiles/std_msgs_generate_messages_nodejs.dir/depend:
-	cd /home/ubuntu/p5_project/build_isolated/controller_stopper && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/p5_project/src/Universal_Robots_ROS_Driver/controller_stopper /home/ubuntu/p5_project/src/Universal_Robots_ROS_Driver/controller_stopper /home/ubuntu/p5_project/build_isolated/controller_stopper /home/ubuntu/p5_project/build_isolated/controller_stopper /home/ubuntu/p5_project/build_isolated/controller_stopper/CMakeFiles/std_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/p5_project_group_364/build_isolated/controller_stopper && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/p5_project_group_364/src/Universal_Robots_ROS_Driver/controller_stopper /home/ubuntu/p5_project_group_364/src/Universal_Robots_ROS_Driver/controller_stopper /home/ubuntu/p5_project_group_364/build_isolated/controller_stopper /home/ubuntu/p5_project_group_364/build_isolated/controller_stopper /home/ubuntu/p5_project_group_364/build_isolated/controller_stopper/CMakeFiles/std_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/std_msgs_generate_messages_nodejs.dir/depend
 

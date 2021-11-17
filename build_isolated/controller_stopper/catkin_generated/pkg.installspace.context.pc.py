@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "controller_manager_msgs;roscpp;std_msgs".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "controller_stopper"
-PROJECT_SPACE_DIR = "/home/ubuntu/p5_project/install_isolated"
+PROJECT_SPACE_DIR = "/home/ubuntu/p5_project_group_364/install_isolated"
 PROJECT_VERSION = "2.0.0"

@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/ubuntu/p5_project/src/Universal_Robots_ROS_Driver/controller_stopper/include/controller_stopper/controller_stopper.h
+/home/ubuntu/p5_project_group_364/src/Universal_Robots_ROS_Driver/controller_stopper/include/controller_stopper/controller_stopper.h
 ros/ros.h
 -
 std_msgs/Bool.h
 -
 
-/home/ubuntu/p5_project/src/Universal_Robots_ROS_Driver/controller_stopper/src/controller_stopper.cpp
+/home/ubuntu/p5_project_group_364/src/Universal_Robots_ROS_Driver/controller_stopper/src/controller_stopper.cpp
 controller_stopper/controller_stopper.h
 -
 controller_manager_msgs/SwitchController.h
@@ -22,7 +22,7 @@ controller_manager_msgs/ListControllers.h
 ios
 -
 
-/home/ubuntu/p5_project/src/Universal_Robots_ROS_Driver/controller_stopper/src/controller_stopper_node.cpp
+/home/ubuntu/p5_project_group_364/src/Universal_Robots_ROS_Driver/controller_stopper/src/controller_stopper_node.cpp
 ros/ros.h
 -
 controller_stopper/controller_stopper.h

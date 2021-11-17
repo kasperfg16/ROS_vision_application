@@ -67,14 +67,14 @@ set(controller_stopper_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(controller_stopper_SOURCE_PREFIX /home/ubuntu/p5_project/src/Universal_Robots_ROS_Driver/controller_stopper)
-  set(controller_stopper_DEVEL_PREFIX /home/ubuntu/p5_project/devel_isolated/controller_stopper)
+  set(controller_stopper_SOURCE_PREFIX /home/ubuntu/p5_project_group_364/src/Universal_Robots_ROS_Driver/controller_stopper)
+  set(controller_stopper_DEVEL_PREFIX /home/ubuntu/p5_project_group_364/devel_isolated/controller_stopper)
   set(controller_stopper_INSTALL_PREFIX "")
   set(controller_stopper_PREFIX ${controller_stopper_DEVEL_PREFIX})
 else()
   set(controller_stopper_SOURCE_PREFIX "")
   set(controller_stopper_DEVEL_PREFIX "")
-  set(controller_stopper_INSTALL_PREFIX /home/ubuntu/p5_project/install_isolated)
+  set(controller_stopper_INSTALL_PREFIX /home/ubuntu/p5_project_group_364/install_isolated)
   set(controller_stopper_PREFIX ${controller_stopper_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/ubuntu/p5_project/install_isolated/lib;/home/ubuntu/p5_project/devel_isolated/ur_calibration/lib;/home/ubuntu/p5_project/devel_isolated/ur_robot_driver/lib;/home/ubuntu/p5_project/devel_isolated/ur_kinematics/lib;/home/ubuntu/p5_project/devel_isolated/ur_gazebo/lib;/home/ubuntu/p5_project/devel_isolated/ur5_cam_moveit_config/lib;/home/ubuntu/p5_project/devel_isolated/ur_description/lib;/home/ubuntu/p5_project/devel_isolated/ur_dashboard_msgs/lib;/home/ubuntu/p5_project/devel_isolated/universal_robots/lib;/home/ubuntu/p5_project/devel_isolated/controller_stopper/lib;/opt/ros/noetic/lib)
+    foreach(path /home/ubuntu/p5_project_group_364/install_isolated/lib;/home/ubuntu/p5_project/devel_isolated/vision_application_movit_config/lib;/home/ubuntu/p5_project/devel_isolated/ur_calibration/lib;/home/ubuntu/p5_project/devel_isolated/ur_robot_driver/lib;/home/ubuntu/p5_project/devel_isolated/ur_kinematics/lib;/home/ubuntu/p5_project/devel_isolated/ur_gazebo/lib;/home/ubuntu/p5_project/devel_isolated/ur5_cam_moveit_config/lib;/home/ubuntu/p5_project/devel_isolated/ur_description/lib;/home/ubuntu/p5_project/devel_isolated/ur_dashboard_msgs/lib;/home/ubuntu/p5_project/devel_isolated/universal_robots/lib;/home/ubuntu/p5_project/devel_isolated/controller_stopper/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

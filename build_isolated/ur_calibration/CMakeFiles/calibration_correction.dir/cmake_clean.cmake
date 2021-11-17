@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/p5_project/devel_isolated/ur_calibration/lib/ur_calibration/calibration_correction"
-  "/home/ubuntu/p5_project/devel_isolated/ur_calibration/lib/ur_calibration/calibration_correction.pdb"
+  "/home/ubuntu/p5_project_group_364/devel_isolated/ur_calibration/lib/ur_calibration/calibration_correction"
+  "/home/ubuntu/p5_project_group_364/devel_isolated/ur_calibration/lib/ur_calibration/calibration_correction.pdb"
   "CMakeFiles/calibration_correction.dir/src/calibration.cpp.o"
   "CMakeFiles/calibration_correction.dir/src/calibration_consumer.cpp.o"
   "CMakeFiles/calibration_correction.dir/src/calibration_correction.cpp.o"

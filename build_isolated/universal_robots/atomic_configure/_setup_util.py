@@ -268,7 +268,7 @@ if __name__ == '__main__':
 
         if not args.local:
             # environment at generation time
-            CMAKE_PREFIX_PATH = r'/home/ubuntu/p5_project/devel_isolated/ur_calibration;/home/ubuntu/p5_project/devel_isolated/ur_robot_driver;/home/ubuntu/p5_project/devel_isolated/ur_kinematics;/home/ubuntu/p5_project/devel_isolated/ur_gazebo;/home/ubuntu/p5_project/devel_isolated/ur5_cam_moveit_config;/home/ubuntu/p5_project/devel_isolated/ur_description;/home/ubuntu/p5_project/devel_isolated/ur_dashboard_msgs;/home/ubuntu/p5_project/devel_isolated/universal_robots;/home/ubuntu/p5_project/devel_isolated/controller_stopper;/opt/ros/noetic;/home/ubuntu/p5_project/devel_isolated/ur_client_library'.split(';')
+            CMAKE_PREFIX_PATH = r'/home/ubuntu/p5_project_group_364/devel_isolated/controller_stopper;/home/ubuntu/p5_project/devel_isolated/vision_application_movit_config;/home/ubuntu/p5_project/devel_isolated/ur_calibration;/home/ubuntu/p5_project/devel_isolated/ur_robot_driver;/home/ubuntu/p5_project/devel_isolated/ur_kinematics;/home/ubuntu/p5_project/devel_isolated/ur_gazebo;/home/ubuntu/p5_project/devel_isolated/ur5_cam_moveit_config;/home/ubuntu/p5_project/devel_isolated/ur_description;/home/ubuntu/p5_project/devel_isolated/ur_dashboard_msgs;/home/ubuntu/p5_project/devel_isolated/universal_robots;/home/ubuntu/p5_project/devel_isolated/controller_stopper;/opt/ros/noetic;/home/ubuntu/p5_project/devel_isolated/ur_client_library'.split(';')
         else:
             # don't consider any other prefix path than this one
             CMAKE_PREFIX_PATH = []
