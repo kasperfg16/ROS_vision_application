@@ -1,1 +1,0 @@
-set(ORDERED_PATHS "/home/ubuntu/p5_project/devel_isolated/ur_robot_driver/lib;/opt/ros/noetic/lib")
