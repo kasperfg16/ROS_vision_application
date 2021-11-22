@@ -4,7 +4,7 @@ Repo containing program that handles motion planning and execution of ur5 manipu
 
 ## Disclaimer
 
-- This code is only tested and developed for Ubuntu 20.04 using ROS1 and MoveIt1. All other configurations is used at own risk ;-)
+- This code is only tested and developed for Ubuntu 20.04 using ROS1 and MoveIt1. All other configurations is used at own risk and suffering ;-)
 
 ## How to setup
 
