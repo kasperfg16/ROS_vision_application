@@ -1,18 +1,21 @@
 # reference: 
 
-import sys
 import copy
-from moveit_commander.planning_scene_interface import PlanningSceneInterface
-import rospy
+import sys
+from math import atan2, pi, sqrt
+
+import geometry_msgs.msg
 import moveit_commander
 import moveit_msgs.msg
-import geometry_msgs.msg
-from math import atan2, pi, sqrt
+import numpy as np
+import rospy
+from moveit_commander.conversions import pose_to_list
+from moveit_commander.move_group import MoveGroupCommander
+from moveit_commander.planning_scene_interface import PlanningSceneInterface
 from rospy.rostime import Time
 from std_msgs.msg import String
-from moveit_commander.conversions import pose_to_list
-import numpy as np
 from tf.transformations import *
+
 
 def all_close(goal, actual, tolerance):
   all_equal = True
@@ -49,13 +52,17 @@ class MoveGroupPythonIntefaceTutorial(object):
     ## to the world surrounding the robot:
     scene = moveit_commander.PlanningSceneInterface()
 
+    
+
     ## Instantiate a `MoveGroupCommander`_ object.  This object is an interface
     ## to one group of joints.  In this case the group is the joints in the Panda
     ## arm so we set ``group_name = panda_arm``. If you are using a different robot,
     ## you should change this value to the name of your robot arm planning group.
     ## This interface can be used to plan and execute motions on the Panda:
-    group_name = "ur5_cam"
-    group = moveit_commander.MoveGroupCommander(group_name)
+    ur5_cam_name = "ur5_cam"
+    group = moveit_commander.MoveGroupCommander(ur5_cam_name)
+
+    #group.set_planner_id("geometric::AnytimePathShortening")
 
     ## We create a `DisplayTrajectory`_ publisher which is used later to publish
     ## trajectories for RViz to visualize:
@@ -98,14 +105,12 @@ class MoveGroupPythonIntefaceTutorial(object):
     self.eef_link = eef_link
     self.group_names = group_names
   
-  def add_static_scene(self):
+  def add_static_scene(self, posBacklight):
     '''
     Adds collision objects to the planning scene
     '''
 
-    group_name = "ur5_cam"
-    group = moveit_commander.MoveGroupCommander(group_name)
-    planning_frame = group.get_planning_frame()
+    planning_frame = self.planning_frame
     scene = self.scene
     
     ## Add tables as collision object
@@ -124,9 +129,9 @@ class MoveGroupPythonIntefaceTutorial(object):
     pose_backlight = geometry_msgs.msg.PoseStamped()
     backlight_id = 'backlight'
     pose_backlight.header.frame_id = planning_frame
-    pose_backlight.pose.position.x = 0.36
-    pose_backlight.pose.position.y = 0.16
-    pose_backlight.pose.position.z = 0.0
+    pose_backlight.pose.position.x = posBacklight[0]
+    pose_backlight.pose.position.y = posBacklight[1]
+    pose_backlight.pose.position.z = posBacklight[2]
 
     # Convert from euler angles to quaterion
     rotx = pi/2
@@ -197,11 +202,14 @@ class MoveGroupPythonIntefaceTutorial(object):
     # Calculate quaternions from euler angles
     
     pose_goal = geometry_msgs.msg.Pose()
+    rotx = np.deg2rad(rotx)
+    roty = np.deg2rad(roty)
+    rotz = np.deg2rad(rotz)
     q_rot = quaternion_from_euler(rotx, roty, rotz)
-    #pose_goal.orientation.x = q_rot[0]
-    #pose_goal.orientation.y = q_rot[1]
-    #pose_goal.orientation.z = q_rot[2]
-    #pose_goal.orientation.w = q_rot[3]
+    pose_goal.orientation.x = q_rot[0]
+    pose_goal.orientation.y = q_rot[1]
+    pose_goal.orientation.z = q_rot[2]
+    pose_goal.orientation.w = q_rot[3]
     pose_goal.position.x = x
     pose_goal.position.y = y
     pose_goal.position.z = z
@@ -349,7 +357,7 @@ class MoveGroupPythonIntefaceTutorial(object):
     return False
     ## END_SUB_TUTORIAL
 
-def startHemisPath(tutorial):
+def startHemisPath(tutorial, veiwPoint):
   # The goal here is to autogenerate a path in the shape of an hemisphere (with the object in the center),
   # that the robot can follow. We can then change the size of the hemisphere to
   # test from different distances. Furthermore, the lights should always point at the object,
@@ -365,7 +373,7 @@ def startHemisPath(tutorial):
   xyzrpw = [] # List that contains the XYZ Coordinate and Roll Pitch Yaw Coordinates.
   i = 0 # Used for indexing xyzrpw list.
 
-  base_xyz = [530, 160, 155] # Reference frame (Center of Hemisphere)
+  base_xyz = veiwPoint # Reference frame (Center of Hemisphere)
   step = 0.5
 
   # Generating the 3D points for an hemisphere
@@ -431,23 +439,33 @@ def startHemisPath(tutorial):
   print("path generated")
 
   for i in range(len(xyzrpw)):
-    print("Move to new goal")
     #rospy.sleep(1)
+    500
     x = xyzrpw[i][0] * 0.001
     y = xyzrpw[i][1] * 0.001
     z = xyzrpw[i][2] * 0.001
     rotx = xyzrpw[i][3]
     roty = xyzrpw[i][4]
     rotz = xyzrpw[i][5]
+    print("")
+    print("Move to new goal")
+    print("x: ", x)
+    print("y: ", y)
+    print("z: ", z)
+    print("rotx: ", rotx)
+    print("roty: ", roty)
+    print("rotz: ", rotz)
     tutorial.go_to_pose_goal(x, y, z, rotx, roty, rotz)
 
 def main():
   try:
+    posBacklight = [0.500, 0.160, 0]
+    veiwPoint = [500, 160, 155]
     tutorial = MoveGroupPythonIntefaceTutorial()
-    tutorial.add_static_scene()
+    tutorial.add_static_scene(posBacklight)
     input()
     print("Starting hemissphere path")
-    startHemisPath(tutorial)
+    startHemisPath(tutorial, veiwPoint)
 
   except rospy.ROSInterruptException:
     return

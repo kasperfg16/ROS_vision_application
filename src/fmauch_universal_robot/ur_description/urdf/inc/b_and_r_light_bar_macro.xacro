@@ -35,7 +35,7 @@
 
     <!-- TCP frame -->
     <joint name="${prefix}tcp_joint" type="fixed">
-      <origin rpy="-1.57079633 0 -1.57079633" xyz="0 0 0.049"/>
+      <origin rpy="-1.57079633 0 0" xyz="0 0.0862 0"/>
       <parent link="${prefix}b_and_r_light_bar"/>
       <child link="${prefix}tcp"/>
     </joint>
