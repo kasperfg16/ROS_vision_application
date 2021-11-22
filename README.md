@@ -20,7 +20,7 @@ Repo containing program that handles motion planning and execution of ur5 manipu
     sudo apt install ros-noetic-moveit
     ```
 
-    b) Build the catkinworkspace
+    b) Build the catkin workspace
 
     ```bash
     cd p5_project_group_364/
@@ -39,3 +39,9 @@ Repo containing program that handles motion planning and execution of ur5 manipu
     ```bash
     roslaunch vision_application_movit_config demo.launch
     ```
+
+## References
+
+1. MoveIt
+
+    <http://docs.ros.org/en/kinetic/api/moveit_tutorials/html/index.html>

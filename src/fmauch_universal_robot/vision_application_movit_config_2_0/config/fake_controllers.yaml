@@ -1,0 +1,17 @@
+controller_list:
+  - name: fake_ur5_cam_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - ur5_cam_1_shoulder_pan_joint
+      - ur5_cam_1_shoulder_lift_joint
+      - ur5_cam_1_elbow_joint
+      - ur5_cam_1_wrist_1_joint
+      - ur5_cam_1_wrist_2_joint
+      - ur5_cam_1_wrist_3_joint
+  - name: fake_mount_and_cam_controller
+    type: $(arg fake_execution_type)
+    joints:
+      []
+initial:  # Define initial robot poses per group
+  - group: ur5_cam
+    pose: home

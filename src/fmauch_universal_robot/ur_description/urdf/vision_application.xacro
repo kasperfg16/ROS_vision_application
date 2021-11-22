@@ -5,23 +5,23 @@
   <!-- define the ur5's position and orientation in the world coordinate system -->
 
   <!-- Specify name for ur5 with camera-->
-  <xacro:ur5_cam prefix="ur5_cam_1" />
+  <xacro:ur5_cam prefix="ur5_cam_1_" />
 
   <!-- Specify name for ur5 with light-->
-  <xacro:ur5_light_bar prefix="ur5_light_bar_1" />
+  <xacro:ur5_light_bar prefix="ur5_light_bar_1_" />
 
   <!-- define the ur5's position and orientation in the world coordinate system -->
   <link name="point_0" />
   <joint name="ur5_cam_1_point_0_joint" type="fixed">
     <parent link="point_0" />
-    <child link="ur5_cam_1base_link" /> <!-- TODO: check base_link name of robot -->
+    <child link="ur5_cam_1_base_link" /> <!-- TODO: check base_link name of robot -->
     <origin xyz="0 0.0 0" rpy="0.0 0.0 0.0" />
   </joint>
 
   <!-- define the ur5's position and orientation in the world coordinate system -->
   <joint name="ur5_light_bar_1_point_0_joint" type="fixed">
     <parent link="point_0" />
-    <child link="ur5_light_bar_1base_link" /> <!-- TODO: check base_link name of robot -->
+    <child link="ur5_light_bar_1_base_link" /> <!-- TODO: check base_link name of robot -->
     <origin xyz="1.1945 0.176 -0.07" rpy="0.0 0.0 0.0" />
   </joint>
 

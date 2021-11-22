@@ -8,7 +8,7 @@
       <!-- The parent link must be read from the robot model it is attached to. -->
       <parent link="${connected_to}" />
       <child link="${prefix}mount" />
-      <!-- The tool is directly attached to the flange. -->
+      <!-- The mount is posiontin in reltaion to the flange. -->
       <origin rpy="-1.57079633 0 -0.785398163" xyz="0 0 0" />
     </joint>
     <link name="${prefix}mount">

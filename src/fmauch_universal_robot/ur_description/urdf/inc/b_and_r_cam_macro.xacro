@@ -8,7 +8,7 @@
       <!-- The parent link must be read from the robot model it is attached to. -->
       <parent link="${connected_to}"/>
       <child link="${prefix}b_and_r_cam"/>
-      <!-- The tool is directly attached to the flange. -->
+      <!-- Tool position in relation to mount -->
       <origin rpy="-1.57079633 0 0" xyz="0.0 -0.063 -0.053"/>
     </joint>
     <link name="${prefix}b_and_r_cam">
@@ -27,7 +27,7 @@
           scale="0.001 0.001 0.001"/>
         </geometry>
         <material>
-          <color rgba="0.8 0.7 0 1"/>
+          <color rgba="1 0.4 0 1"/>
         </material>
       </collision>
     </link>

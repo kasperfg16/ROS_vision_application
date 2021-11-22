@@ -6,6 +6,6 @@
 
   <!-- Load the controllers -->
   <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
-    output="screen" args="ur5_cam_controller ur5_light_bar_controller "/>
+    output="screen" args="ur5_cam_controller ur5_light_bar_controller mount_and_cam_controller mount_and_light_bar_controller "/>
 
 </launch>

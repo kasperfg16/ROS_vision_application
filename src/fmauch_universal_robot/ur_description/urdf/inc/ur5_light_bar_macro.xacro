@@ -5,12 +5,13 @@
     <xacro:include filename="$(find ur_description)/urdf/inc/b_and_r_light_bar_macro.xacro" />
     <xacro:include filename="$(find ur_description)/urdf/inc/mount_macro.xacro" />
 
+    <!-- Use the macro for an ur5 robot and name it -->
     <xacro:ur5_robot prefix="${prefix}" />
 
-    <!-- Specify where the mount is connected to -->
+    <!-- Use the macro for a mount, Specify where the mount is connected to the ur5 -->
     <xacro:mount prefix="${prefix}" connected_to="${prefix}tool0" />
 
-    <!-- Specify where the camera is connected to -->
+    <!-- Use the macro for a light bar, Specify where the light bar is connected to the mount -->
     <xacro:b_and_r_light_bar prefix="${prefix}" connected_to="${prefix}mount" />
 
   </xacro:macro>
