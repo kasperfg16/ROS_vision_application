@@ -1,0 +1,18 @@
+# Define the goal
+uint8 x
+uint8 y
+uint8 z
+uint8 rotx
+uint8 roty
+uint8 rotz
+---
+# Define the result
+uint8 x
+uint8 y
+uint8 z
+uint8 rotx
+uint8 roty
+uint8 rotz
+---
+# Define a feedback message
+string robot_moved_str
