@@ -11,6 +11,7 @@ class robotposition(object):
     _result = messages.msg.posResult()
     _goal = messages.msg.posGoal()
 
+
     def __init__(self, name):
         self._action_name = name
         # Create and start the action server
@@ -19,21 +20,29 @@ class robotposition(object):
         
     def execute_cb(self, goal):
         r = rospy.Rate(1)
+        self._as.set_succeeded()
         success = True
+
+        self._goal_x = goal.x
+        self._goal.y = goal.y
+        self._goal.z = goal.z
+        self._goal.rotx = goal.rotx
+        self._goal.roty = goal.roty
+        self._goal.rotz = goal.rotz
 
         # Print the position of recived goal
         print("Position: ")
-        print("x: ", goal.x)
-        print("y: ", goal.y)
-        print("z: ", goal.z)
-        print("rotx: ", goal.rotx)
-        print("roty: ", goal.roty)
-        print("rotz: ", goal.rotz)
+        print("x: ", self._goal.x)
+        print("y: ", self._goal.y)
+        print("z: ", self._goal.z)
+        print("rotx: ", self._goal.rotx)
+        print("roty: ", self._goal.roty)
+        print("rotz: ", self._goal.rotz)
 
         if success:
             rospy.loginfo('%s: Succeeded' % self._action_name)
 
-        return goal.x, goal.y, goal.z, goal.rotx, goal.roty, goal.rotz
+        return self._goal.x, self._goal.y, self._goal.z, self._goal.rotx, self._goal.roty, self._goal.rotz,
 
 if __name__ == '__main__':
     rospy.init_node('Robot_position_msg')
