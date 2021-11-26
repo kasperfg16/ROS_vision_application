@@ -6,6 +6,6 @@ moveit_setup_assistant_config:
   SRDF:
     relative_path: config/vision_application.srdf
   CONFIG:
-    author_name: Kasper Fuglsang Grøntved´
+    author_name: Kasper Fuglsang Grøntved
     author_email: kasperfg16@outlook.dk
-    generated_timestamp: 1637244185
+    generated_timestamp: 1637936786
