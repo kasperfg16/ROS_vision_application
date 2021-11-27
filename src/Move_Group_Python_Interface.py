@@ -62,7 +62,7 @@ class MoveGroupPythonIntefaceTutorial(object):
         # arm so we set ``group_name = panda_arm``. If you are using a different robot,
         # you should change this value to the name of your robot arm planning group.
         # This interface can be used to plan and execute motions on the Panda:
-        ur5_cam_name = "ur5_cam"
+        ur5_cam_name = "ur5_light_bar"
         group = moveit_commander.MoveGroupCommander(ur5_cam_name)
 
         group.set_num_planning_attempts(100)
