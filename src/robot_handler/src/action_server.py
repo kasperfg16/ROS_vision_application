@@ -3,19 +3,19 @@ from __future__ import print_function
 from threading import main_thread
 import rospy
 import actionlib
-import messages.msg
+import robot_handler.msg
 
 class robotposition(object):
     # Uesd for feedback of result and goal if needed
-    _feedback = messages.msg.posFeedback()
-    _result = messages.msg.posResult()
-    _goal = messages.msg.posGoal()
+    _feedback = robot_handler.msg.posFeedback()
+    _result = robot_handler.msg.posResult()
+    _goal = robot_handler.msg.posGoal()
 
 
     def __init__(self, name):
         self._action_name = name
         # Create and start the action server
-        self._as = actionlib.SimpleActionServer(self._action_name, messages.msg.posAction, execute_cb=self.execute_cb, auto_start = False)
+        self._as = actionlib.SimpleActionServer(self._action_name, robot_handler.msg.posAction, execute_cb=self.execute_cb, auto_start = False)
         self._as.start()
         
     def execute_cb(self, goal):
@@ -45,7 +45,7 @@ class robotposition(object):
         return self._goal.x, self._goal.y, self._goal.z, self._goal.rotx, self._goal.roty, self._goal.rotz,
 
 if __name__ == '__main__':
-    rospy.init_node('Robot_position_msg')
+    rospy.init_node('Custom_Python_Script')
     server = robotposition(rospy.get_name())
     rospy.spin
 
