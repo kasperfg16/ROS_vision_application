@@ -10,5 +10,6 @@
         "/opt/ros/noetic/lib/python3/dist-packages",
         "./devel/lib/python3/dist-packages"
     ],
-    "cmake.configureOnOpen": true
+    "cmake.configureOnOpen": true,
+    "ros.distro": "noetic"
 }

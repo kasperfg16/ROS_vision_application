@@ -1,5 +1,3 @@
-# reference:
-
 import copy
 import sys
 from math import atan, atan2, pi, sqrt
@@ -484,7 +482,7 @@ def startHemisPath(tutorial, veiwPoint):
 def main():
     try:
         posBacklight = [0.370, 0.160, 0]
-        veiwPoint = [370, 160, 155]
+        veiwPoint = [370, 160, 300]
         tutorial = MoveGroupPythonIntefaceTutorial()
         tutorial.add_static_scene(posBacklight)
         input()

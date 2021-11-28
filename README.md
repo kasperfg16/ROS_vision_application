@@ -6,13 +6,17 @@ Repo containing program that handles motion planning and execution of ur5 manipu
 
 - This code is only tested and developed for Ubuntu 20.04 using ROS1 and MoveIt1. All other configurations is used at own risk and suffering ;-)
 
-## How to setup run a demo in rviz
+## How to setup and run a demo in rviz
 
 1. Install ROS1
 
     <http://wiki.ros.org/noetic/Installation/Ubuntu>
 
-2. In a termial:
+2. Install Universal_Robots_ROS_Driver
+
+    <https://github.com/UniversalRobots/Universal_Robots_ROS_Driver>
+
+3. In a termial:
 
     a) Install MoveIt1
 
@@ -48,13 +52,15 @@ Repo containing program that handles motion planning and execution of ur5 manipu
     roslaunch vision_application_movit_config_2_0 demo.launch
     ```
 
-    e) Run a path
+4. In  ANOTHER termial:
+
+    a) Run a path
 
     ```bash
     /bin/python3 /home/ubuntu/p5_project_group_364/src/Move_Group_Python_Interface.py
     ```
 
-## How to use with real robots
+## How to use with real UR robots
 
 1. In a termial:
 
@@ -74,7 +80,7 @@ Repo containing program that handles motion planning and execution of ur5 manipu
     **If `catkin_make:isolated` was used use `source devel_isolated/setup.bash` instead.** \
     !
 
-    c) Run this driver
+    c) Run the driver
 
     ```bash
     roslaunch ur_robot_driver vision_application_bringup.launch robot_ip:=INSERT_ROBOT_IP_HERE
