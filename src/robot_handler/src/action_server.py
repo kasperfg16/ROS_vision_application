@@ -20,15 +20,24 @@ class robotposition(object):
         
     def execute_cb(self, goal):
         r = rospy.Rate(1)
-        self._as.set_succeeded()
+        #self._as.set_succeeded()
         success = True
 
-        self._goal_x = goal.x
+        #Get the received goal values.
+        self._goal.x = goal.x
         self._goal.y = goal.y
         self._goal.z = goal.z
         self._goal.rotx = goal.rotx
         self._goal.roty = goal.roty
         self._goal.rotz = goal.rotz
+
+        #Set values for the result variables that we want to return:
+        self._result.x = goal.x
+        self._result.y = goal.y
+        self._result.z = goal.z
+        self._result.rotx = goal.rotx
+        self._result.roty = goal.roty
+        self._result.rotz = goal.rotz
 
         # Print the position of recived goal
         print("Position: ")
@@ -39,8 +48,21 @@ class robotposition(object):
         print("roty: ", self._goal.roty)
         print("rotz: ", self._goal.rotz)
 
+
         if success:
             rospy.loginfo('%s: Succeeded' % self._action_name)
+            self._feedback.robot_moved_str = "process succeeded"
+            #Feedback should only be used to give the user periodic feedback, not to inform if the process has ended.
+            self._as.publish_feedback(self._feedback)
+            #Result is the real indication, that the process has ended.
+            self._as.set_succeeded(self._result)    
+        else:
+            #This should of couse be changed at some point, so that the client receives usefull information
+            #Such as using set_aborted instead of set_succeeded.
+            self._feedback.robot_moved_str = "process failed"
+            self._as.publish_feedback(self._feedback)
+            self._as.set_succeeded(self._result)
+            
 
         return self._goal.x, self._goal.y, self._goal.z, self._goal.rotx, self._goal.roty, self._goal.rotz,
 
