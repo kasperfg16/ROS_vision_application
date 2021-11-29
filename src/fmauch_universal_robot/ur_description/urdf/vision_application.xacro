@@ -15,14 +15,14 @@
   <joint name="ur5_cam_1_point_0_joint" type="fixed">
     <parent link="point_0" />
     <child link="ur5_cam_1_base_link" /> <!-- TODO: check base_link name of robot -->
-    <origin xyz="0 0.0 0" rpy="0.0 0.0 0.0" />
+    <origin xyz="0 0.0 0" rpy="0.0 0.0 -0.785398163" />
   </joint>
 
   <!-- define the ur5's position and orientation in the world coordinate system -->
   <joint name="ur5_light_bar_1_point_0_joint" type="fixed">
     <parent link="point_0" />
     <child link="ur5_light_bar_1_base_link" /> <!-- TODO: check base_link name of robot -->
-    <origin xyz="1.1945 0.176 -0.07" rpy="0.0 0.0 0.0" />
+    <origin xyz="1.1945 0.176 -0.07" rpy="0.0 0.0 2.35619449" />
   </joint>
 
 </robot> 

@@ -16,6 +16,7 @@
         <link name="ur5_cam_1_mount"/>
         <link name="ur5_cam_1_b_and_r_cam"/>
         <link name="ur5_cam_1_tcp"/>
+        <link name="ur5_cam_1_tool0"/>
     </group>
     <group name="ur5_light_bar">
         <chain base_link="point_0" tip_link="ur5_light_bar_1_tcp"/>
@@ -23,6 +24,7 @@
     <group name="mount_and_light_bar">
         <link name="ur5_light_bar_1_b_and_r_light_bar"/>
         <link name="ur5_light_bar_1_mount"/>
+        <link name="ur5_light_bar_1_tool0"/>
     </group>
     <!--GROUP STATES: Purpose: Define a named state for a particular group, in terms of joint values. This is useful to define states like 'folded arms'-->
     <group_state name="home" group="ur5_cam">
@@ -37,7 +39,7 @@
     <end_effector name="cam" parent_link="ur5_cam_1_tool0" group="mount_and_cam"/>
     <end_effector name="light_bar" parent_link="ur5_light_bar_1_tool0" group="mount_and_light_bar"/>
     <!--VIRTUAL JOINT: Purpose: this element defines a virtual joint between a robot link and an external frame of reference (considered fixed with respect to the robot)-->
-    <virtual_joint name="virtual_joint" type="fixed" parent_frame="point_0" child_link="point_0"/>
+    <virtual_joint name="fixed_base" type="fixed" parent_frame="world" child_link="point_0"/>
     <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
     <disable_collisions link1="ur5_cam_1_b_and_r_cam" link2="ur5_cam_1_mount" reason="Adjacent"/>
     <disable_collisions link1="ur5_cam_1_b_and_r_cam" link2="ur5_cam_1_wrist_1_link" reason="Never"/>

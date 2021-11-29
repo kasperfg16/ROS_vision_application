@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<robot xmlns:xacro="http://wiki.ros.org/xacro">
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="ur5_light_bar">
   <xacro:macro name="ur5_light_bar" params="prefix">
     <xacro:include filename="$(find ur_description)/urdf/inc/ur5_macro.xacro" />
     <xacro:include filename="$(find ur_description)/urdf/inc/b_and_r_light_bar_macro.xacro" />

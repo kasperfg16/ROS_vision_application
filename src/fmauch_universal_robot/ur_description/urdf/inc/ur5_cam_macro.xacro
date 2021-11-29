@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<robot xmlns:xacro="http://wiki.ros.org/xacro">
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="ur5_cam">
   <xacro:macro name="ur5_cam" params="prefix">
     <!--
       Macro for creating an urdf file for an ur5 with a cam on it

@@ -1,6 +1,7 @@
 import copy
+import csv
 import sys
-from math import atan, atan2, pi, sqrt
+from math import atan, pi, sqrt
 
 import geometry_msgs.msg
 import moveit_commander
@@ -8,14 +9,9 @@ import moveit_msgs.msg
 import numpy as np
 import rospy
 from moveit_commander.conversions import pose_to_list
-from moveit_commander.move_group import MoveGroupCommander
-from moveit_commander.planning_scene_interface import PlanningSceneInterface
 from robodk.robodk import *
-from rospy.rostime import Time
-from std_msgs.msg import String
-from tf.transformations import *
-import csv
 from scipy.spatial.transform import Rotation as R
+from tf.transformations import *
 
 
 def all_close(goal, actual, tolerance):
@@ -60,8 +56,8 @@ class MoveGroupPythonIntefaceTutorial(object):
         # arm so we set ``group_name = panda_arm``. If you are using a different robot,
         # you should change this value to the name of your robot arm planning group.
         # This interface can be used to plan and execute motions on the Panda:
-        ur5_cam_name = "ur5_light_bar"
-        group = moveit_commander.MoveGroupCommander(ur5_cam_name)
+        group_name = "ur5_cam"
+        group = moveit_commander.MoveGroupCommander(group_name)
 
         group.set_num_planning_attempts(100)
         # group.set_planner_id("geometric::AnytimePathShortening")
@@ -481,8 +477,8 @@ def startHemisPath(tutorial, veiwPoint):
 
 def main():
     try:
-        posBacklight = [0.370, 0.160, 0]
-        veiwPoint = [370, 160, 300]
+        posBacklight = [0.367, 0.120, 0]
+        veiwPoint = [367, 120, 300]
         tutorial = MoveGroupPythonIntefaceTutorial()
         tutorial.add_static_scene(posBacklight)
         input()

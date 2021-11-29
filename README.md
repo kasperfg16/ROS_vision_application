@@ -43,7 +43,7 @@ Repo containing program that handles motion planning and execution of ur5 manipu
     ```
 
     ! Note:\
-    **If `catkin_make:isolated` was used use `source devel_isolated/setup.bash` instead.** \
+    **If `catkin_make:isolated` was used, use `source devel_isolated/setup.bash` instead.** \
     !
 
     d) Launch the demo workspace
@@ -77,7 +77,7 @@ Repo containing program that handles motion planning and execution of ur5 manipu
     ```
 
     ! Note:\
-    **If `catkin_make:isolated` was used use `source devel_isolated/setup.bash` instead.** \
+    **If `catkin_make:isolated` was used, use `source devel_isolated/setup.bash` instead.** \
     !
 
     c) Run the driver
@@ -101,7 +101,7 @@ Repo containing program that handles motion planning and execution of ur5 manipu
     ```
 
     ! Note:\
-    **If `catkin_make:isolated` was used use `source devel_isolated/setup.bash` instead.** \
+    **If `catkin_make:isolated` was used, use `source devel_isolated/setup.bash` instead.** \
     !
 
     c) Run the moveit_planning_execution.launch file
@@ -123,6 +123,10 @@ Repo containing program that handles motion planning and execution of ur5 manipu
     ```bash
     source devel/setup.bash
     ```
+
+    ! Note:\
+    **If `catkin_make:isolated` was used, use `source devel_isolated/setup.bash` instead.** \
+    !
 
     c) Run the moveit_planning_execution.launch file
 
