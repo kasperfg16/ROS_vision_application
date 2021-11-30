@@ -1,6 +1,6 @@
 controller_list:
-  - name: scaled_pos_joint_traj_controller
-    action_ns: follow_joint_trajectory
+  - name: ur5_cam
+    action_ns: scaled_pos_joint_traj_controller/follow_joint_trajectory
     type: FollowJointTrajectory
     default: True
     joints:
@@ -10,8 +10,8 @@ controller_list:
       - ur5_cam_1_wrist_1_joint
       - ur5_cam_1_wrist_2_joint
       - ur5_cam_1_wrist_3_joint
-  - name: light_scaled_pos_joint_traj_controller
-    action_ns: follow_joint_trajectory
+  - name: ur5_light_bar
+    action_ns: scaled_pos_joint_traj_controller/follow_joint_trajectory
     type: FollowJointTrajectory
     default: True
     joints:

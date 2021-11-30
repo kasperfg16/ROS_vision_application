@@ -478,7 +478,7 @@ def startHemisPath(tutorial, veiwPoint):
 def main():
     try:
         posBacklight = [0.367, 0.120, 0]
-        veiwPoint = [367, 120, 300]
+        veiwPoint = [367, 120, 155+116]
         tutorial = MoveGroupPythonIntefaceTutorial()
         tutorial.add_static_scene(posBacklight)
         input()

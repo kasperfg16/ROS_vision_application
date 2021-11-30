@@ -48,6 +48,7 @@
     <disable_collisions link1="ur5_cam_1_b_and_r_cam" link2="ur5_light_bar_1_base_link_inertia" reason="Never"/>
     <disable_collisions link1="ur5_cam_1_b_and_r_cam" link2="ur5_light_bar_1_shoulder_link" reason="Never"/>
     <disable_collisions link1="ur5_cam_1_base_link_inertia" link2="ur5_cam_1_shoulder_link" reason="Adjacent"/>
+    <disable_collisions link1="ur5_cam_1_base_link_inertia" link2="ur5_cam_1_upper_arm_link" reason="Never"/>
     <disable_collisions link1="ur5_cam_1_base_link_inertia" link2="ur5_light_bar_1_b_and_r_light_bar" reason="Never"/>
     <disable_collisions link1="ur5_cam_1_base_link_inertia" link2="ur5_light_bar_1_base_link_inertia" reason="Adjacent"/>
     <disable_collisions link1="ur5_cam_1_base_link_inertia" link2="ur5_light_bar_1_forearm_link" reason="Never"/>
@@ -61,6 +62,7 @@
     <disable_collisions link1="ur5_cam_1_forearm_link" link2="ur5_cam_1_wrist_1_link" reason="Adjacent"/>
     <disable_collisions link1="ur5_cam_1_forearm_link" link2="ur5_light_bar_1_base_link_inertia" reason="Never"/>
     <disable_collisions link1="ur5_cam_1_forearm_link" link2="ur5_light_bar_1_shoulder_link" reason="Never"/>
+    <disable_collisions link1="ur5_cam_1_forearm_link" link2="ur5_light_bar_1_upper_arm_link" reason="Never"/>
     <disable_collisions link1="ur5_cam_1_mount" link2="ur5_cam_1_wrist_1_link" reason="Never"/>
     <disable_collisions link1="ur5_cam_1_mount" link2="ur5_cam_1_wrist_2_link" reason="Never"/>
     <disable_collisions link1="ur5_cam_1_mount" link2="ur5_cam_1_wrist_3_link" reason="Adjacent"/>
@@ -77,22 +79,30 @@
     <disable_collisions link1="ur5_cam_1_shoulder_link" link2="ur5_light_bar_1_wrist_2_link" reason="Never"/>
     <disable_collisions link1="ur5_cam_1_shoulder_link" link2="ur5_light_bar_1_wrist_3_link" reason="Never"/>
     <disable_collisions link1="ur5_cam_1_upper_arm_link" link2="ur5_light_bar_1_base_link_inertia" reason="Never"/>
+    <disable_collisions link1="ur5_cam_1_upper_arm_link" link2="ur5_light_bar_1_forearm_link" reason="Never"/>
     <disable_collisions link1="ur5_cam_1_upper_arm_link" link2="ur5_light_bar_1_shoulder_link" reason="Never"/>
     <disable_collisions link1="ur5_cam_1_upper_arm_link" link2="ur5_light_bar_1_upper_arm_link" reason="Never"/>
+    <disable_collisions link1="ur5_cam_1_upper_arm_link" link2="ur5_light_bar_1_wrist_1_link" reason="Never"/>
+    <disable_collisions link1="ur5_cam_1_upper_arm_link" link2="ur5_light_bar_1_wrist_2_link" reason="Never"/>
     <disable_collisions link1="ur5_cam_1_wrist_1_link" link2="ur5_cam_1_wrist_2_link" reason="Adjacent"/>
     <disable_collisions link1="ur5_cam_1_wrist_1_link" link2="ur5_cam_1_wrist_3_link" reason="Never"/>
     <disable_collisions link1="ur5_cam_1_wrist_1_link" link2="ur5_light_bar_1_base_link_inertia" reason="Never"/>
     <disable_collisions link1="ur5_cam_1_wrist_1_link" link2="ur5_light_bar_1_shoulder_link" reason="Never"/>
+    <disable_collisions link1="ur5_cam_1_wrist_1_link" link2="ur5_light_bar_1_upper_arm_link" reason="Never"/>
     <disable_collisions link1="ur5_cam_1_wrist_2_link" link2="ur5_cam_1_wrist_3_link" reason="Adjacent"/>
     <disable_collisions link1="ur5_cam_1_wrist_2_link" link2="ur5_light_bar_1_base_link_inertia" reason="Never"/>
     <disable_collisions link1="ur5_cam_1_wrist_2_link" link2="ur5_light_bar_1_shoulder_link" reason="Never"/>
+    <disable_collisions link1="ur5_cam_1_wrist_2_link" link2="ur5_light_bar_1_upper_arm_link" reason="Never"/>
     <disable_collisions link1="ur5_cam_1_wrist_3_link" link2="ur5_light_bar_1_base_link_inertia" reason="Never"/>
     <disable_collisions link1="ur5_cam_1_wrist_3_link" link2="ur5_light_bar_1_shoulder_link" reason="Never"/>
+    <disable_collisions link1="ur5_cam_1_wrist_3_link" link2="ur5_light_bar_1_upper_arm_link" reason="Never"/>
+    <disable_collisions link1="ur5_cam_1_wrist_3_link" link2="ur5_light_bar_1_wrist_3_link" reason="Never"/>
     <disable_collisions link1="ur5_light_bar_1_b_and_r_light_bar" link2="ur5_light_bar_1_mount" reason="Adjacent"/>
     <disable_collisions link1="ur5_light_bar_1_b_and_r_light_bar" link2="ur5_light_bar_1_wrist_1_link" reason="Never"/>
     <disable_collisions link1="ur5_light_bar_1_b_and_r_light_bar" link2="ur5_light_bar_1_wrist_2_link" reason="Never"/>
     <disable_collisions link1="ur5_light_bar_1_b_and_r_light_bar" link2="ur5_light_bar_1_wrist_3_link" reason="Never"/>
     <disable_collisions link1="ur5_light_bar_1_base_link_inertia" link2="ur5_light_bar_1_shoulder_link" reason="Adjacent"/>
+    <disable_collisions link1="ur5_light_bar_1_base_link_inertia" link2="ur5_light_bar_1_upper_arm_link" reason="Never"/>
     <disable_collisions link1="ur5_light_bar_1_forearm_link" link2="ur5_light_bar_1_upper_arm_link" reason="Adjacent"/>
     <disable_collisions link1="ur5_light_bar_1_forearm_link" link2="ur5_light_bar_1_wrist_1_link" reason="Adjacent"/>
     <disable_collisions link1="ur5_light_bar_1_mount" link2="ur5_light_bar_1_wrist_1_link" reason="Never"/>
