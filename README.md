@@ -83,7 +83,7 @@ Repo containing program that handles motion planning and execution of ur5 manipu
     c) Run the driver
 
     ```bash
-    roslaunch ur_robot_driver vision_application_bringup.launch robot_ip:=INSERT_ROBOT_IP_HERE
+    roslaunch ur_description vision_application_bringup.launch
     ```
 
 2. In  ANOTHER termial:
