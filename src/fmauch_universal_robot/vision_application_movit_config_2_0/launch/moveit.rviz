@@ -452,6 +452,8 @@ Visualization Manager:
           Value: false
         ur5_light_bar_1_wrist_3_link:
           Value: false
+        world:
+          Value: true
       Marker Alpha: 1
       Marker Scale: 1
       Name: TF
@@ -459,39 +461,40 @@ Visualization Manager:
       Show Axes: true
       Show Names: false
       Tree:
-        point_0:
-          ur5_cam_1_base_link:
-            ur5_cam_1_base:
-              {}
-            ur5_cam_1_base_link_inertia:
-              ur5_cam_1_shoulder_link:
-                ur5_cam_1_upper_arm_link:
-                  ur5_cam_1_forearm_link:
-                    ur5_cam_1_wrist_1_link:
-                      ur5_cam_1_wrist_2_link:
-                        ur5_cam_1_wrist_3_link:
-                          ur5_cam_1_flange:
-                            ur5_cam_1_tool0:
-                              ur5_cam_1_mount:
-                                ur5_cam_1_b_and_r_cam:
-                                  ur5_cam_1_tcp:
-                                    {}
-          ur5_light_bar_1_base_link:
-            ur5_light_bar_1_base:
-              {}
-            ur5_light_bar_1_base_link_inertia:
-              ur5_light_bar_1_shoulder_link:
-                ur5_light_bar_1_upper_arm_link:
-                  ur5_light_bar_1_forearm_link:
-                    ur5_light_bar_1_wrist_1_link:
-                      ur5_light_bar_1_wrist_2_link:
-                        ur5_light_bar_1_wrist_3_link:
-                          ur5_light_bar_1_flange:
-                            ur5_light_bar_1_tool0:
-                              ur5_light_bar_1_mount:
-                                ur5_light_bar_1_b_and_r_light_bar:
-                                  ur5_light_bar_1_tcp:
-                                    {}
+        world:
+          point_0:
+            ur5_cam_1_base_link:
+              ur5_cam_1_base:
+                {}
+              ur5_cam_1_base_link_inertia:
+                ur5_cam_1_shoulder_link:
+                  ur5_cam_1_upper_arm_link:
+                    ur5_cam_1_forearm_link:
+                      ur5_cam_1_wrist_1_link:
+                        ur5_cam_1_wrist_2_link:
+                          ur5_cam_1_wrist_3_link:
+                            ur5_cam_1_flange:
+                              ur5_cam_1_tool0:
+                                ur5_cam_1_mount:
+                                  ur5_cam_1_b_and_r_cam:
+                                    ur5_cam_1_tcp:
+                                      {}
+            ur5_light_bar_1_base_link:
+              ur5_light_bar_1_base:
+                {}
+              ur5_light_bar_1_base_link_inertia:
+                ur5_light_bar_1_shoulder_link:
+                  ur5_light_bar_1_upper_arm_link:
+                    ur5_light_bar_1_forearm_link:
+                      ur5_light_bar_1_wrist_1_link:
+                        ur5_light_bar_1_wrist_2_link:
+                          ur5_light_bar_1_wrist_3_link:
+                            ur5_light_bar_1_flange:
+                              ur5_light_bar_1_tool0:
+                                ur5_light_bar_1_mount:
+                                  ur5_light_bar_1_b_and_r_light_bar:
+                                    ur5_light_bar_1_tcp:
+                                      {}
       Update Interval: 0
       Value: true
   Enabled: true
@@ -510,7 +513,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 5.208972930908203
+      Distance: 1.0982866287231445
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -518,33 +521,33 @@ Visualization Manager:
         Value: false
       Field of View: 0.75
       Focal Point:
-        X: 0.2713119089603424
-        Y: -0.044455066323280334
-        Z: -0.19965849816799164
+        X: 0.4365726709365845
+        Y: 0.17615064978599548
+        Z: 0.3765556216239929
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.31000009179115295
+      Pitch: 0.37979668378829956
       Target Frame: point_0
-      Yaw: 0.2867668867111206
+      Yaw: 2.1049582958221436
     Saved: ~
 Window Geometry:
   Displays:
-    collapsed: false
+    collapsed: true
   Height: 948
   Help:
     collapsed: false
-  Hide Left Dock: false
+  Hide Left Dock: true
   Hide Right Dock: false
   MotionPlanning:
-    collapsed: false
+    collapsed: true
   MotionPlanning - Trajectory Slider:
     collapsed: false
-  QMainWindow State: 000000ff00000000fd0000000100000000000001f30000035afc0200000007fb000000100044006900730070006c006100790073010000003d00000198000000c900fffffffb0000000800480065006c00700000000342000000bb0000006e00fffffffb0000000a00560069006500770073000000010c000000a4000000a400fffffffb0000000c00430061006d00650072006100000002ff000001610000000000000000fb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e00670100000374000001890000000000000000fb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000001600000016fb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e006701000001db000001bc0000017d00ffffff000001c70000035a00000001000000020000000100000002fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd0000000100000000000001f30000035afc0200000007fb000000100044006900730070006c006100790073000000003d00000198000000c900fffffffb0000000800480065006c00700000000342000000bb0000006e00fffffffb0000000a00560069006500770073000000010c000000a4000000a400fffffffb0000000c00430061006d00650072006100000002ff000001610000000000000000fb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e00670100000374000001890000000000000000fb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000001600000016fb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e006700000001db000001bc0000017d00ffffff000003c00000035a00000001000000020000000100000002fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Views:
     collapsed: false
   Width: 960
-  X: 0
+  X: 960
   Y: 27
