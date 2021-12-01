@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Load ur5_cam controllers -->
+    <include ns="ur5_cam"
+    file="$(find ur_robot_driver)/launch/ur5_cam_bringup.launch">
+    <arg name="robot_ip" value="192.168.87.110" />
+    <arg name="reverse_port" value="50001" />
+    <arg name="script_sender_port" value="50002" />
+    <arg name="trajectory_port" value="50003" />
+  </include>
+  
+  <!-- Load ur5_light_bar controllers -->
+  <include ns="ur5_light_bar"
+  file="$(find ur_robot_driver)/launch/ur5_light_bar_bringup.launch">
+  <arg name="robot_ip" value="192.168.87.136" />
+  <arg name="reverse_port" value="50004" />
+  <arg name="script_sender_port" value="50005" />
+  <arg name="trajectory_port" value="50006" />
+  </include>
+</launch>
