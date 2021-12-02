@@ -1,14 +1,18 @@
 #goal
 string robot_name
-uint8 x
-uint8 y
-uint8 z
+float64 x
+float64 y
+float64 z
+float64 viewpoint_height
+float64 obj_height
+float64 obj_length
+float64 obj_width
 ---
 #result
 string robot_name
-uint8 x
-uint8 y
-uint8 z
+float64 x
+float64 y
+float64 z
 ---
 #feedback message
 string robot_moved_str
