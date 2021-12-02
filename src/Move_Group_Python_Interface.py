@@ -3,6 +3,9 @@ import csv
 import sys
 from math import atan, pi, sqrt
 
+from numpy.lib.function_base import append
+
+import mathutils
 import geometry_msgs.msg
 import moveit_commander
 import moveit_msgs.msg
@@ -56,7 +59,7 @@ class MoveGroupPythonIntefaceTutorial(object):
         # arm so we set ``group_name = panda_arm``. If you are using a different robot,
         # you should change this value to the name of your robot arm planning group.
         # This interface can be used to plan and execute motions on the Panda:
-        group_name = "ur5_cam"
+        group_name = "ur5_light_bar"
         group = moveit_commander.MoveGroupCommander(group_name)
 
         group.set_num_planning_attempts(100)
@@ -353,6 +356,18 @@ class MoveGroupPythonIntefaceTutorial(object):
         return False
         # END_SUB_TUTORIAL
 
+def look_at(camera_pos, point_pos, roll = 0):
+    direction = point_pos - camera_pos
+    # point the cameras '-Z' and use its 'Y' as up
+    rot_quat = direction.to_track_quat('Z', 'X')
+
+    rot_quat = rot_quat.to_matrix().to_4x4()
+    rollMatrix = mathutils.Matrix.Rotation(roll, 4, 'Z')
+
+    rot_final = rot_quat @ rollMatrix
+
+    # assume we're using euler rotation
+    return rot_final.to_euler()
 
 def startHemisPath(tutorial, veiwPoint):
     # The goal here is to autogenerate a path in the shape of an hemisphere (with the object in the center),
@@ -406,47 +421,15 @@ def startHemisPath(tutorial, veiwPoint):
 
                   # Compute roll, pitch and yaw of the camera with fixed angles wrt. the robot frame.
                   # vectors from camera frame to inspection frame
-                  x_vect = inspection_center_xyz[0] - x_hemsphe
-                  y_vect = inspection_center_xyz[1] - y_hemsphe
-                  z_vect = inspection_center_xyz[2] - z_hemsphe
 
-                  if x_vect < 0 and z_vect > 0:
-                      rot_y = atan(z_vect/x_vect)/pi*180
-                  elif x_vect > 0 and z_vect > 0:
-                      rot_y = atan(x_vect/z_vect)/pi*180
-                  elif x_vect > 0 and z_vect < 0:
-                      rot_y = -atan(z_vect/x_vect)/pi*180+180
-                  elif x_vect < 0 and z_vect < 0:
-                      rot_y = atan(x_vect/z_vect)/pi*180+270
-                  else:
-                      print(
-                          "computiation fail in y angle between camera and inspection object")
+                  vec_cam = mathutils.Vector((x_hemsphe, y_hemsphe, z_hemsphe))
+                  vec_point = mathutils.Vector((veiwPoint[0], veiwPoint[1], veiwPoint[2]))
 
-                  if y_vect > 0 and z_vect < 0:
-                      rot_x = atan(y_vect/(sqrt(pow(z_vect, 2)+pow(x_vect, 2))))/pi*180-90
-                  elif y_vect < 0 and z_vect < 0:
-                      rot_x = - atan((sqrt(pow(z_vect, 2)+pow(x_vect, 2)))/y_vect)/pi*180-180
-                  elif y_vect < 0 and z_vect > 0:
-                      rot_x = atan(z_vect/y_vect)/pi*180
-                  elif y_vect > 0 and z_vect > 0:
-                      rot_x = atan(y_vect/z_vect)/pi*180
-                  else:
-                      print(
-                          "computiation fail in x angle between camera and inspection object")
-
-                  pathPoints = transl(
-                      x_hemsphe, y_hemsphe, z_hemsphe)*rotz(0*pi/180)*roty(0*pi/180)*rotx(0*pi/180)
-
-                  xyz.append(
-                      [pathPoints[0, 3], pathPoints[1, 3], pathPoints[2, 3]])
-
-                  # Fixed rotation
-                  rot_y1 = rot_y - 90
-
-                  # Euler rotation
-                  rot_x2 = rot_x + 90
+                  euler_ang = look_at(vec_cam, vec_point)
                   
-                  rpy.append([rot_x2,rot_y1,0])
+                  rpy.append(euler_ang)
+                  
+                  xyz.append([x_hemsphe, y_hemsphe, z_hemsphe])
 
                   i += 1
                   # Using the double for loop actually results is us trying to find values that exceed
@@ -469,19 +452,21 @@ def startHemisPath(tutorial, veiwPoint):
         x = xyz[i][0] * 0.001
         y = xyz[i][1] * 0.001
         z = xyz[i][2] * 0.001
-        rx = -np.deg2rad(rpy[i][0])
-        ry = np.deg2rad(rpy[i][1])
-        rz = np.deg2rad(rpy[i][2])
+        rx = (rpy[i][0])
+        ry = (rpy[i][1])
+        rz = (rpy[i][2])
+        print(rx)
+        print(ry)
+        print(rz)
         tutorial.go_to_pose_goal(x, y, z, rx, ry, rz)
 
 
 def main():
     try:
         posBacklight = [0.367, 0.120, 0]
-        veiwPoint = [367, 120, 155+116]
+        veiwPoint = [367, 120, 300]
         tutorial = MoveGroupPythonIntefaceTutorial()
         tutorial.add_static_scene(posBacklight)
-        input()
         print("Starting hemissphere path")
         startHemisPath(tutorial, veiwPoint)
 

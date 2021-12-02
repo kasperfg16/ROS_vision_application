@@ -141,31 +141,16 @@ class robotposition(object):
         self._goal.x = goal.x
         self._goal.y = goal.y
         self._goal.z = goal.z
-        self._goal.rotx = goal.rotx
-        self._goal.roty = goal.roty
-        self._goal.rotz = goal.rotz
 
         # Print the position of recived goal
-        print("Position: \n Robot: %s \n x: %s \n x: %s \n y: %s \n z: %s \n rotx: %s \n roty: %s \n rotz: %s " % 
+        print("Position: \n Robot: %s \n x: %s \n x: %s \n y: %s \n z: %s " % 
         (self._goal.robot_name,
         self._goal.x, 
         self._goal.y, 
-        self._goal.z, 
-        self._goal.rotx, 
-        self._goal.roty, 
-        self._goal.rotz))
+        self._goal.z))
 
         if success:
             rospy.loginfo('%s: Succeeded' % self._action_name)
-
-        robotposition.go_to_pose_goal(
-        self._goal.robot_name, 
-        self._goal.x, 
-        self._goal.y, 
-        self._goal.z, 
-        self._goal.rotx, 
-        self._goal.roty, 
-        self._goal.rotz)
 
 
     def add_static_scene(self, posBacklight):
@@ -264,8 +249,8 @@ def main():
         RobPos = robotposition()
         RobPos.add_static_scene(posBacklight)
         input()
-
-        RobPos.go_to_pose_goal(RobPos._goal.x, RobPos._goal.y, RobPos._goal.z, RobPos._goal.rotx, RobPos._goal.roty, RobPos._goal.rotz)
+        print("Moving to position: X: %s Y: %s Z: %s "% (RobPos._goal.x, RobPos._goal.y, RobPos._goal.z))
+        RobPos.go_to_pose_goal(RobPos._goal.x, RobPos._goal.y, RobPos._goal.z)
 
     
 
