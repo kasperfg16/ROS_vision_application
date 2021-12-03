@@ -7,9 +7,9 @@ Repo containing program that handles motion planning and execution of ur5 manipu
 - This code is only tested and developed for Ubuntu 20.04 using ROS1 and MoveIt1. All other configurations is used at own risk and suffering ;-)
 
 ## dependencies
-* [NumPy](https://pypi.org/project/numpy/) ```pip install numpy ```
-* [python-Math](https://pypi.org/project/python-math/) ```pip install python-math
-* [MoveIt](https://moveit.ros.org/install/)  ```sudo apt install ros-noetic-moveit ```
+* [NumPy](https://pypi.org/project/numpy/)    ```pip install numpy ```
+* [python-Math](https://pypi.org/project/python-math/)    ```pip install python-math```
+* [MoveIt](https://moveit.ros.org/install/)   ```sudo apt install ros-noetic-moveit ```
 
 ## How to setup and run a demo in rviz
 
