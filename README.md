@@ -49,7 +49,7 @@ Repo containing program that handles motion planning and execution of ur5 manipu
     d) Launch the demo workspace
 
     ```bash
-    roslaunch vision_application_movit_config_2_0 demo.launch
+    roslaunch vision_application_movit_config demo.launch
     ```
 
 4. In  ANOTHER termial:
@@ -61,6 +61,8 @@ Repo containing program that handles motion planning and execution of ur5 manipu
     ```
 
 ## How to use with real UR robots
+
+1. Connect to the same network as the UR robots  - Preferably with wired connection as errors otherwise can occur
 
 1. In a termial:
 
@@ -107,7 +109,7 @@ Repo containing program that handles motion planning and execution of ur5 manipu
     c) Run the moveit_planning_execution.launch file
 
     ```bash
-    roslaunch vision_application_movit_config_2_0 vision_application_moveit_planning_execution.launch
+    roslaunch vision_application_movit_config vision_application_moveit_planning_execution.launch
     ```
 
 3. In  ANOTHER termial:
@@ -131,7 +133,7 @@ Repo containing program that handles motion planning and execution of ur5 manipu
     c) Run the moveit_planning_execution.launch file
 
     ```bash
-    roslaunch vision_application_movit_config_2_0 moveit_rviz.launch rviz_config:=$(rospack find vision_application_movit_config_2_0)/launch/moveit.rviz
+    roslaunch vision_application_movit_config moveit_rviz.launch rviz_config:=$(rospack find vision_application_movit_config)/launch/moveit.rviz
     ```
 
 4. In  ANOTHER termial:
@@ -159,3 +161,7 @@ Repo containing program that handles motion planning and execution of ur5 manipu
 1. MoveIt
 
     <http://docs.ros.org/en/kinetic/api/moveit_tutorials/html/index.html>
+
+2. Universal_Robots_ROS_Driver
+
+    <https://github.com/UniversalRobots/Universal_Robots_ROS_Driver>

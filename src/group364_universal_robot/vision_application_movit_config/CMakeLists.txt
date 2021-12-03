@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.1.3)
-project(vision_application_movit_config_2_0)
+project(vision_application_movit_config)
 
 find_package(catkin REQUIRED)
 

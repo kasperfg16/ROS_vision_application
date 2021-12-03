@@ -24,7 +24,7 @@
           <!-- The path to the collision meshes in the package. NOTE: mesh must be imported in metres, else
           use the "scale" param to compensate-->
           <mesh filename="package://ur_description/meshes/camera.stl"
-          scale="0.0012 0.0012 0.0012"/>
+          scale="0.0013 0.0013 0.0013"/>
         </geometry>
         <material>
           <color rgba="1 0.4 0 1"/>

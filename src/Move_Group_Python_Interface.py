@@ -121,7 +121,7 @@ class MoveGroupPythonIntefaceTutorial(object):
         pose_tables.pose.position.x = 0.0
         pose_tables.pose.position.y = 0.0
         pose_tables.pose.position.z = 0.0
-        table_size = (0.001, 0.001, 0.001)
+        table_size = (0.0011, 0.0011, 0.0011)
         table_path_mesh = "./src/scene_meshes/table.stl"
 
         scene.add_mesh(table_id, pose_tables, table_path_mesh, table_size)
@@ -145,7 +145,7 @@ class MoveGroupPythonIntefaceTutorial(object):
         pose_backlight.pose.orientation.y = q_new[1]
         pose_backlight.pose.orientation.z = q_new[2]
         pose_backlight.pose.orientation.w = q_new[3]
-        backlight_size = (0.001, 0.001, 0.001)
+        backlight_size = (0.0011, 0.0011, 0.0011)
         backlight_path_stl = "./src/scene_meshes/backlight.stl"
 
         scene.add_mesh(backlight_id, pose_backlight,
@@ -467,6 +467,7 @@ def main():
         veiwPoint = [367, 120, 300]
         tutorial = MoveGroupPythonIntefaceTutorial()
         tutorial.add_static_scene(posBacklight)
+        input()
         print("Starting hemissphere path")
         startHemisPath(tutorial, veiwPoint)
 
