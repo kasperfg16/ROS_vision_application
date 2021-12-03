@@ -156,6 +156,30 @@ Repo containing program that handles motion planning and execution of ur5 manipu
     python3 /home/ubuntu/p5_project_group_364/src/Move_Group_Python_Interface.py
     ```
 
+## How to control from local web-server. 
+
+1. 
+    a) Start RVIZ up just like if you would run in on the robots or just simulation.
+    But do not run the Move_Group_Python_Interface.py Python script! 
+
+    b) Install rosbridge suite.
+
+    ```bash
+    sudo apt-get install ros-noetic-rosbridge-suite
+    ```
+    c) Run the rosbridge server.
+
+    ```bash
+    roslaunch rosbridge_server rosbridge_websocket.launch
+    ```
+
+    d) now run the run_robot_handler.py Python script.
+
+    ```bash
+    python run_robot_handler.py
+    ```
+
+
 ## References
 
 1. MoveIt

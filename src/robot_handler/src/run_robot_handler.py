@@ -25,6 +25,20 @@ from tf.transformations import *
 import csv
 from scipy.spatial.transform import Rotation as R
 
+import mathutils
+
+def look_at(camera_pos, point_pos, roll = 0):
+    direction = point_pos - camera_pos
+    # point the cameras '-Z' and use its 'Y' as up
+    rot_quat = direction.to_track_quat('Z', 'X')
+
+    rot_quat = rot_quat.to_matrix().to_4x4()
+    rollMatrix = mathutils.Matrix.Rotation(roll, 4, 'Z')
+
+    rot_final = rot_quat @ rollMatrix
+
+    # assume we're using euler rotation
+    return rot_final.to_euler()
 
 def all_close(goal, actual, tolerance):
     all_equal = True
@@ -42,17 +56,8 @@ def all_close(goal, actual, tolerance):
     return True
 
 class robotposition(object):
-    # Uesd for feedback of result and goal if needed
-    _feedback = robot_handler.msg.posFeedback()
-    _result = robot_handler.msg.posResult()
-    _goal = robot_handler.msg.posGoal()
 
-
-    def __init__(self, name):
-        self._action_name = name
-        # Create and start the action server
-        self._as = actionlib.SimpleActionServer(self._action_name, robot_handler.msg.posAction, execute_cb=self.execute_cb, auto_start = False)
-        self._as.start()
+    def __init__(self, group_name):
 
         super(robotposition, self).__init__()
 
@@ -66,6 +71,7 @@ class robotposition(object):
         # Instantiate a `RobotCommander`_ object. This object is the outer-level interface to
         # the robot:
         robot = moveit_commander.RobotCommander()
+        
 
         # Instantiate a `PlanningSceneInterface`_ object.  This object is an interface
         # to the world surrounding the robot:
@@ -76,17 +82,16 @@ class robotposition(object):
         # arm so we set ``group_name = panda_arm``. If you are using a different robot,
         # you should change this value to the name of your robot arm planning group.
         # This interface can be used to plan and execute motions on the Panda:
-        ur5_robot_name = " "
 
-        if self._goal.robot_name == "camera_robot":
-            ur5_robot_name = "ur5_cam"
-        if self._goal.robot_name == "lightbar_robot":
-            ur5_robot_name = "ur5_light_bar"
+        #ur5_robot_name = "ur5_cam"
+        #ur5_robot_name = "ur5_light_bar"
 
 
-        group = moveit_commander.MoveGroupCommander(ur5_robot_name)
-
+   
+        group = moveit_commander.MoveGroupCommander(group_name)
+        
         group.set_num_planning_attempts(100)
+
         # group.set_planner_id("geometric::AnytimePathShortening")
 
         # We create a `DisplayTrajectory`_ publisher which is used later to publish
@@ -130,29 +135,6 @@ class robotposition(object):
         self.eef_link = eef_link
         self.group_names = group_names
 
-
-
-        
-    def execute_cb(self, goal):
-        r = rospy.Rate(1)
-        self._as.set_succeeded()
-        success = True
-
-        self._goal.x = goal.x
-        self._goal.y = goal.y
-        self._goal.z = goal.z
-
-        # Print the position of recived goal
-        print("Position: \n Robot: %s \n x: %s \n x: %s \n y: %s \n z: %s " % 
-        (self._goal.robot_name,
-        self._goal.x, 
-        self._goal.y, 
-        self._goal.z))
-
-        if success:
-            rospy.loginfo('%s: Succeeded' % self._action_name)
-
-
     def add_static_scene(self, posBacklight):
         '''
         Adds collision objects to the planning scene
@@ -169,7 +151,7 @@ class robotposition(object):
         pose_tables.pose.position.y = 0.0
         pose_tables.pose.position.z = 0.0
         table_size = (0.001, 0.001, 0.001)
-        table_path_mesh = "./src/scene_meshes/table.stl"
+        table_path_mesh = "/home/ubu/Git_repos/ROS_vision_application/src/scene_meshes/table.stl"
 
         scene.add_mesh(table_id, pose_tables, table_path_mesh, table_size)
 
@@ -193,7 +175,7 @@ class robotposition(object):
         pose_backlight.pose.orientation.z = q_new[2]
         pose_backlight.pose.orientation.w = q_new[3]
         backlight_size = (0.001, 0.001, 0.001)
-        backlight_path_stl = "./src/scene_meshes/backlight.stl"
+        backlight_path_stl = "/home/ubu/Git_repos/ROS_vision_application/src/scene_meshes/backlight.stl"
 
         scene.add_mesh(backlight_id, pose_backlight,
                        backlight_path_stl, backlight_size)
@@ -243,14 +225,71 @@ class robotposition(object):
         return all_close(pose_goal, current_pose, 0.01)
 
 
+class action_server(object):
+    # Used for feedback of result and goal if needed
+    _feedback = robot_handler.msg.posFeedback()
+    _result = robot_handler.msg.posResult()
+    _goal = robot_handler.msg.posGoal()
+
+    def __init__(self, name, robot_cam, robot_light):
+        self._action_name = name
+        self._as = actionlib.SimpleActionServer(self._action_name, robot_handler.msg.posAction, execute_cb=self.execute_cb, auto_start = False)
+        self._as.start()
+        self._robot_cam = robot_cam
+        self._robot_light = robot_light
+
+    def execute_cb(self, goal):
+        r = rospy.Rate(1)
+        
+        success = True
+        
+        self._goal.robot_name = goal.robot_name
+        self._goal.x = goal.x
+        self._goal.y = goal.y
+        self._goal.z = goal.z
+        self._goal.viewpoint_height = goal.viewpoint_height
+        self._goal.obj_height = goal.obj_height
+        self._goal.obj_length = goal.obj_length
+        self._goal.obj_width = goal.obj_width
+
+        self._result.robot_name = goal.robot_name
+        self._result.x = goal.x
+        self._result.y = goal.y
+        self._result.z = goal.z
+
+        # Print the position of recived goal
+        print("Position: \n Robot: %s \n x: %s \n y: %s \n z: %s" % 
+        (self._goal.robot_name,
+        self._goal.x, 
+        self._goal.y, 
+        self._goal.z))
+
+        #RobPos = robotposition()
+        center = [0.370, 0.160, 0.154]
+        vec_cam = mathutils.Vector((self._goal.x, self._goal.y, self._goal.z))
+        vec_point = mathutils.Vector((center[0], center[1], center[2]+self._goal.viewpoint_height))
+        euler_ang = look_at(vec_cam, vec_point)
+        print("Moving to position: X: %s Y: %s Z: %s Rotx: %s Roty: %s Rotz %s"% (self._goal.x, self._goal.y, self._goal.z, euler_ang[0], euler_ang[1], euler_ang[2]))
+        if self._goal.robot_name == "camera_robot":
+            self._robot_cam.go_to_pose_goal(self._goal.x, self._goal.y, self._goal.z, euler_ang[0], euler_ang[1], euler_ang[2])
+        if self._goal.robot_name == "lightbar_robot":
+            self._robot_light.go_to_pose_goal(self._goal.x, self._goal.y, self._goal.z, euler_ang[0], euler_ang[1], euler_ang[2])
+        if success:
+            self._feedback.robot_moved_str = "process succeeded"
+            self._as.publish_feedback(self._feedback)
+            rospy.loginfo('%s: Succeeded' % self._action_name)
+            self._as.set_succeeded(self._result)
+
 def main():
     try:
         posBacklight = [0.370, 0.160, 0]
-        RobPos = robotposition()
+        RobPos = robotposition(rospy.get_name())
         RobPos.add_static_scene(posBacklight)
-        input()
-        print("Moving to position: X: %s Y: %s Z: %s "% (RobPos._goal.x, RobPos._goal.y, RobPos._goal.z))
-        RobPos.go_to_pose_goal(RobPos._goal.x, RobPos._goal.y, RobPos._goal.z)
+        vec_cam = mathutils.Vector((RobPos._goal.x, RobPos._goal.y, RobPos._goal.z))
+        vec_point = mathutils.Vector((RobPos._goal.obj_width/2, RobPos._goal.obj_length/2, RobPos._goal.viewpoint_height))
+        euler_ang = look_at(vec_cam, vec_point)
+        print("Moving to position: X: %s Y: %s Z: %s Rotx: %s Roty: %s Rotz %s"% (RobPos._goal.x, RobPos._goal.y, RobPos._goal.z, euler_ang[0], euler_ang[1], euler_ang[2]))
+        RobPos.go_to_pose_goal(RobPos._goal.x, RobPos._goal.y, RobPos._goal.z, euler_ang[0], euler_ang[1], euler_ang[2])
 
     
 
@@ -262,10 +301,17 @@ def main():
 
 if __name__ == '__main__':
     rospy.init_node('Custom_Python_Script')
-    server = robotposition(rospy.get_name())
+    robot_cam = robotposition("ur5_cam")
+    robot_light = robotposition("ur5_light_bar")
+    posBacklight = [0.370, 0.160, 0]
+    robot_cam.add_static_scene(posBacklight)
+    server_name = action_server(rospy.get_name(), robot_cam, robot_light)
+    # Create and start the action server
     rospy.spin
+      #ur5_robot_name = "ur5_cam"
+        #ur5_robot_name = "ur5_light_bar"
 
-    main()
+    #main()
     
 
 
