@@ -23,13 +23,7 @@ Repo containing program that handles motion planning and execution of ur5 manipu
 
 3. In a termial:
 
-    a) Install MoveIt1
-
-    ```bash
-    sudo apt install ros-noetic-moveit
-    ```
-
-    b) Build the catkin workspace
+    a) Build the catkin workspace
 
     ```bash
     cd p5_project_group_364/
@@ -41,7 +35,7 @@ Repo containing program that handles motion planning and execution of ur5 manipu
     **There have been problems using `catkin_make` this problem can be solved with `catkin_make:isolated`.** \
     !
 
-    c) Source the workspace
+    b) Source the workspace
 
     ```bash
     source devel/setup.bash
@@ -51,7 +45,7 @@ Repo containing program that handles motion planning and execution of ur5 manipu
     **If `catkin_make:isolated` was used, use `source devel_isolated/setup.bash` instead.** \
     !
 
-    d) Launch the demo workspace
+    c) Launch the demo workspace
 
     ```bash
     roslaunch vision_application_movit_config demo.launch
