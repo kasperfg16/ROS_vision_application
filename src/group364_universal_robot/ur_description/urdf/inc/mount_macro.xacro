@@ -23,7 +23,7 @@
         <geometry>
           <!-- The path to the collision meshes in the package. NOTE: mesh must be imported in metres, else
           use the "scale" param to compensate-->
-          <mesh filename="package://ur_description/meshes/mount.stl" scale="0.0012 0.0012 0.0012" />
+          <mesh filename="package://ur_description/meshes/mount.stl" scale="0.0013 0.0013 0.0013" />
         </geometry>
         <material>
           <color rgba="0 0 0 0" />

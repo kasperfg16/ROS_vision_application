@@ -9,17 +9,17 @@
   <param if="$(arg load_robot_description)" name="$(arg robot_description)" command="xacro  '$(find ur_description)/urdf/vision_application.xacro'"/>
 
   <!-- The semantic description that corresponds to the URDF -->
-  <param name="$(arg robot_description)_semantic" textfile="$(find vision_application_movit_config_2_0)/config/vision_application.srdf" />
+  <param name="$(arg robot_description)_semantic" textfile="$(find vision_application_movit_config)/config/vision_application.srdf" />
 
   <!-- Load updated joint limits (override information from URDF) -->
   <group ns="$(arg robot_description)_planning">
-    <rosparam command="load" file="$(find vision_application_movit_config_2_0)/config/joint_limits.yaml"/>
-    <rosparam command="load" file="$(find vision_application_movit_config_2_0)/config/cartesian_limits.yaml"/>
+    <rosparam command="load" file="$(find vision_application_movit_config)/config/joint_limits.yaml"/>
+    <rosparam command="load" file="$(find vision_application_movit_config)/config/cartesian_limits.yaml"/>
   </group>
 
   <!-- Load default settings for kinematics; these settings are overridden by settings in a node's namespace -->
   <group ns="$(arg robot_description)_kinematics">
-    <rosparam command="load" file="$(find vision_application_movit_config_2_0)/config/kinematics.yaml"/>
+    <rosparam command="load" file="$(find vision_application_movit_config)/config/kinematics.yaml"/>
 
   </group>
 
