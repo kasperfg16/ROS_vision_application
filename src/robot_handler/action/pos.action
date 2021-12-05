@@ -16,6 +16,7 @@ float64 z
 float64 rotx
 float64 roty
 float64 rotz
+bool status
 ---
 #feedback message
 string robot_moved_str

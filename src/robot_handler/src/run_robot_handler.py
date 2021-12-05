@@ -209,7 +209,7 @@ class robotposition(object):
 
         # Now, we call the planner to compute the plan and execute it.
         plan = group.go(wait=True)
-        
+        print("Test: " , plan)
         # Calling `stop()` ensures that there is no residual movement
         group.stop()
         # It is always good to clear your targets after planning with poses.
@@ -222,7 +222,8 @@ class robotposition(object):
         # Note that since this section of code will not be included in the tutorials
         # we use the class variable rather than the copied state variable
         current_pose = self.group.get_current_pose().pose
-        return all_close(pose_goal, current_pose, 0.01)
+        #print("current pose: ", current_pose[0])
+        return all_close(pose_goal, current_pose, 0.01), plan, current_pose
 
 
 class action_server(object):
@@ -240,9 +241,7 @@ class action_server(object):
 
     def execute_cb(self, goal):
         r = rospy.Rate(1)
-        
         success = True
-        
         self._goal.robot_name = goal.robot_name
         self._goal.x = goal.x
         self._goal.y = goal.y
@@ -251,11 +250,6 @@ class action_server(object):
         self._goal.obj_height = goal.obj_height
         self._goal.obj_length = goal.obj_length
         self._goal.obj_width = goal.obj_width
-
-        self._result.robot_name = goal.robot_name
-        self._result.x = goal.x
-        self._result.y = goal.y
-        self._result.z = goal.z
 
         # Print the position of recived goal
         print("Position: \n Robot: %s \n x: %s \n y: %s \n z: %s" % 
@@ -271,17 +265,24 @@ class action_server(object):
         euler_ang = look_at(vec_cam, vec_point)
         print("Moving to position: X: %s Y: %s Z: %s Rotx: %s Roty: %s Rotz %s"% (self._goal.x, self._goal.y, self._goal.z, euler_ang[0], euler_ang[1], euler_ang[2]))
         if self._goal.robot_name == "camera_robot":
-            self._robot_cam.go_to_pose_goal(self._goal.x, self._goal.y, self._goal.z, euler_ang[0], euler_ang[1], euler_ang[2])
+            delta_pose, planstatus,current_pose = self._robot_cam.go_to_pose_goal(self._goal.x, self._goal.y, self._goal.z, euler_ang[0], euler_ang[1], euler_ang[2])
         if self._goal.robot_name == "lightbar_robot":
-            self._robot_light.go_to_pose_goal(self._goal.x, self._goal.y, self._goal.z, euler_ang[0], euler_ang[1], euler_ang[2])
+            delta_pose, planstatus,current_pose = self._robot_light.go_to_pose_goal(self._goal.x, self._goal.y, self._goal.z, euler_ang[0], euler_ang[1], euler_ang[2])
+        #print("current pose: ", current_pose.position)
+        self._result.robot_name = goal.robot_name
+        self._result.x = current_pose.position.x
+        self._result.y = current_pose.position.y
+        self._result.z = current_pose.position.z
+        self._result.rotx = euler_ang[0]
+        self._result.roty = euler_ang[1]
+        self._result.rotz = euler_ang[2]
+        self._result.status = planstatus
         if success:
-            self._result.rotx = euler_ang[0]
-            self._result.roty = euler_ang[1]
-            self._result.rotz = euler_ang[2]
             self._feedback.robot_moved_str = "process succeeded"
             self._as.publish_feedback(self._feedback)
             rospy.loginfo('%s: Succeeded' % self._action_name)
             self._as.set_succeeded(self._result)
+
 
 def main():
     try:
