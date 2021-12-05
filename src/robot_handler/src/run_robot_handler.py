@@ -275,6 +275,9 @@ class action_server(object):
         if self._goal.robot_name == "lightbar_robot":
             self._robot_light.go_to_pose_goal(self._goal.x, self._goal.y, self._goal.z, euler_ang[0], euler_ang[1], euler_ang[2])
         if success:
+            self._result.rotx = euler_ang[0]
+            self._result.roty = euler_ang[1]
+            self._result.rotz = euler_ang[2]
             self._feedback.robot_moved_str = "process succeeded"
             self._as.publish_feedback(self._feedback)
             rospy.loginfo('%s: Succeeded' % self._action_name)
@@ -300,7 +303,7 @@ def main():
 
 
 if __name__ == '__main__':
-    rospy.init_node('Custom_Python_Script')
+    rospy.init_node('robot_handler')
     robot_cam = robotposition("ur5_cam")
     robot_light = robotposition("ur5_light_bar")
     posBacklight = [0.370, 0.160, 0]
