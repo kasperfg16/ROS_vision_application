@@ -1,0 +1,89 @@
+digraph G {
+node [shape=box];
+"point_0" [label="point_0"];
+"ur5_cam_1_base_link" [label="ur5_cam_1_base_link"];
+"ur5_cam_1_base" [label="ur5_cam_1_base"];
+"ur5_cam_1_base_link_inertia" [label="ur5_cam_1_base_link_inertia"];
+"ur5_cam_1_shoulder_link" [label="ur5_cam_1_shoulder_link"];
+"ur5_cam_1_upper_arm_link" [label="ur5_cam_1_upper_arm_link"];
+"ur5_cam_1_forearm_link" [label="ur5_cam_1_forearm_link"];
+"ur5_cam_1_wrist_1_link" [label="ur5_cam_1_wrist_1_link"];
+"ur5_cam_1_wrist_2_link" [label="ur5_cam_1_wrist_2_link"];
+"ur5_cam_1_wrist_3_link" [label="ur5_cam_1_wrist_3_link"];
+"ur5_cam_1_flange" [label="ur5_cam_1_flange"];
+"ur5_cam_1_tool0" [label="ur5_cam_1_tool0"];
+"ur5_cam_1_mount" [label="ur5_cam_1_mount"];
+"ur5_cam_1_b_and_r_cam" [label="ur5_cam_1_b_and_r_cam"];
+"ur5_cam_1_tcp" [label="ur5_cam_1_tcp"];
+"ur5_light_bar_1_base_link" [label="ur5_light_bar_1_base_link"];
+"ur5_light_bar_1_base" [label="ur5_light_bar_1_base"];
+"ur5_light_bar_1_base_link_inertia" [label="ur5_light_bar_1_base_link_inertia"];
+"ur5_light_bar_1_shoulder_link" [label="ur5_light_bar_1_shoulder_link"];
+"ur5_light_bar_1_upper_arm_link" [label="ur5_light_bar_1_upper_arm_link"];
+"ur5_light_bar_1_forearm_link" [label="ur5_light_bar_1_forearm_link"];
+"ur5_light_bar_1_wrist_1_link" [label="ur5_light_bar_1_wrist_1_link"];
+"ur5_light_bar_1_wrist_2_link" [label="ur5_light_bar_1_wrist_2_link"];
+"ur5_light_bar_1_wrist_3_link" [label="ur5_light_bar_1_wrist_3_link"];
+"ur5_light_bar_1_flange" [label="ur5_light_bar_1_flange"];
+"ur5_light_bar_1_tool0" [label="ur5_light_bar_1_tool0"];
+"ur5_light_bar_1_mount" [label="ur5_light_bar_1_mount"];
+"ur5_light_bar_1_b_and_r_light_bar" [label="ur5_light_bar_1_b_and_r_light_bar"];
+"ur5_light_bar_1_tcp" [label="ur5_light_bar_1_tcp"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"point_0" -> "ur5_cam_1_point_0_joint" [label="xyz: 0 0 0 \nrpy: 0 0 -0.785398"]
+"ur5_cam_1_point_0_joint" -> "ur5_cam_1_base_link"
+"ur5_cam_1_base_link" -> "ur5_cam_1_base_link-base_fixed_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 3.14159"]
+"ur5_cam_1_base_link-base_fixed_joint" -> "ur5_cam_1_base"
+"ur5_cam_1_base_link" -> "ur5_cam_1_base_link-base_link_inertia" [label="xyz: 0 0 0 \nrpy: 0 -0 3.14159"]
+"ur5_cam_1_base_link-base_link_inertia" -> "ur5_cam_1_base_link_inertia"
+"ur5_cam_1_base_link_inertia" -> "ur5_cam_1_shoulder_pan_joint" [label="xyz: 0 0 0.089159 \nrpy: 0 -0 0"]
+"ur5_cam_1_shoulder_pan_joint" -> "ur5_cam_1_shoulder_link"
+"ur5_cam_1_shoulder_link" -> "ur5_cam_1_shoulder_lift_joint" [label="xyz: 0 0 0 \nrpy: 1.5708 -0 0"]
+"ur5_cam_1_shoulder_lift_joint" -> "ur5_cam_1_upper_arm_link"
+"ur5_cam_1_upper_arm_link" -> "ur5_cam_1_elbow_joint" [label="xyz: -0.425 0 0 \nrpy: 0 -0 0"]
+"ur5_cam_1_elbow_joint" -> "ur5_cam_1_forearm_link"
+"ur5_cam_1_forearm_link" -> "ur5_cam_1_wrist_1_joint" [label="xyz: -0.39225 0 0.10915 \nrpy: 0 -0 0"]
+"ur5_cam_1_wrist_1_joint" -> "ur5_cam_1_wrist_1_link"
+"ur5_cam_1_wrist_1_link" -> "ur5_cam_1_wrist_2_joint" [label="xyz: 0 -0.09465 -1.9413e-11 \nrpy: 1.5708 -0 0"]
+"ur5_cam_1_wrist_2_joint" -> "ur5_cam_1_wrist_2_link"
+"ur5_cam_1_wrist_2_link" -> "ur5_cam_1_wrist_3_joint" [label="xyz: 0 0.0823 -1.688e-11 \nrpy: -1.5708 1.22465e-16 -1.22465e-16"]
+"ur5_cam_1_wrist_3_joint" -> "ur5_cam_1_wrist_3_link"
+"ur5_cam_1_wrist_3_link" -> "ur5_cam_1_wrist_3-flange" [label="xyz: 0 0 0 \nrpy: 0 -1.5708 -1.5708"]
+"ur5_cam_1_wrist_3-flange" -> "ur5_cam_1_flange"
+"ur5_cam_1_flange" -> "ur5_cam_1_flange-tool0" [label="xyz: 0 0 0 \nrpy: 1.5708 -0 1.5708"]
+"ur5_cam_1_flange-tool0" -> "ur5_cam_1_tool0"
+"ur5_cam_1_tool0" -> "ur5_cam_1_mount_joint" [label="xyz: 0 0 0 \nrpy: -1.5708 -5.55112e-17 -0.785398"]
+"ur5_cam_1_mount_joint" -> "ur5_cam_1_mount"
+"ur5_cam_1_mount" -> "ur5_cam_1_b_and_r_cam_joint" [label="xyz: 0 -0.063 -0.053 \nrpy: -1.5708 0 0"]
+"ur5_cam_1_b_and_r_cam_joint" -> "ur5_cam_1_b_and_r_cam"
+"ur5_cam_1_b_and_r_cam" -> "ur5_cam_1_tcp_joint" [label="xyz: 0 0.068 0 \nrpy: 0 -1.5708 -1.5708"]
+"ur5_cam_1_tcp_joint" -> "ur5_cam_1_tcp"
+"point_0" -> "ur5_light_bar_1_point_0_joint" [label="xyz: 1.1945 0.199 -0.07 \nrpy: 0 -0 2.35619"]
+"ur5_light_bar_1_point_0_joint" -> "ur5_light_bar_1_base_link"
+"ur5_light_bar_1_base_link" -> "ur5_light_bar_1_base_link-base_fixed_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 3.14159"]
+"ur5_light_bar_1_base_link-base_fixed_joint" -> "ur5_light_bar_1_base"
+"ur5_light_bar_1_base_link" -> "ur5_light_bar_1_base_link-base_link_inertia" [label="xyz: 0 0 0 \nrpy: 0 -0 3.14159"]
+"ur5_light_bar_1_base_link-base_link_inertia" -> "ur5_light_bar_1_base_link_inertia"
+"ur5_light_bar_1_base_link_inertia" -> "ur5_light_bar_1_shoulder_pan_joint" [label="xyz: 0 0 0.089159 \nrpy: 0 -0 0"]
+"ur5_light_bar_1_shoulder_pan_joint" -> "ur5_light_bar_1_shoulder_link"
+"ur5_light_bar_1_shoulder_link" -> "ur5_light_bar_1_shoulder_lift_joint" [label="xyz: 0 0 0 \nrpy: 1.5708 -0 0"]
+"ur5_light_bar_1_shoulder_lift_joint" -> "ur5_light_bar_1_upper_arm_link"
+"ur5_light_bar_1_upper_arm_link" -> "ur5_light_bar_1_elbow_joint" [label="xyz: -0.425 0 0 \nrpy: 0 -0 0"]
+"ur5_light_bar_1_elbow_joint" -> "ur5_light_bar_1_forearm_link"
+"ur5_light_bar_1_forearm_link" -> "ur5_light_bar_1_wrist_1_joint" [label="xyz: -0.39225 0 0.10915 \nrpy: 0 -0 0"]
+"ur5_light_bar_1_wrist_1_joint" -> "ur5_light_bar_1_wrist_1_link"
+"ur5_light_bar_1_wrist_1_link" -> "ur5_light_bar_1_wrist_2_joint" [label="xyz: 0 -0.09465 -1.9413e-11 \nrpy: 1.5708 -0 0"]
+"ur5_light_bar_1_wrist_2_joint" -> "ur5_light_bar_1_wrist_2_link"
+"ur5_light_bar_1_wrist_2_link" -> "ur5_light_bar_1_wrist_3_joint" [label="xyz: 0 0.0823 -1.688e-11 \nrpy: -1.5708 1.22465e-16 -1.22465e-16"]
+"ur5_light_bar_1_wrist_3_joint" -> "ur5_light_bar_1_wrist_3_link"
+"ur5_light_bar_1_wrist_3_link" -> "ur5_light_bar_1_wrist_3-flange" [label="xyz: 0 0 0 \nrpy: 0 -1.5708 -1.5708"]
+"ur5_light_bar_1_wrist_3-flange" -> "ur5_light_bar_1_flange"
+"ur5_light_bar_1_flange" -> "ur5_light_bar_1_flange-tool0" [label="xyz: 0 0 0 \nrpy: 1.5708 -0 1.5708"]
+"ur5_light_bar_1_flange-tool0" -> "ur5_light_bar_1_tool0"
+"ur5_light_bar_1_tool0" -> "ur5_light_bar_1_mount_joint" [label="xyz: 0 0 0 \nrpy: -1.5708 -5.55112e-17 -0.785398"]
+"ur5_light_bar_1_mount_joint" -> "ur5_light_bar_1_mount"
+"ur5_light_bar_1_mount" -> "ur5_light_bar_1_b_and_r_light_joint" [label="xyz: 0 -0.093 -0.049 \nrpy: -1.5708 -5.55112e-17 -1.5708"]
+"ur5_light_bar_1_b_and_r_light_joint" -> "ur5_light_bar_1_b_and_r_light_bar"
+"ur5_light_bar_1_b_and_r_light_bar" -> "ur5_light_bar_1_tcp_joint" [label="xyz: 0 0.0862 0 \nrpy: -1.5708 0 0"]
+"ur5_light_bar_1_tcp_joint" -> "ur5_light_bar_1_tcp"
+}
