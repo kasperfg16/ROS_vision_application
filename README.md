@@ -6,6 +6,11 @@ Repo containing program that handles motion planning and execution of ur5 manipu
 
 - This code is only tested and developed for Ubuntu 20.04 using ROS1 and MoveIt1. All other configurations is used at own risk and suffering ;-)
 
+## dependencies
+* [NumPy](https://pypi.org/project/numpy/)    ```pip install numpy ```
+* [python-Math](https://pypi.org/project/python-math/)    ```pip install python-math```
+* [MoveIt](https://moveit.ros.org/install/)   ```sudo apt install ros-noetic-moveit ```
+
 ## How to setup and run a demo in rviz
 
 1. Install ROS1
@@ -18,13 +23,7 @@ Repo containing program that handles motion planning and execution of ur5 manipu
 
 3. In a termial:
 
-    a) Install MoveIt1
-
-    ```bash
-    sudo apt install ros-noetic-moveit
-    ```
-
-    b) Build the catkin workspace
+    a) Build the catkin workspace
 
     ```bash
     cd p5_project_group_364/
@@ -36,7 +35,7 @@ Repo containing program that handles motion planning and execution of ur5 manipu
     **There have been problems using `catkin_make` this problem can be solved with `catkin_make:isolated`.** \
     !
 
-    c) Source the workspace
+    b) Source the workspace
 
     ```bash
     source devel/setup.bash
@@ -46,7 +45,7 @@ Repo containing program that handles motion planning and execution of ur5 manipu
     **If `catkin_make:isolated` was used, use `source devel_isolated/setup.bash` instead.** \
     !
 
-    d) Launch the demo workspace
+    c) Launch the demo workspace
 
     ```bash
     roslaunch vision_application_movit_config demo.launch
