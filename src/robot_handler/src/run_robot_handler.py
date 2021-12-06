@@ -150,10 +150,10 @@ class robotposition(object):
         pose_tables.pose.position.x = 0.0
         pose_tables.pose.position.y = 0.0
         pose_tables.pose.position.z = 0.0
-        table_size = (0.001, 0.001, 0.001)
-        table_path_mesh = "/home/ubu/Git_repos/ROS_vision_application/src/scene_meshes/table.stl"
+        table_scale = (0.001, 0.001, 0.001)
+        table_path_mesh = "scene_meshes/table.stl"
 
-        scene.add_mesh(table_id, pose_tables, table_path_mesh, table_size)
+        scene.add_mesh(table_id, pose_tables, table_path_mesh, table_scale)
 
         # Add backlight as collision object
         pose_backlight = geometry_msgs.msg.PoseStamped()
@@ -174,11 +174,40 @@ class robotposition(object):
         pose_backlight.pose.orientation.y = q_new[1]
         pose_backlight.pose.orientation.z = q_new[2]
         pose_backlight.pose.orientation.w = q_new[3]
-        backlight_size = (0.001, 0.001, 0.001)
-        backlight_path_stl = "/home/ubu/Git_repos/ROS_vision_application/src/scene_meshes/backlight.stl"
+        backlight_scale = (0.001, 0.001, 0.001)
+        backlight_path_stl = "scene_meshes/backlight.stl"
 
         scene.add_mesh(backlight_id, pose_backlight,
-                       backlight_path_stl, backlight_size)
+                       backlight_path_stl, backlight_scale)
+
+    def add_inspection_object(self, size_inspection_object):
+        '''
+        Adds inspection collision object to the planning scene
+        '''
+
+        planning_frame = self.planning_frame
+        scene = self.scene
+
+        # Add inspection object as collision object
+        pose_inspection_object = geometry_msgs.msg.PoseStamped()
+        inspection_object_id = 'inspection_object'
+        pose_inspection_object.header.frame_id = planning_frame
+        pose_inspection_object.pose.position.x = posBacklight[0]
+        pose_inspection_object.pose.position.y = posBacklight[1]
+        pose_inspection_object.pose.position.z = posBacklight[2]
+
+        # Convert from euler angles to quaterion
+        rx = pi/2
+        ry = 0
+        rz = 0
+        q_orig = quaternion_from_euler(0, 0, 0)
+        q_rot = quaternion_from_euler(rx, ry, rz)
+        q_new = quaternion_multiply(q_rot, q_orig)
+        pose_inspection_object.pose.orientation.x = q_new[0]
+        pose_inspection_object.pose.orientation.y = q_new[1]
+        pose_inspection_object.pose.orientation.z = q_new[2]
+        pose_inspection_object.pose.orientation.w = q_new[3]
+        scene.add_box(inspection_object_id, pose_inspection_object, size_inspection_object)
 
     def go_to_pose_goal(self, x, y, z, rx, ry, rz):
         # Copy class variables to local variables to make the web tutorials more clear.
@@ -238,6 +267,9 @@ class action_server(object):
         self._as.start()
         self._robot_cam = robot_cam
         self._robot_light = robot_light
+        self._old_height = 0
+        self._old_lenght = 0
+        self._old_width = 0
 
     def execute_cb(self, goal):
         r = rospy.Rate(1)
@@ -250,6 +282,14 @@ class action_server(object):
         self._goal.obj_height = goal.obj_height
         self._goal.obj_length = goal.obj_length
         self._goal.obj_width = goal.obj_width
+
+        if self._goal.obj_height != self._old_height and self._goal.obj_length!= self._old_lenght and self._goal.obj_width != self._old_width:
+            self._old_height = self._goal.obj_height
+            self._old_lenght = self._goal.obj_length
+            self._old_width = self._goal.obj_width
+
+        size_inspection_object = (self._goal.obj_height, self._goal.obj_length, self._goal.obj_width)
+        self._robot_cam.add_inspection_object(size_inspection_object)
 
         # Print the position of recived goal
         print("Position: \n Robot: %s \n x: %s \n y: %s \n z: %s" % 
