@@ -151,7 +151,7 @@ class robotposition(object):
         pose_tables.pose.position.x = 0.0
         pose_tables.pose.position.y = 0.0
         pose_tables.pose.position.z = 0.0
-        table_scale = (0.001, 0.001, 0.001)
+        table_scale = (0.0011, 0.0011, 0.0011)
         table_path_mesh = work_dir+"/src/scene_meshes/table.stl"
 
         scene.add_mesh(table_id, pose_tables, table_path_mesh, table_scale)
@@ -175,7 +175,7 @@ class robotposition(object):
         pose_backlight.pose.orientation.y = q_new[1]
         pose_backlight.pose.orientation.z = q_new[2]
         pose_backlight.pose.orientation.w = q_new[3]
-        backlight_scale = (0.001, 0.001, 0.001)
+        backlight_scale = (0.0011, 0.0011, 0.0011)
         backlight_path_stl = work_dir+"/src/scene_meshes/backlight.stl"
 
         scene.add_mesh(backlight_id, pose_backlight,
@@ -208,7 +208,7 @@ class robotposition(object):
         pose_inspection_object.pose.orientation.y = q_new[1]
         pose_inspection_object.pose.orientation.z = q_new[2]
         pose_inspection_object.pose.orientation.w = q_new[3]
-        scene.add_box(inspection_object_id, pose_inspection_object, (size_inspection_object[0],size_inspection_object[1],size_inspection_object[2]))
+        scene.add_box(inspection_object_id, pose_inspection_object, (size_inspection_object[0]+0.03,size_inspection_object[1]+0.03,size_inspection_object[2]+0.03))
 
     def go_to_pose_goal(self, x, y, z, rx, ry, rz):
         # Copy class variables to local variables to make the web tutorials more clear.
