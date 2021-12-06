@@ -153,7 +153,7 @@ class robotposition(object):
         pose_tables.pose.position.x = 0.0
         pose_tables.pose.position.y = 0.0
         pose_tables.pose.position.z = 0.0
-        table_scale = (0.001, 0.001, 0.001)
+        table_scale = (0.0011, 0.0011, 0.0011)
         table_path_mesh = str(two_up)+"/scene_meshes/table.stl"
 
         scene.add_mesh(table_id, pose_tables, table_path_mesh, table_scale)
@@ -177,7 +177,7 @@ class robotposition(object):
         pose_backlight.pose.orientation.y = q_new[1]
         pose_backlight.pose.orientation.z = q_new[2]
         pose_backlight.pose.orientation.w = q_new[3]
-        backlight_scale = (0.001, 0.001, 0.001)
+        backlight_scale = (0.0011, 0.0011, 0.0011)
         backlight_path_stl = str(two_up)+"/scene_meshes/backlight.stl"
 
         scene.add_mesh(backlight_id, pose_backlight,
@@ -285,7 +285,7 @@ class action_server(object):
         self._goal.obj_height = goal.obj_height
         self._goal.obj_length = goal.obj_length
         self._goal.obj_width = goal.obj_width
-        posBacklight = [0.370, 0.160, 0]
+        posBacklight = [0.367, 0.120, 0]
 
         if self._goal.obj_height != self._old_height and self._goal.obj_length!= self._old_lenght and self._goal.obj_width != self._old_width:
             self._old_height = self._goal.obj_height
@@ -302,7 +302,7 @@ class action_server(object):
         self._goal.z))
 
         #RobPos = robotposition()
-        center = [0.370, 0.160, 0.154]
+        center = [0.367, 0.120, 0.154]
         vec_cam = mathutils.Vector((self._goal.x, self._goal.y, self._goal.z))
         vec_point = mathutils.Vector((center[0], center[1], center[2]+self._goal.viewpoint_height))
         euler_ang = look_at(vec_cam, vec_point)
@@ -350,7 +350,7 @@ if __name__ == '__main__':
     rospy.init_node('robot_handler')
     robot_cam = robotposition("ur5_cam")
     robot_light = robotposition("ur5_light_bar")
-    posBacklight = [0.370, 0.160, 0]
+    posBacklight = [0.367, 0.120, 0]
     robot_cam.add_static_scene(posBacklight)
     server_name = action_server(rospy.get_name(), robot_cam, robot_light)
     # Create and start the action server
