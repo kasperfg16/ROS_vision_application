@@ -24,6 +24,7 @@ from robodk.robodk import *
 from tf.transformations import *
 import csv
 from scipy.spatial.transform import Rotation as R
+import os.path as path
 
 import mathutils
 
@@ -142,7 +143,8 @@ class robotposition(object):
 
         planning_frame = self.planning_frame
         scene = self.scene
-        work_dir = os.getcwd()
+        two_up =  path.abspath(path.join(__file__ ,"../../.."))
+        print(str(two_up))
 
         # Add tables as collision object
         pose_tables = geometry_msgs.msg.PoseStamped()
@@ -152,7 +154,7 @@ class robotposition(object):
         pose_tables.pose.position.y = 0.0
         pose_tables.pose.position.z = 0.0
         table_scale = (0.001, 0.001, 0.001)
-        table_path_mesh = work_dir+"/src/scene_meshes/table.stl"
+        table_path_mesh = str(two_up)+"/scene_meshes/table.stl"
 
         scene.add_mesh(table_id, pose_tables, table_path_mesh, table_scale)
 
@@ -176,7 +178,7 @@ class robotposition(object):
         pose_backlight.pose.orientation.z = q_new[2]
         pose_backlight.pose.orientation.w = q_new[3]
         backlight_scale = (0.001, 0.001, 0.001)
-        backlight_path_stl = work_dir+"/src/scene_meshes/backlight.stl"
+        backlight_path_stl = str(two_up)+"/scene_meshes/backlight.stl"
 
         scene.add_mesh(backlight_id, pose_backlight,
                        backlight_path_stl, backlight_scale)
