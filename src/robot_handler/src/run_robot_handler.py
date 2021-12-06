@@ -142,6 +142,7 @@ class robotposition(object):
 
         planning_frame = self.planning_frame
         scene = self.scene
+        work_dir = os.getcwd()
 
         # Add tables as collision object
         pose_tables = geometry_msgs.msg.PoseStamped()
@@ -151,7 +152,7 @@ class robotposition(object):
         pose_tables.pose.position.y = 0.0
         pose_tables.pose.position.z = 0.0
         table_scale = (0.001, 0.001, 0.001)
-        table_path_mesh = "scene_meshes/table.stl"
+        table_path_mesh = work_dir+"/src/scene_meshes/table.stl"
 
         scene.add_mesh(table_id, pose_tables, table_path_mesh, table_scale)
 
@@ -175,7 +176,7 @@ class robotposition(object):
         pose_backlight.pose.orientation.z = q_new[2]
         pose_backlight.pose.orientation.w = q_new[3]
         backlight_scale = (0.001, 0.001, 0.001)
-        backlight_path_stl = "scene_meshes/backlight.stl"
+        backlight_path_stl = work_dir+"/src/scene_meshes/backlight.stl"
 
         scene.add_mesh(backlight_id, pose_backlight,
                        backlight_path_stl, backlight_scale)
@@ -208,7 +209,7 @@ class robotposition(object):
         pose_inspection_object.pose.orientation.z = q_new[2]
         pose_inspection_object.pose.orientation.w = q_new[3]
         scene.add_box(inspection_object_id, pose_inspection_object, size_inspection_object)
-
+        
     def go_to_pose_goal(self, x, y, z, rx, ry, rz):
         # Copy class variables to local variables to make the web tutorials more clear.
         # In practice, you should use the class variables directly unless you have a good
