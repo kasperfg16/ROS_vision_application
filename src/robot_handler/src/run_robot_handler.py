@@ -181,7 +181,7 @@ class robotposition(object):
         scene.add_mesh(backlight_id, pose_backlight,
                        backlight_path_stl, backlight_scale)
 
-    def add_inspection_object(self, size_inspection_object):
+    def add_inspection_object(self, size_inspection_object, posBacklight):
         '''
         Adds inspection collision object to the planning scene
         '''
@@ -195,7 +195,7 @@ class robotposition(object):
         pose_inspection_object.header.frame_id = planning_frame
         pose_inspection_object.pose.position.x = posBacklight[0]
         pose_inspection_object.pose.position.y = posBacklight[1]
-        pose_inspection_object.pose.position.z = posBacklight[2]
+        pose_inspection_object.pose.position.z = (posBacklight[2]+0.154)+size_inspection_object[2]/2
 
         # Convert from euler angles to quaterion
         rx = pi/2
@@ -208,8 +208,8 @@ class robotposition(object):
         pose_inspection_object.pose.orientation.y = q_new[1]
         pose_inspection_object.pose.orientation.z = q_new[2]
         pose_inspection_object.pose.orientation.w = q_new[3]
-        scene.add_box(inspection_object_id, pose_inspection_object, size_inspection_object)
-        
+        scene.add_box(inspection_object_id, pose_inspection_object, (size_inspection_object[0],size_inspection_object[1],size_inspection_object[2]))
+
     def go_to_pose_goal(self, x, y, z, rx, ry, rz):
         # Copy class variables to local variables to make the web tutorials more clear.
         # In practice, you should use the class variables directly unless you have a good
@@ -283,14 +283,14 @@ class action_server(object):
         self._goal.obj_height = goal.obj_height
         self._goal.obj_length = goal.obj_length
         self._goal.obj_width = goal.obj_width
+        posBacklight = [0.370, 0.160, 0]
 
         if self._goal.obj_height != self._old_height and self._goal.obj_length!= self._old_lenght and self._goal.obj_width != self._old_width:
             self._old_height = self._goal.obj_height
             self._old_lenght = self._goal.obj_length
             self._old_width = self._goal.obj_width
-
-        size_inspection_object = (self._goal.obj_height, self._goal.obj_length, self._goal.obj_width)
-        self._robot_cam.add_inspection_object(size_inspection_object)
+            size_inspection_object = [self._goal.obj_height, self._goal.obj_length, self._goal.obj_width]
+            self._robot_cam.add_inspection_object(size_inspection_object, posBacklight)
 
         # Print the position of recived goal
         print("Position: \n Robot: %s \n x: %s \n y: %s \n z: %s" % 
