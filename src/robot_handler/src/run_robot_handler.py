@@ -1,32 +1,30 @@
  #! /usr/bin/env python
 from __future__ import print_function
-from threading import main_thread
 
 import copy
+import csv
+import os.path as path
 import sys
 from math import atan, atan2, pi, sqrt
-import numpy as np
+from threading import main_thread
 
+import actionlib
 import geometry_msgs.msg
-import robot_handler.msg
+import mathutils
+import moveit_commander
 import moveit_msgs.msg
-from std_msgs.msg import String
-
+import numpy as np
+import robot_handler.msg
 import rospy
 import rospy.rostime
-import actionlib
-import moveit_commander
 from moveit_commander.conversions import pose_to_list
 from moveit_commander.move_group import MoveGroupCommander
 from moveit_commander.planning_scene_interface import PlanningSceneInterface
-
 from robodk.robodk import *
-from tf.transformations import *
-import csv
 from scipy.spatial.transform import Rotation as R
-import os.path as path
+from std_msgs.msg import String
+from tf.transformations import *
 
-import mathutils
 
 def look_at(camera_pos, point_pos, roll = 0):
     direction = point_pos - camera_pos
