@@ -93,9 +93,8 @@ class robotInterface(object):
         
         group.set_num_planning_attempts(100)
 
-        group.set_planner_id("EST")
-
-
+        # Set planner planner IDs are found in src/group364_universal_robot/vision_application_movit_config/config/ompl_planning.yaml
+        group.set_planner_id("RRTConnect")
 
         # group.set_planner_id("geometric::AnytimePathShortening")
 
