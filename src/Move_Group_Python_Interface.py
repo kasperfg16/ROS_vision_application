@@ -59,10 +59,13 @@ class MoveGroupPythonIntefaceTutorial(object):
         # arm so we set ``group_name = panda_arm``. If you are using a different robot,
         # you should change this value to the name of your robot arm planning group.
         # This interface can be used to plan and execute motions on the Panda:
-        group_name = "ur5_light_bar"
+        group_name = "ur5_cam"
         group = moveit_commander.MoveGroupCommander(group_name)
 
-        group.set_num_planning_attempts(100)
+        group.set_num_planning_attempts(5)
+        group.set_planning_time(0.1)
+        group.set_planner_id("TRRT")
+
         # group.set_planner_id("geometric::AnytimePathShortening")
 
         # We create a `DisplayTrajectory`_ publisher which is used later to publish

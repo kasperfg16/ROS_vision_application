@@ -56,11 +56,11 @@ def all_close(goal, actual, tolerance):
 
     return True
 
-class robotposition(object):
+class robotInterface(object):
 
     def __init__(self, group_name):
 
-        super(robotposition, self).__init__()
+        super(robotInterface, self).__init__()
 
         # BEGIN_SUB_TUTORIAL setup
         ##
@@ -92,6 +92,10 @@ class robotposition(object):
         group = moveit_commander.MoveGroupCommander(group_name)
         
         group.set_num_planning_attempts(100)
+
+        group.set_planner_id("EST")
+
+
 
         # group.set_planner_id("geometric::AnytimePathShortening")
 
@@ -301,17 +305,18 @@ class action_server(object):
         self._goal.y, 
         self._goal.z))
 
-        #RobPos = robotposition()
+        # Find pose based on center of backlight and recieved position from backend
         center = [0.367, 0.120, 0.154]
         vec_cam = mathutils.Vector((self._goal.x, self._goal.y, self._goal.z))
         vec_point = mathutils.Vector((center[0], center[1], center[2]+self._goal.viewpoint_height))
         euler_ang = look_at(vec_cam, vec_point)
+        
+        # Print goal and sent goal to robot specified in the message from the backend
         print("Moving to position: X: %s Y: %s Z: %s Rotx: %s Roty: %s Rotz %s"% (self._goal.x, self._goal.y, self._goal.z, euler_ang[0], euler_ang[1], euler_ang[2]))
         if self._goal.robot_name == "camera_robot":
             delta_pose, planstatus,current_pose = self._robot_cam.go_to_pose_goal(self._goal.x, self._goal.y, self._goal.z, euler_ang[0], euler_ang[1], euler_ang[2])
         if self._goal.robot_name == "lightbar_robot":
             delta_pose, planstatus,current_pose = self._robot_light.go_to_pose_goal(self._goal.x, self._goal.y, self._goal.z, euler_ang[0], euler_ang[1], euler_ang[2])
-        #print("current pose: ", current_pose.position)
         self._result.robot_name = goal.robot_name
         self._result.x = current_pose.position.x
         self._result.y = current_pose.position.y
@@ -329,8 +334,8 @@ class action_server(object):
 
 def main():
     try:
-        posBacklight = [0.370, 0.160, 0]
-        RobPos = robotposition(rospy.get_name())
+        posBacklight = [0.367, 0.120, 0]
+        RobPos = robotInterface(rospy.get_name())
         RobPos.add_static_scene(posBacklight)
         vec_cam = mathutils.Vector((RobPos._goal.x, RobPos._goal.y, RobPos._goal.z))
         vec_point = mathutils.Vector((RobPos._goal.obj_width/2, RobPos._goal.obj_length/2, RobPos._goal.viewpoint_height))
@@ -348,18 +353,13 @@ def main():
 
 if __name__ == '__main__':
     rospy.init_node('robot_handler')
-    robot_cam = robotposition("ur5_cam")
-    robot_light = robotposition("ur5_light_bar")
+    robot_cam = robotInterface("ur5_cam")
+    robot_light = robotInterface("ur5_light_bar")
     posBacklight = [0.367, 0.120, 0]
     robot_cam.add_static_scene(posBacklight)
     server_name = action_server(rospy.get_name(), robot_cam, robot_light)
     # Create and start the action server
     rospy.spin
-      #ur5_robot_name = "ur5_cam"
-        #ur5_robot_name = "ur5_light_bar"
-
-    #main()
-    
 
 
 
