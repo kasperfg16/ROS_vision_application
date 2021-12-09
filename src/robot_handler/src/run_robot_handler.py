@@ -96,29 +96,23 @@ class robotInterface(object):
         # Set planner planner IDs are found in src/group364_universal_robot/vision_application_movit_config/config/ompl_planning.yaml
         group.set_planner_id("RRTConnect")
 
-        # group.set_planner_id("geometric::AnytimePathShortening")
-
         # We create a `DisplayTrajectory`_ publisher which is used later to publish
         # trajectories for RViz to visualize:
         display_trajectory_publisher = rospy.Publisher('/move_group/display_planned_path',
                                                        moveit_msgs.msg.DisplayTrajectory,
                                                        queue_size=20)
 
-        # END_SUB_TUTORIAL
-
-        # BEGIN_SUB_TUTORIAL basic_info
-        ##
         # Getting Basic Information
         # ^^^^^^^^^^^^^^^^^^^^^^^^^
-        # We can get the name of the reference frame for this robot:
+        # Get the name of the reference frame for this robot:
         planning_frame = group.get_planning_frame()
         print("============ Reference frame: %s" % planning_frame)
 
-        # We can also print the name of the end-effector link for this group:
+        # Print the name of the end-effector link for this group:
         eef_link = group.get_end_effector_link()
         print("============ End effector: %s" % eef_link)
 
-        # We can get a list of all the groups in the robot:
+        # List of all the groups in the robot:
         group_names = robot.get_group_names()
         print("============ Robot Groups:", robot.get_group_names())
 
@@ -127,7 +121,6 @@ class robotInterface(object):
         print("============ Printing robot state")
         print(robot.get_current_state())
         print("")
-        # END_SUB_TUTORIAL
 
         # Misc variables
         self.box_name = ''
@@ -216,20 +209,16 @@ class robotInterface(object):
         scene.add_box(inspection_object_id, pose_inspection_object, (size_inspection_object[0]+0.03,size_inspection_object[1]+0.03,size_inspection_object[2]+0.03))
 
     def go_to_pose_goal(self, x, y, z, rx, ry, rz):
-        # Copy class variables to local variables to make the web tutorials more clear.
         # In practice, you should use the class variables directly unless you have a good
         # reason not to.
         group = self.group
 
-        # BEGIN_SUB_TUTORIAL plan_to_pose
-        ##
         # Planning to a Pose Goal
         # ^^^^^^^^^^^^^^^^^^^^^^^
-        # We can plan a motion for this group to a desired pose for the
+        # Plan a motion for this group to a desired pose for the
         # end-effector:
 
         # Calculate quaternions from euler angles
-
         pose_goal = geometry_msgs.msg.Pose()
         q_rot = quaternion_from_euler(rx, ry, rz)
         pose_goal.orientation.x = q_rot[0]
@@ -242,7 +231,7 @@ class robotInterface(object):
 
         group.set_pose_target(pose_goal)
 
-        # Now, we call the planner to compute the plan and execute it.
+        # Call the planner to compute the plan and execute it.
         plan = group.go(wait=True)
         print("Test: " , plan)
         # Calling `stop()` ensures that there is no residual movement
@@ -251,13 +240,7 @@ class robotInterface(object):
         # Note: there is no equivalent function for clear_joint_value_targets()
         group.clear_pose_targets()
 
-        # END_SUB_TUTORIAL
-
-        # For testing:
-        # Note that since this section of code will not be included in the tutorials
-        # we use the class variable rather than the copied state variable
         current_pose = self.group.get_current_pose().pose
-        #print("current pose: ", current_pose[0])
         return all_close(pose_goal, current_pose, 0.01), plan, current_pose
 
 
