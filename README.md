@@ -30,27 +30,31 @@ Dependency | Command to install
 
 3. In a termial:
 
+    a) Clone the reposetory into a folder of your choise (<PATH>)
+
+    ```bash
+    cd <PATH>/
+
+    git clone <https://github.com/kasperfg16/ROS_vision_application.git>
+    ```
+
     a) Build the catkin workspace
 
     ```bash
-    cd p5_project_group_364/
+    cd <PATH>
 
     catkin_make
     ```
 
-    ! Note:\
-    **There have been problems using `catkin_make` this problem can be solved with `catkin_make_isolated`.** \
-    !
+## How to run a demo in rviz
 
-    b) Source the workspace
+1. In a terminal
+
+    a) Source the workspace
 
     ```bash
     source devel/setup.bash
     ```
-
-    ! Note:\
-    **If `catkin_make_isolated` was used, use `source devel_isolated/setup.bash` instead.** \
-    !
 
     c) Launch the demo workspace
 
@@ -58,12 +62,18 @@ Dependency | Command to install
     roslaunch vision_application_movit_config demo.launch
     ```
 
-4. In  ANOTHER termial:
+2. In  ANOTHER termial:
 
-    a) Run a path
+    a) cd the workspace
 
     ```bash
-    python3 /home/ubuntu/p5_project_group_364/src/Move_Group_Python_Interface.py
+    cd <PATH>
+    ```
+
+    b) Run the pyhon script
+
+    ```bash
+    python3 src/Move_Group_Python_Interface.py
     ```
 
 ## How to use with real UR robots
