@@ -19,6 +19,9 @@
           <mesh filename="package://ur_description/meshes/lightbar.stl"
           scale="0.001 0.001 0.001"/>
         </geometry>
+        <material name="b_and_r_color">
+          <color rgba="1 0.4 0 1"/>
+        </material>
       </visual>
       <collision>
         <geometry>
@@ -27,8 +30,8 @@
           <mesh filename="package://ur_description/meshes/lightbar.stl"
           scale="0.0013 0.0013 0.0013"/>
         </geometry>
-        <material>
-          <color rgba="1 0.4 0"/>
+        <material name="collision">
+          <color rgba="0 0 1 1"/>
         </material>
       </collision>
     </link>

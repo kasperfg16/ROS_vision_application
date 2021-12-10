@@ -18,6 +18,9 @@
           use the "scale" param to compensate-->
           <mesh filename="package://ur_description/meshes/mount.stl" scale="0.001 0.001 0.001" />
         </geometry>
+        <material name="mount">
+          <color rgba="0.2 0.2 0.2 1" />
+        </material>
       </visual>
       <collision>
         <geometry>
@@ -25,8 +28,8 @@
           use the "scale" param to compensate-->
           <mesh filename="package://ur_description/meshes/mount.stl" scale="0.0013 0.0013 0.0013" />
         </geometry>
-        <material>
-          <color rgba="0 0 0 0" />
+        <material name="collision">
+          <color rgba="0 0 1 1"/>
         </material>
       </collision>
     </link>

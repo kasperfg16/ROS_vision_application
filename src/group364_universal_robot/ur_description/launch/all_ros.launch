@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+    <include
+      file="$(find ur_description)/launch/vision_application_bringup.launch">
+    </include>
+    <include
+      file="$(find vision_application_movit_config)/launch/vision_application_moveit_planning_execution.launch">
+    </include>
+    <include
+      file="$(find vision_application_movit_config)/launch/moveit_rviz.launch">
+    </include>
+</launch>
