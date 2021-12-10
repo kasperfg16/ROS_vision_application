@@ -79,7 +79,8 @@ class robotInterface(object):
 
         group = moveit_commander.MoveGroupCommander(group_name)
         
-        group.set_num_planning_attempts(100)
+        group.set_num_planning_attempts(1000)
+        group.set_planning_time(1)
 
         # Set planner planner IDs are found in src/group364_universal_robot/vision_application_movit_config/config/ompl_planning.yaml
         group.set_planner_id("RRTConnect")
