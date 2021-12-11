@@ -266,7 +266,7 @@ class action_server(object):
             self._old_height = self._goal.obj_height
             self._old_lenght = self._goal.obj_length
             self._old_width = self._goal.obj_width
-            size_inspection_object = [self._goal.obj_height, self._goal.obj_length, self._goal.obj_width]
+            size_inspection_object = [self._goal.obj_length, self._goal.obj_width, self._goal.obj_height]
             self._robot_cam.add_inspection_object(size_inspection_object, posBacklight)
 
         # Print the position of recived goal
