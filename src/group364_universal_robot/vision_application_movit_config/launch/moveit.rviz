@@ -7,7 +7,7 @@ Panels:
         - /MotionPlanning1/Planned Path1
         - /TF1
       Splitter Ratio: 0.5
-    Tree Height: 263
+    Tree Height: 357
   - Class: rviz/Help
     Name: Help
   - Class: rviz/Views
@@ -424,6 +424,10 @@ Visualization Manager:
           Value: false
         ur5_cam_1_wrist_3_link:
           Value: false
+        ur5_cambase:
+          Value: true
+        ur5_camtool0_controller:
+          Value: true
         ur5_light_bar_1_b_and_r_light_bar:
           Value: false
         ur5_light_bar_1_base:
@@ -452,7 +456,9 @@ Visualization Manager:
           Value: false
         ur5_light_bar_1_wrist_3_link:
           Value: false
-        world:
+        ur5_light_barbase:
+          Value: true
+        ur5_light_bartool0_controller:
           Value: true
       Marker Alpha: 1
       Marker Scale: 1
@@ -461,40 +467,39 @@ Visualization Manager:
       Show Axes: true
       Show Names: false
       Tree:
-        world:
-          point_0:
-            ur5_cam_1_base_link:
-              ur5_cam_1_base:
-                {}
-              ur5_cam_1_base_link_inertia:
-                ur5_cam_1_shoulder_link:
-                  ur5_cam_1_upper_arm_link:
-                    ur5_cam_1_forearm_link:
-                      ur5_cam_1_wrist_1_link:
-                        ur5_cam_1_wrist_2_link:
-                          ur5_cam_1_wrist_3_link:
-                            ur5_cam_1_flange:
-                              ur5_cam_1_tool0:
-                                ur5_cam_1_mount:
-                                  ur5_cam_1_b_and_r_cam:
-                                    ur5_cam_1_tcp:
-                                      {}
-            ur5_light_bar_1_base_link:
-              ur5_light_bar_1_base:
-                {}
-              ur5_light_bar_1_base_link_inertia:
-                ur5_light_bar_1_shoulder_link:
-                  ur5_light_bar_1_upper_arm_link:
-                    ur5_light_bar_1_forearm_link:
-                      ur5_light_bar_1_wrist_1_link:
-                        ur5_light_bar_1_wrist_2_link:
-                          ur5_light_bar_1_wrist_3_link:
-                            ur5_light_bar_1_flange:
-                              ur5_light_bar_1_tool0:
-                                ur5_light_bar_1_mount:
-                                  ur5_light_bar_1_b_and_r_light_bar:
-                                    ur5_light_bar_1_tcp:
-                                      {}
+        point_0:
+          ur5_cam_1_base_link:
+            ur5_cam_1_base:
+              {}
+            ur5_cam_1_base_link_inertia:
+              ur5_cam_1_shoulder_link:
+                ur5_cam_1_upper_arm_link:
+                  ur5_cam_1_forearm_link:
+                    ur5_cam_1_wrist_1_link:
+                      ur5_cam_1_wrist_2_link:
+                        ur5_cam_1_wrist_3_link:
+                          ur5_cam_1_flange:
+                            ur5_cam_1_tool0:
+                              ur5_cam_1_mount:
+                                ur5_cam_1_b_and_r_cam:
+                                  ur5_cam_1_tcp:
+                                    {}
+          ur5_light_bar_1_base_link:
+            ur5_light_bar_1_base:
+              {}
+            ur5_light_bar_1_base_link_inertia:
+              ur5_light_bar_1_shoulder_link:
+                ur5_light_bar_1_upper_arm_link:
+                  ur5_light_bar_1_forearm_link:
+                    ur5_light_bar_1_wrist_1_link:
+                      ur5_light_bar_1_wrist_2_link:
+                        ur5_light_bar_1_wrist_3_link:
+                          ur5_light_bar_1_flange:
+                            ur5_light_bar_1_tool0:
+                              ur5_light_bar_1_mount:
+                                ur5_light_bar_1_b_and_r_light_bar:
+                                  ur5_light_bar_1_tcp:
+                                    {}
       Update Interval: 0
       Value: true
   Enabled: true
@@ -513,7 +518,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 1.0982866287231445
+      Distance: 1.2843658924102783
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -521,15 +526,15 @@ Visualization Manager:
         Value: false
       Field of View: 0.75
       Focal Point:
-        X: 0.4365726709365845
-        Y: 0.17615064978599548
-        Z: 0.3765556216239929
+        X: 0.33671337366104126
+        Y: 0.0009246519766747952
+        Z: 0.26759958267211914
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.37979668378829956
+      Pitch: 0.23979683220386505
       Target Frame: point_0
       Yaw: 2.1049582958221436
     Saved: ~
@@ -549,5 +554,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 960
-  X: 960
+  X: 0
   Y: 27
