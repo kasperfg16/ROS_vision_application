@@ -137,7 +137,7 @@ Dependency | Command to install
     python3 src/Move_Group_Python_Interface.py
     ```
 
-## How to run with real UR robots using launcheverything.py
+## How to use with real UR robots
 
 1. **For safety and for better performance** connect with wired connection to the same network as the UR5 robots and the B&R Smart Sensor as errors otherwise can occur connect
 
@@ -155,57 +155,19 @@ Dependency | Command to install
 
     b)
 
-    cd the workspace folder
+    Go to the webadress:
 
-    ```bash
-    cd <PATH>/
-    ```
+    192.168.87.210:81/MappVision
 
     c)
 
-    Source the workspace folder
-
-    ```bash
-    source devel/setup.bash
-    ```
+    Go to gcam
 
     d)
 
-    Run the program
-
-    ```bash
-    python3 launcheverything.py
-    ```
-
-    d)
-
-    On both the UR5s, run the **External Control** program that was created on both the UR5s by pressing the play button
-
-    ![alt text](https://github.com/UniversalRobots/Universal_Robots_ROS_Driver/blob/master/ur_robot_driver/doc/initial_setup_images/cb3_11_program_view_excontrol.png?raw=true)
+    Close the webpage
 
     e)
-
-    Go to the following webadress to use the program
-
-    `localhost:5555`
-
-## How to use with real UR robots launching programs seperatly
-
-1. **For safety and for better performance** connect with wired connection to the same network as the UR5 robots and the B&R Smart Sensor as errors otherwise can occur connect
-
-2. In a termial:
-
-    a)
-
-    Add route to the Smart Sensor webserver
-
-    Make sure the B&R Smart Sensor have the ip adress: 192.168.87.210
-
-    ```bash
-    sudo route add -net 192.168.200.0 netmask 255.255.255.0 gw 192.168.87.210
-    ```
-
-    b)
 
     cd the workspace
 
@@ -213,7 +175,7 @@ Dependency | Command to install
     cd <PATH>/
     ```
 
-    b)
+    f)
 
     Source the workspace
 
@@ -221,7 +183,7 @@ Dependency | Command to install
     source devel/setup.bash
     ```
 
-    c)
+    g)
 
     Run the driver
 
@@ -319,40 +281,62 @@ Dependency | Command to install
     cd <PATH>/
     ```
 
-    b)
-
-    Now run the run_robot_handler.py Python script.
+    b) now run the run_robot_handler.py Python script.
 
     ```bash
-    python run_robot_handler.py
+    source devel/setup.bash
+
+    cd src/robot_handler/src/
+
+    python3 run_robot_handler.py
     ```
 
-7. Go to the following web address to use the program
+8. Follow the README in the reposetory:
 
-    `localhost:5555`
+    <https://github.com/BenMusak/564-Automated-Robotic-Vision-Light-Configuration>
 
 ## How to control from local web-server
 
 1.
-    a) Start RVIZ up just like if you would run in on the robots or just simulation.
+    a)
+
+    Start RVIZ up just like if you would run in on the robots or just simulation.
     But do not run the Move_Group_Python_Interface.py Python script!
 
-    b) Install rosbridge suite.
+    b)
+
+    Install rosbridge suite.
 
     ```bash
     sudo apt-get install ros-noetic-rosbridge-suite
     ```
 
-    c) Run the rosbridge server.
+    c)
+
+    Run the rosbridge server.
 
     ```bash
     roslaunch rosbridge_server rosbridge_websocket.launch
     ```
 
-    d) now run the run_robot_handler.py Python script.
+    a)
+
+    cd the workspace in wich run_robot_handler.py is
 
     ```bash
-    python run_robot_handler.py
+    cd <PATH 2>/
+    ```
+
+    e)
+
+    Now run the run_robot_handler.py Python script.
+
+    ```bash
+    source devel/setup.bash
+
+    cd src/robot_handler/src/
+
+    python3 run_robot_handler.py
     ```
 
 ## References
