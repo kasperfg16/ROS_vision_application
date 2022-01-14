@@ -119,23 +119,9 @@ Dependency | Command to install
     roslaunch vision_application_movit_config demo.launch
     ```
 
-2. In  ANOTHER termial:
+2. Follow the README in the reposetory:
 
-    a)
-
-    cd the workspace
-
-    ```bash
-    cd <PATH>
-    ```
-
-    b)
-
-    Run the pyhon script
-
-    ```bash
-    python3 src/Move_Group_Python_Interface.py
-    ```
+    <https://github.com/BenMusak/564-Automated-Robotic-Vision-Light-Configuration>
 
 ## How to use with real UR robots
 
