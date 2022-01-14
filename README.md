@@ -46,7 +46,7 @@ Dependency | Command to install
 
     b)
 
-    Clone the Universal_Robots_ROS_Driver into the workspace folder
+    Clone the Universal_Robots_ROS_Driver into the workspace folder (NOT needed for simulation only)
 
     Info about the driver is found here: <https://github.com/UniversalRobots/Universal_Robots_ROS_Driver>
 
