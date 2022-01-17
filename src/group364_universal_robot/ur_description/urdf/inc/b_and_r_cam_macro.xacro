@@ -34,10 +34,45 @@
         </material>
       </collision>
     </link>
+    <joint name="${prefix}wirecollisionbox_joint" type="fixed">
+      <origin rpy="0 0 0" xyz="0 -0.02 -0.03" />
+      <parent link="${prefix}b_and_r_cam"/>
+      <child link="${prefix}wirecollisionbox"/>
+    </joint>
+    <link name="${prefix}wirecollisionbox">
+      <visual>
+        <geometry>
+          <box size="0.09 0.02 0.09"/>
+        </geometry>
+      </visual>
+      <collision>
+        <geometry>
+          <box size="0.09 0.02 0.08"/>
+        </geometry>
+      </collision>
+    </link>
+    <joint name="${prefix}wirecollisionbox_2_joint" type="fixed">
+      <origin rpy="0 0 0" xyz="0 0.01 0.13" />
+      <parent link="${prefix}b_and_r_cam"/>
+      <child link="${prefix}wirecollisionbox_2"/>
+    </joint>
+    <link name="${prefix}wirecollisionbox_2">
+      <visual>
+        <geometry>
+          <box size="0.09 0.04 0.09"/>
+        </geometry>
+      </visual>
+      <collision>
+        <geometry>
+          <box size="0.09 0.04 0.09"/>
+        </geometry>
+      </collision>
+    </link>
+    
 
     <!-- TCP frame -->
     <joint name="${prefix}tcp_joint" type="fixed">
-      <origin rpy="-1.57079633 -1.57079633 0" xyz="0.0 0.068 0.0" />
+      <origin rpy="-1.57079633 -1.57079633 0" xyz="0 0.062 -0.007" />
       <parent link="${prefix}b_and_r_cam"/>
       <child link="${prefix}tcp"/>
     </joint>
